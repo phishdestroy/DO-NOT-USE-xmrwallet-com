@@ -1,6 +1,6 @@
 2018-2024
 
-Website: https://www.xmrwallet.com/#/landing.html
+Website: https://www.xmrwallet.com/app.html#/login.html
 
 Source language files - /src/i18n
 Public html/css/js - public
