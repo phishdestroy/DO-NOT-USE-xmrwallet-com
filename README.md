@@ -1,4 +1,5 @@
 # ⚠️ XMRWallet — Security Warning & Technical Analysis
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5fa1d97a-e84b-4602-85d4-d2c0bf7b98c5" />
 
 
 ## 🚨 Critical Notice
@@ -218,3 +219,4 @@ This design violates fundamental security expectations for cryptocurrency wallet
 This document is based on publicly available analysis and observed behavior.
 
 Use at your own risk.
+
