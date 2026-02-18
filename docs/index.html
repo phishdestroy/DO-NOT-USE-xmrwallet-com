@@ -158,6 +158,7 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
     <a href="#attack">Attack Breakdown</a>
     <a href="#coverup">Operator Profile</a>
     <a href="#tracking">Google Tracking</a>
+    <a href="#terms">Terms vs Reality</a>
     <a href="#victims">Victims</a>
     <a href="#report">Report</a>
   </div>
@@ -419,6 +420,177 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
     <div class="victim"><div class="victim-quote">"Create wallet - put 20 xmr next day 0 xmr. Scammers owner!"</div><div class="victim-meta"><span class="amount">20 XMR overnight</span><span>Sitejabber</span></div></div>
     <div class="victim"><div class="victim-quote">"I cannot verify the transaction using the private viewing key. Waiting for support response for several days."</div><div class="victim-meta"><span class="amount">Funds inaccessible</span><span>Trustpilot</span><span>TxID: bd1e596d...</span></div></div>
   </div>
+</section>
+
+<!-- TERMS ANALYSIS -->
+<section class="section" id="terms">
+  <div class="section-label">Legal Analysis</div>
+  <h2 class="section-title reveal">TERMS OF SERVICE<br>vs REALITY</h2>
+  <p class="section-intro reveal">xmrwallet.com Terms of Service (last updated September 27, 2021) make 5 specific technical claims about how the service works. Every single one is contradicted by observed network behavior.</p>
+
+  <style>
+  .terms-item{background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--red);margin-bottom:1px;overflow:hidden;}
+  .terms-header{padding:22px 26px;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;}
+  .terms-section{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:#333;padding-top:3px;white-space:nowrap;}
+  .terms-claim{font-size:13px;color:#666;line-height:1.6;}
+  .terms-claim em{color:#888;font-style:normal;border-bottom:1px solid #222;}
+  .terms-verdict{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:1px;color:var(--red);white-space:nowrap;padding-top:2px;}
+  .terms-body{display:none;padding:0 26px 22px;border-top:1px solid var(--border);}
+  .terms-body.open{display:block;}
+  .terms-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:16px;}
+  .terms-col{background:var(--bg2);padding:16px 18px;}
+  .terms-col-title{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+  .terms-col.claim .terms-col-title{color:#333;}
+  .terms-col.reality .terms-col-title{color:var(--red);}
+  .terms-col p{font-size:12px;line-height:1.8;color:#555;margin:0;}
+  .terms-col.reality p{color:#888;}
+  .terms-col blockquote{font-family:var(--mono);font-size:11px;color:#444;border-left:2px solid #222;padding-left:12px;margin:8px 0;line-height:1.7;}
+  .terms-col.reality blockquote{color:var(--red);border-left-color:rgba(255,60,60,0.4);opacity:0.8;}
+  .terms-source{font-family:var(--mono);font-size:10px;color:#222;margin-top:12px;}
+  .terms-source a{color:#333;text-decoration:none;}
+  .terms-source a:hover{color:var(--blue);}
+  .terms-item:hover .terms-section{color:#555;}
+  </style>
+
+  <div class="reveal">
+
+  <!-- 1 -->
+  <div class="terms-item">
+    <div class="terms-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div class="terms-section">§4 · SERVICES</div>
+      <div class="terms-claim">
+        <em>"The view key of your account is <strong>temporarily stored in memory</strong> by the service which enables it to determine any transactions concerning to your account."</em>
+      </div>
+      <div class="terms-verdict">LIE</div>
+    </div>
+    <div class="terms-body">
+      <div class="terms-row">
+        <div class="terms-col claim">
+          <div class="terms-col-title">// What they claim</div>
+          <blockquote>"temporarily stored in memory"</blockquote>
+          <p>Implies the view key exists only client-side in RAM during the session. Standard behavior for a legitimate light wallet.</p>
+        </div>
+        <div class="terms-col reality">
+          <div class="terms-col-title">// What actually happens</div>
+          <blockquote>session_key = [blob]:[base64(address)]:[base64(viewkey)]</blockquote>
+          <p>The view key is Base64-encoded into <code style="color:var(--red);font-family:var(--mono);font-size:11px">session_key</code> and transmitted to xmrwallet.com servers on <strong style="color:var(--red);font-weight:400">every single API request</strong> — 40+ times per session across 6 different endpoints. This is not "in memory". This is active exfiltration.</p>
+        </div>
+      </div>
+      <div class="terms-source">Source: <a href="https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06" target="_blank">URLQuery network capture</a> · <a href="https://github.com/XMRWallet/Website/issues/36" target="_blank">GitHub Issue #36</a></div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="terms-item">
+    <div class="terms-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div class="terms-section">§4 · SERVICES</div>
+      <div class="terms-claim">
+        <em>"The service (XMRWallet) <strong>do not know or store</strong> your private key. This means that it is <strong>cryptographically impossible</strong> for our company to spend funds on your behalf."</em>
+      </div>
+      <div class="terms-verdict">FALSE</div>
+    </div>
+    <div class="terms-body">
+      <div class="terms-row">
+        <div class="terms-col claim">
+          <div class="terms-col-title">// What they claim</div>
+          <blockquote>"cryptographically impossible for our company to spend funds on your behalf"</blockquote>
+          <p>Standard non-custodial wallet guarantee. If true, even a compromised server cannot move your funds.</p>
+        </div>
+        <div class="terms-col reality">
+          <div class="terms-col-title">// What actually happens</div>
+          <blockquote>raw_tx_and_hash.raw = 0<br>if(type == 'swept') { ... }</blockquote>
+          <p>The client builds a transaction locally — then <strong style="color:var(--red);font-weight:400">discards it</strong> (<code style="color:var(--red);font-family:var(--mono);font-size:11px">raw = 0</code>). Only metadata is sent to the server. The server constructs its own transaction and broadcasts it. The <code style="color:var(--red);font-family:var(--mono);font-size:11px">type='swept'</code> marker indicates server-initiated fund transfer. The claim of cryptographic impossibility is directly contradicted by the production code.</p>
+        </div>
+      </div>
+      <div class="terms-source">Source: JavaScript deobfuscation · <a href="https://github.com/XMRWallet/Website/issues/36" target="_blank">GitHub Issue #36</a></div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="terms-item">
+    <div class="terms-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div class="terms-section">§4 · SERVICES</div>
+      <div class="terms-claim">
+        <em>"You authorize our company to submit your <strong>requested transaction</strong> to the blockchain according with the instructions you provide."</em>
+      </div>
+      <div class="terms-verdict">MISLEADING</div>
+    </div>
+    <div class="terms-body">
+      <div class="terms-row">
+        <div class="terms-col claim">
+          <div class="terms-col-title">// What they claim</div>
+          <blockquote>"your requested transaction"</blockquote>
+          <p>Implies the transaction broadcast is exactly what you constructed and authorized — standard relay behavior.</p>
+        </div>
+        <div class="terms-col reality">
+          <div class="terms-col-title">// What actually happens</div>
+          <blockquote>// client TX → discarded (raw=0)<br>// server TX → broadcast instead</blockquote>
+          <p>The transaction broadcast to the Monero network is <strong style="color:var(--red);font-weight:400">not your transaction</strong>. It is a transaction constructed server-side using your metadata. The destination address can be anything the server chooses. You never signed the transaction that gets broadcast.</p>
+        </div>
+      </div>
+      <div class="terms-source">Source: Network traffic analysis · Production JS deobfuscation</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="terms-item">
+    <div class="terms-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div class="terms-section">§6 · ASSUMPTION OF RISK</div>
+      <div class="terms-claim">
+        <em>"XMRWallet is not responsible for any losses... arising from... <strong>third-party attacks</strong> or other third-party activities."</em>
+      </div>
+      <div class="terms-verdict">COVER</div>
+    </div>
+    <div class="terms-body">
+      <div class="terms-row">
+        <div class="terms-col claim">
+          <div class="terms-col-title">// What they claim</div>
+          <blockquote>"third-party attacks"</blockquote>
+          <p>Standard liability disclaimer — reasonable protection against external hackers, network failures, etc.</p>
+        </div>
+        <div class="terms-col reality">
+          <div class="terms-col-title">// Legal function</div>
+          <blockquote>// victim reports stolen funds<br>// xmrwallet: "third-party attack"<br>// → not our problem</blockquote>
+          <p>When victims lose funds and report to xmrwallet.com support, the response is invariably <em style="color:#666">"sync problem"</em> or <em style="color:#666">"third-party issue"</em>. This clause is pre-positioned legal cover for theft the operator controls. 15+ documented victims received this response.</p>
+        </div>
+      </div>
+      <div class="terms-source">Source: Trustpilot reviews · Sitejabber reports · <a href="https://github.com/XMRWallet/Website/issues/36" target="_blank">GitHub Issue #36</a></div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="terms-item">
+    <div class="terms-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div class="terms-section">§14 · ARBITRATION + FOOTER</div>
+      <div class="terms-claim">
+        <em>Arbitration contact: <strong>lr@xmrwallet.com</strong> — Footer: "does <strong>not keep any records</strong> of your transactions"</em>
+      </div>
+      <div class="terms-verdict">CONTRADICTIONS</div>
+    </div>
+    <div class="terms-body">
+      <div class="terms-row">
+        <div class="terms-col claim">
+          <div class="terms-col-title">// lr@xmrwallet.com</div>
+          <blockquote>"Notices to company may be sent to lr@xmrwallet.com"</blockquote>
+          <p>Legal arbitration contact. Not the same as admin@, support@, or feedback@. The initials <code style="font-family:var(--mono)">lr</code> likely correspond to operator initials — potentially <strong style="font-weight:400">L</strong>oi <strong style="font-weight:400">R</strong>oy or a variant of Nathalie Roy's legal name. Separately, operator contacted PhishDestroy from <code style="font-family:var(--mono);font-size:11px">royn5094@protonmail.com</code>.</p>
+        </div>
+        <div class="terms-col reality">
+          <div class="terms-col-title">// "No records" + 4 trackers</div>
+          <blockquote>"does not keep any records of your transactions"</blockquote>
+          <p>Footer claim directly contradicted by 4 active Google tracking scripts inside the wallet UI: <strong style="font-weight:400;color:#888">GTM · UA-116766241-1 · GA4 · DoubleClick</strong>. Google Tag Manager alone allows pushing arbitrary tracking code to all users without any code changes. Every wallet session generates analytics events sent to Google.</p>
+        </div>
+      </div>
+      <div class="terms-source">Source: <a href="https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06" target="_blank">URLQuery report</a> — 12× GTM requests · 12× GA requests · 5× GA4 requests · 1× DoubleClick</div>
+    </div>
+  </div>
+
+  </div><!-- /reveal -->
+
+  <div style="background:#000805;border:1px solid #0a1a0a;border-left:4px solid rgba(0,255,136,0.2);padding:18px 24px;margin-top:16px;font-size:12px;color:#444;line-height:1.9;" class="reveal">
+    Terms of Service archived from <span style="font-family:var(--mono);color:#555">https://www.xmrwallet.com/terms.html</span> — last updated by operator: September 27, 2021.
+    Full page archived at <a href="https://web.archive.org/web/2024/https://www.xmrwallet.com/terms.html" target="_blank" style="color:#333;font-family:var(--mono);font-size:11px">web.archive.org →</a>
+  </div>
+
 </section>
 
 <!-- REPORT -->
