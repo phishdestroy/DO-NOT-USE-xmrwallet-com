@@ -426,23 +426,286 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
   <div class="section-label">Take Action</div>
   <h2 class="section-title reveal">REPORT &amp;<br>GET HELP</h2>
   <p class="section-intro reveal">Document everything: wallet address, TxID, TX Key, timestamps, screenshots. Do NOT pay any "recovery service" — that is a second scam targeting victims.</p>
+
+  <style>
+  .rpt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--border);margin-bottom:32px;}
+  .rpt-card{background:var(--bg2);padding:18px 20px;text-decoration:none;display:block;transition:background 0.2s;border-left:3px solid transparent;border-top:1px solid transparent;}
+  .rpt-card:hover{background:var(--bg3);border-left-color:var(--red);}
+  .rpt-flag{font-size:22px;margin-bottom:8px;display:block;line-height:1;}
+  .rpt-country{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#333;margin-bottom:4px;}
+  .rpt-name{font-size:13px;font-weight:500;color:#ccc;margin-bottom:4px;line-height:1.4;}
+  .rpt-url{font-family:var(--mono);font-size:10px;color:#333;}
+  .rpt-card:hover .rpt-url{color:var(--red);}
+
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);margin-bottom:32px;}
+  .tool-card{background:var(--bg2);padding:14px 18px;text-decoration:none;display:block;transition:background 0.2s;border-left:3px solid transparent;}
+  .tool-card:hover{background:var(--bg3);border-left-color:var(--blue);}
+  .tool-logo{height:22px;object-fit:contain;margin-bottom:10px;display:block;filter:brightness(0) invert(0.5);max-width:120px;}
+  .tool-card:hover .tool-logo{filter:brightness(0) invert(0.8);}
+  .tool-name{font-size:12px;font-weight:500;color:#888;margin-bottom:3px;}
+  .tool-url{font-family:var(--mono);font-size:10px;color:#333;}
+  .tool-card:hover .tool-url{color:var(--blue);}
+  .tool-tag{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:2px;border:1px solid var(--border2);color:#333;display:inline-block;margin-top:5px;}
+  .tool-tag.scan{border-color:#00A4EF44;color:#00A4EF88;}
+  .tool-tag.report{border-color:#ff3c3c44;color:#ff3c3c88;}
+  .tool-tag.intel{border-color:#f5790044;color:#f5790088;}
+  </style>
+
+  <!-- LAW ENFORCEMENT -->
   <div class="section-label reveal">Law Enforcement</div>
-  <div class="report-grid reveal">
-    <a class="report-item" href="https://ic3.gov" target="_blank"><div class="report-item-label">🇺🇸 United States</div><div class="report-item-title">FBI Internet Crime Complaint Center</div><div class="report-item-url">ic3.gov</div></a>
-    <a class="report-item" href="https://reportfraud.ftc.gov" target="_blank"><div class="report-item-label">🇺🇸 United States</div><div class="report-item-title">FTC Consumer Fraud</div><div class="report-item-url">reportfraud.ftc.gov</div></a>
-    <a class="report-item" href="https://www.actionfraud.police.uk" target="_blank"><div class="report-item-label">🇬🇧 United Kingdom</div><div class="report-item-title">Action Fraud</div><div class="report-item-url">actionfraud.police.uk</div></a>
-    <a class="report-item" href="https://www.europol.europa.eu/report-a-crime/report-cybercrime-online" target="_blank"><div class="report-item-label">🇪🇺 EU</div><div class="report-item-title">Europol Cybercrime</div><div class="report-item-url">europol.europa.eu</div></a>
-    <a class="report-item" href="https://www.antifraudcentre-centreantifraude.ca" target="_blank"><div class="report-item-label">🇨🇦 Canada</div><div class="report-item-title">Canadian Anti-Fraud Centre</div><div class="report-item-url">antifraudcentre.ca</div></a>
-    <a class="report-item" href="https://www.interpol.int/Crimes/Cybercrime" target="_blank"><div class="report-item-label">🌍 International</div><div class="report-item-title">Interpol Cybercrime</div><div class="report-item-url">interpol.int</div></a>
+  <div class="rpt-grid reveal">
+
+    <a class="rpt-card" href="https://ic3.gov" target="_blank">
+      <span class="rpt-flag">🇺🇸</span>
+      <div class="rpt-country">United States · FBI</div>
+      <div class="rpt-name">Internet Crime Complaint Center</div>
+      <div class="rpt-url">ic3.gov</div>
+    </a>
+
+    <a class="rpt-card" href="https://reportfraud.ftc.gov" target="_blank">
+      <span class="rpt-flag">🇺🇸</span>
+      <div class="rpt-country">United States · FTC</div>
+      <div class="rpt-name">Consumer Fraud Report</div>
+      <div class="rpt-url">reportfraud.ftc.gov</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.actionfraud.police.uk" target="_blank">
+      <span class="rpt-flag">🇬🇧</span>
+      <div class="rpt-country">United Kingdom · NFIB</div>
+      <div class="rpt-name">Action Fraud</div>
+      <div class="rpt-url">actionfraud.police.uk</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.europol.europa.eu/report-a-crime/report-cybercrime-online" target="_blank">
+      <span class="rpt-flag">🇪🇺</span>
+      <div class="rpt-country">European Union</div>
+      <div class="rpt-name">Europol Cybercrime</div>
+      <div class="rpt-url">europol.europa.eu</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.antifraudcentre-centreantifraude.ca" target="_blank">
+      <span class="rpt-flag">🇨🇦</span>
+      <div class="rpt-country">Canada · RCMP</div>
+      <div class="rpt-name">Canadian Anti-Fraud Centre</div>
+      <div class="rpt-url">antifraudcentre.ca</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.interpol.int/Crimes/Cybercrime" target="_blank">
+      <span class="rpt-flag">🌐</span>
+      <div class="rpt-country">International</div>
+      <div class="rpt-name">Interpol Cybercrime</div>
+      <div class="rpt-url">interpol.int</div>
+    </a>
+
   </div>
-  <div class="section-label reveal" style="margin-top:40px">Takedown Reports</div>
-  <div class="report-grid reveal">
-    <a class="report-item" href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank"><div class="report-item-label">Blocks in Chrome/Firefox</div><div class="report-item-title">Google Safe Browsing</div><div class="report-item-url">safebrowsing.google.com</div></a>
-    <a class="report-item" href="https://report.netcraft.com" target="_blank"><div class="report-item-label">Used by ISPs &amp; registrars</div><div class="report-item-title">Netcraft</div><div class="report-item-url">report.netcraft.com</div></a>
-    <a class="report-item" href="https://phishtank.org/add_web_phish.php" target="_blank"><div class="report-item-label">Community blocklist</div><div class="report-item-title">PhishTank</div><div class="report-item-url">phishtank.org</div></a>
-    <a class="report-item" href="mailto:abuse@namesilo.com"><div class="report-item-label">Domain Registrar</div><div class="report-item-title">NameSilo Abuse</div><div class="report-item-url">abuse@namesilo.com</div></a>
-    <a class="report-item" href="mailto:abuse@ddos-guard.net"><div class="report-item-label">Hosting Provider</div><div class="report-item-title">DDoS-Guard Abuse</div><div class="report-item-url">abuse@ddos-guard.net</div></a>
-    <a class="report-item" href="https://github.com/XMRWallet/Website/issues/36" target="_blank"><div class="report-item-label">Evidence Thread</div><div class="report-item-title">GitHub Issue #36</div><div class="report-item-url">github.com/XMRWallet/Website/issues/36</div></a>
+
+  <!-- TAKEDOWN REPORTS -->
+  <div class="section-label reveal" style="margin-top:40px">Takedown Reports — Domain &amp; Hosting</div>
+  <div class="rpt-grid reveal">
+
+    <a class="rpt-card" href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank">
+      <span class="rpt-flag"><img src="https://www.google.com/favicon.ico" style="width:22px;height:22px;filter:none" onerror="this.outerHTML='🛡️'"></span>
+      <div class="rpt-country">Blocks in Chrome · Firefox · Safari</div>
+      <div class="rpt-name">Google Safe Browsing</div>
+      <div class="rpt-url">safebrowsing.google.com</div>
+    </a>
+
+    <a class="rpt-card" href="https://report.netcraft.com/report" target="_blank">
+      <span class="rpt-flag"><img src="https://report.netcraft.com/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='🕸️'"></span>
+      <div class="rpt-country">Used by ISPs &amp; Registrars</div>
+      <div class="rpt-name">Netcraft</div>
+      <div class="rpt-url">report.netcraft.com</div>
+    </a>
+
+    <a class="rpt-card" href="https://phishtank.org/add_web_phish.php" target="_blank">
+      <span class="rpt-flag"><img src="https://phishtank.org/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='🐟'"></span>
+      <div class="rpt-country">Community Blocklist</div>
+      <div class="rpt-name">PhishTank</div>
+      <div class="rpt-url">phishtank.org</div>
+    </a>
+
+    <a class="rpt-card" href="https://phish.report/" target="_blank">
+      <span class="rpt-flag"><img src="https://phish.report/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='🎣'"></span>
+      <div class="rpt-country">Auto-reports to 6+ platforms</div>
+      <div class="rpt-name">Phish.Report</div>
+      <div class="rpt-url">phish.report</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.microsoft.com/en-us/wdsi/support/report-unsafe-site-guest" target="_blank">
+      <span class="rpt-flag"><img src="https://www.microsoft.com/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='🪟'"></span>
+      <div class="rpt-country">Blocks in Edge · SmartScreen</div>
+      <div class="rpt-name">Microsoft Defender</div>
+      <div class="rpt-url">microsoft.com/wdsi</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.spamhaus.org/" target="_blank">
+      <span class="rpt-flag"><img src="https://www.spamhaus.org/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='📮'"></span>
+      <div class="rpt-country">ISP &amp; Email blocklists</div>
+      <div class="rpt-name">Spamhaus</div>
+      <div class="rpt-url">spamhaus.org</div>
+    </a>
+
+    <a class="rpt-card" href="mailto:abuse@namesilo.com">
+      <span class="rpt-flag">📧</span>
+      <div class="rpt-country">Domain Registrar</div>
+      <div class="rpt-name">NameSilo Abuse</div>
+      <div class="rpt-url">abuse@namesilo.com</div>
+    </a>
+
+    <a class="rpt-card" href="mailto:abuse@ddos-guard.net">
+      <span class="rpt-flag">📧</span>
+      <div class="rpt-country">Hosting Provider</div>
+      <div class="rpt-name">DDoS-Guard Abuse</div>
+      <div class="rpt-url">abuse@ddos-guard.net</div>
+    </a>
+
+    <a class="rpt-card" href="https://github.com/XMRWallet/Website/issues/36" target="_blank">
+      <span class="rpt-flag"><img src="https://github.com/favicon.ico" style="width:22px;height:22px;filter:invert(1)" onerror="this.outerHTML='📌'"></span>
+      <div class="rpt-country">Evidence Thread</div>
+      <div class="rpt-name">GitHub Issue #36</div>
+      <div class="rpt-url">github.com/XMRWallet/Website/issues/36</div>
+    </a>
+
+    <a class="rpt-card" href="https://securityalliance.org/" target="_blank">
+      <span class="rpt-flag"><img src="https://securityalliance.org/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='🔐'"></span>
+      <div class="rpt-country">Web3 Security</div>
+      <div class="rpt-name">Security Alliance (SEAL)</div>
+      <div class="rpt-url">securityalliance.org</div>
+    </a>
+
+    <a class="rpt-card" href="https://linktr.ee/chainalysis" target="_blank">
+      <span class="rpt-flag"><img src="https://chainalysis.com/favicon.ico" style="width:22px;height:22px" onerror="this.outerHTML='⛓️'"></span>
+      <div class="rpt-country">Blockchain Intelligence</div>
+      <div class="rpt-name">Chainalysis</div>
+      <div class="rpt-url">chainalysis.com</div>
+    </a>
+
+  </div>
+
+  <!-- SCAN & ANALYZE TOOLS -->
+  <div class="section-label reveal" style="margin-top:40px">URL Scanners &amp; Threat Intelligence Tools</div>
+  <p class="wallet-cat-note reveal">Use these tools to analyze xmrwallet.com yourself and share results as additional evidence.</p>
+  <div class="tool-grid reveal">
+
+    <a class="tool-card" href="https://www.virustotal.com/gui/home/url" target="_blank">
+      <img class="tool-logo" src="https://www.virustotal.com/gui/images/favicon.png" onerror="this.style.display='none'" alt="VirusTotal">
+      <div class="tool-name">VirusTotal</div>
+      <div class="tool-url">virustotal.com</div>
+      <span class="tool-tag scan">80+ AV engines</span>
+    </a>
+
+    <a class="tool-card" href="https://urlscan.io/" target="_blank">
+      <img class="tool-logo" src="https://urlscan.io/favicon.ico" onerror="this.style.display='none'" alt="urlscan">
+      <div class="tool-name">urlscan.io</div>
+      <div class="tool-url">urlscan.io</div>
+      <span class="tool-tag scan">DOM · network · screenshot</span>
+    </a>
+
+    <a class="tool-card" href="https://urlquery.net/" target="_blank">
+      <img class="tool-logo" src="https://urlquery.net/static/images/urlquery.png" onerror="this.style.display='none'" alt="URLQuery">
+      <div class="tool-name">URLQuery</div>
+      <div class="tool-url">urlquery.net</div>
+      <span class="tool-tag scan">network behavior</span>
+    </a>
+
+    <a class="tool-card" href="https://phish.report/analysis" target="_blank">
+      <img class="tool-logo" src="https://phish.report/favicon.ico" onerror="this.style.display='none'" alt="phish.report">
+      <div class="tool-name">Phish.Report Analysis</div>
+      <div class="tool-url">phish.report/analysis</div>
+      <span class="tool-tag report">auto-takedown</span>
+    </a>
+
+    <a class="tool-card" href="https://checkphish.bolster.ai/" target="_blank">
+      <img class="tool-logo" src="https://checkphish.bolster.ai/favicon.ico" onerror="this.style.display='none'" alt="CheckPhish">
+      <div class="tool-name">CheckPhish (Bolster AI)</div>
+      <div class="tool-url">checkphish.bolster.ai</div>
+      <span class="tool-tag scan">AI phish detection</span>
+    </a>
+
+    <a class="tool-card" href="https://search.criminalip.io/domain" target="_blank">
+      <img class="tool-logo" src="https://www.criminalip.io/favicon.ico" onerror="this.style.display='none'" alt="CriminalIP">
+      <div class="tool-name">Criminal IP</div>
+      <div class="tool-url">criminalip.io</div>
+      <span class="tool-tag intel">IP · domain intel</span>
+    </a>
+
+    <a class="tool-card" href="https://www.isitphish.com/" target="_blank">
+      <img class="tool-logo" src="https://www.isitphish.com/favicon.ico" onerror="this.style.display='none'" alt="IsItPhish">
+      <div class="tool-name">IsItPhish</div>
+      <div class="tool-url">isitphish.com</div>
+      <span class="tool-tag scan">ML phish classifier</span>
+    </a>
+
+    <a class="tool-card" href="https://phishs.com/" target="_blank">
+      <img class="tool-logo" src="https://phishs.com/favicon.ico" onerror="this.style.display='none'" alt="phishs">
+      <div class="tool-name">Phishs.com</div>
+      <div class="tool-url">phishs.com</div>
+      <span class="tool-tag scan">phishing lookup</span>
+    </a>
+
+    <a class="tool-card" href="https://www.bitdefender.com/en-us/consumer/link-checker" target="_blank">
+      <img class="tool-logo" src="https://www.bitdefender.com/favicon.ico" onerror="this.style.display='none'" alt="Bitdefender">
+      <div class="tool-name">Bitdefender Link Checker</div>
+      <div class="tool-url">bitdefender.com</div>
+      <span class="tool-tag scan">AV engine</span>
+    </a>
+
+    <a class="tool-card" href="https://safeweb.norton.com/" target="_blank">
+      <img class="tool-logo" src="https://safeweb.norton.com/favicon.ico" onerror="this.style.display='none'" alt="Norton">
+      <div class="tool-name">Norton Safe Web</div>
+      <div class="tool-url">safeweb.norton.com</div>
+      <span class="tool-tag scan">reputation score</span>
+    </a>
+
+    <a class="tool-card" href="https://polyswarm.network/scan" target="_blank">
+      <img class="tool-logo" src="https://polyswarm.network/favicon.ico" onerror="this.style.display='none'" alt="PolySwarm">
+      <div class="tool-name">PolySwarm</div>
+      <div class="tool-url">polyswarm.network</div>
+      <span class="tool-tag intel">decentralized threat intel</span>
+    </a>
+
+    <a class="tool-card" href="https://sitereview.bluecoat.com/#/" target="_blank">
+      <img class="tool-logo" src="https://sitereview.bluecoat.com/favicon.ico" onerror="this.style.display='none'" alt="BlueCoat">
+      <div class="tool-name">Symantec Site Review</div>
+      <div class="tool-url">sitereview.bluecoat.com</div>
+      <span class="tool-tag scan">web filtering</span>
+    </a>
+
+    <a class="tool-card" href="https://sitecheck.sucuri.net/" target="_blank">
+      <img class="tool-logo" src="https://sucuri.net/wp-content/themes/sucuri-website/images/favicon.ico" onerror="this.style.display='none'" alt="Sucuri">
+      <div class="tool-name">Sucuri SiteCheck</div>
+      <div class="tool-url">sitecheck.sucuri.net</div>
+      <span class="tool-tag scan">malware scan</span>
+    </a>
+
+    <a class="tool-card" href="https://quttera.com/website-malware-scanner" target="_blank">
+      <img class="tool-logo" src="https://quttera.com/favicon.ico" onerror="this.style.display='none'" alt="Quttera">
+      <div class="tool-name">Quttera</div>
+      <div class="tool-url">quttera.com</div>
+      <span class="tool-tag scan">malware scanner</span>
+    </a>
+
+    <a class="tool-card" href="https://www.threatminer.org/" target="_blank">
+      <img class="tool-logo" src="https://www.threatminer.org/favicon.ico" onerror="this.style.display='none'" alt="ThreatMiner">
+      <div class="tool-name">ThreatMiner</div>
+      <div class="tool-url">threatminer.org</div>
+      <span class="tool-tag intel">OSINT · passive DNS</span>
+    </a>
+
+    <a class="tool-card" href="https://dnsdumpster.com/" target="_blank">
+      <img class="tool-logo" src="https://dnsdumpster.com/static/images/favicon.ico" onerror="this.style.display='none'" alt="DNSDumpster">
+      <div class="tool-name">DNSDumpster</div>
+      <div class="tool-url">dnsdumpster.com</div>
+      <span class="tool-tag intel">DNS · subdomain recon</span>
+    </a>
+
+    <a class="tool-card" href="https://www.scamadviser.com/" target="_blank">
+      <img class="tool-logo" src="https://www.scamadviser.com/images/static/logo/logo.svg" onerror="this.style.display='none'" alt="ScamAdviser">
+      <div class="tool-name">ScamAdviser</div>
+      <div class="tool-url">scamadviser.com</div>
+      <span class="tool-tag intel">trust score · reviews</span>
+    </a>
+
   </div>
   <div class="section-label reveal" style="margin-top:40px">Use These Instead — Verified Safe Wallets</div>
 
