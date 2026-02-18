@@ -1,46 +1,219 @@
-# Do Not Use XMRWallet.com
-
+# ⚠️ XMRWallet — Security Warning & Technical Analysis
 ![xmrwallet.com scam warning](1.png)
+## 🚨 Critical Notice
 
-This repository documents confirmed security issues with **www.xmrwallet.com**.
+**[WARNING]**
+This project has been identified as a **high-risk wallet implementation** with behavior consistent with fund compromise.
 
-⚠️ **[View the full evidence page →](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/)**
-
-## What's documented here
-
-- Private view key exfiltration (40+ requests per session)
-- Google Analytics + Tag Manager on a "private" wallet
-- Self-phishing infrastructure / typosquat domains
-- DDoS-Guard hosting to evade takedowns
-- Victim reports (590 XMR, 17 XMR, multiple accounts)
-- Deleted GitHub issues and fake Trustpilot reviews
-
-## Quick proof
-
-```python
-import base64
-# Decode part of any session_key from a live session:
-print(base64.b64decode("ZWZiYTEzZWNiOGIzNjA2NjBhM2RjYWFmYWY3Y2Y5OTE0OTcxM2QwNjRiOWQ2NDk5N2IyNDU0ZDU4ZWU2NzgwMA==").decode())
-# → efba13ecb8b360660a3dcaafaf7cf99149713d064b9d64997b2454d58ee67800
-#   ↑ private view key transmitted in session_key on every API request
-```
-
-## If you lost funds
-
-See [LOST_FUNDS.md](LOST_FUNDS.md) — checklist, explorer links, all report URLs.
-
-## Technical evidence
-
-- [Issue #36](https://github.com/XMRWallet/Website/issues/36) — view key exfiltration proof
-- [Issue #35](https://github.com/XMRWallet/Website/issues/35) — additional findings
-- [proof/TECHNICAL_EVIDENCE.md](proof/TECHNICAL_EVIDENCE.md)
-- [proof/GOOGLE_ANALYTICS_AND_VICTIMS.md](proof/GOOGLE_ANALYTICS_AND_VICTIMS.md)
-
-## Use instead
-
-- **Official Monero GUI** → https://getmonero.org/downloads
-- **Feather Wallet** → https://featherwallet.org
+This repository does NOT provide verifiable guarantees that the code served to users matches the code published here.
 
 ---
 
-*Research by [PhishDestroy](https://github.com/phishdestroy) · [destroylist](https://github.com/phishdestroy/destroylist) — 70,000+ blocked domains*
+## 🔍 Summary of Findings
+
+Independent analysis and OSINT data indicate:
+
+* ❌ Not a true client-side wallet
+* ❌ Server-side transaction construction
+* ❌ Sensitive data transmitted to backend
+* ❌ Production code differs from GitHub repository
+* ❌ Evidence of infrastructure reuse and typosquatting domains
+* ❌ Marketing patterns consistent with paid promotion / SEO manipulation
+
+**[NOTE]** Some findings are based on publicly available reports and observed behavior; independent verification is recommended.
+
+Independent technical analysis reveals:
+
+* ❌ Not a true client-side wallet
+* ❌ Server-side transaction construction
+* ❌ Sensitive data transmitted to backend
+* ❌ Production code differs from GitHub repository
+
+---
+
+## ⚙️ Technical Evidence
+
+### 1. Transaction Manipulation
+
+```js
+raw_tx_and_hash.raw = 0
+```
+
+* Client builds a transaction
+* Transaction is discarded
+* Only metadata is sent to server
+
+Server then:
+
+* Rebuilds transaction
+* Signs it
+* Broadcasts it
+
+➡️ **Result: full control over destination address**
+
+---
+
+### 2. Sensitive Data Exposure
+
+Observed in network traffic:
+
+* Wallet address
+* Private view key
+* Session-linked identifiers (`session_key`)
+* Seed phrase transmission (`login.php`)
+
+➡️ Server receives enough data to monitor and control wallet activity
+
+---
+
+### 3. Hidden Production Logic
+
+Not present in public repository:
+
+* `session_key`
+* `verification`
+* encrypted payload (`data`)
+
+➡️ No way to verify integrity of deployed code
+
+---
+
+### 4. Fake Transaction Records
+
+```js
+if(type == 'swept')
+```
+
+* Used for server-side initiated transfers
+* Marked as:
+
+  * `Unknown transaction id`
+
+➡️ Obfuscates fund movement
+
+---
+
+## 🌐 Infrastructure Indicators
+
+* Domain: xmrwallet.com
+
+* Related domains (typosquatting pattern observed):
+
+  * xmreallet.com
+  * xmrqallet.com
+  * xmrwalley.com
+  * xmrwallrt.com
+  * xmrwallwt.com
+
+* IP / CDN patterns:
+
+  * 186.2.165.49 (DDoS-Guard)
+  * Cloudflare-linked infrastructure (shared across domains)
+
+* Hosting characteristics:
+
+  * Abuse-resistant / offshore infrastructure (DDoS-Guard ecosystem)
+
+* Backend:
+
+  * Apache / PHP 8.2
+
+Tracking:
+
+* Google Analytics: UA-116766241-1
+
+---
+
+## 🕵️ Additional Risk Signals
+
+* No verified link between GitHub repository and production deployment
+* No signed releases or reproducible builds
+* Reports of deleted GitHub issues and missing records
+* Review platform anomalies (sudden rating changes, low-quality positive reviews)
+* Historical use of SEO content and third-party placements to drive traffic
+
+**[WARNING]** These patterns are commonly associated with high-risk or deceptive services in the cryptocurrency space.
+
+* Domain: xmrwallet.com
+* IP: 186.2.165.49
+* Hosting: DDoS-Guard (AS59692)
+* Backend: Apache / PHP 8.2
+
+Tracking:
+
+* Google Analytics: UA-116766241-1
+
+---
+
+## ⚠️ Architecture Risks
+
+* No reproducible builds
+* No signed releases
+* No CI/CD transparency
+* No cryptographic linkage between repo and production
+
+➡️ Users cannot verify what code is executed
+
+---
+
+## 💣 Impact
+
+**[IMPORTANT]**
+
+Using this wallet may result in:
+
+* Loss of funds
+* Transaction redirection
+* Key exposure
+* No recovery (Monero privacy)
+
+---
+
+## 🚫 Recommendation
+
+* Do NOT use this wallet
+* Do NOT enter seed phrases
+* Do NOT trust client-side claims
+
+Use:
+
+* Official Monero wallet
+* Audited open-source wallets
+* Hardware wallets
+
+---
+
+## 📢 Report Abuse
+
+[https://safebrowsing.google.com/safebrowsing/report_phish/](https://safebrowsing.google.com/safebrowsing/report_phish/)
+[https://report.netcraft.com](https://report.netcraft.com)
+[https://www.virustotal.com/gui/domain/xmrwallet.com](https://www.virustotal.com/gui/domain/xmrwallet.com)
+[https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06](https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06)
+
+---
+
+## 🧠 Conclusion
+
+Client-side simulation + server-side transaction control = **high-risk wallet model**.
+
+Combined with:
+
+* non-verifiable deployment
+* infrastructure clustering
+* observed data exposure
+
+➡️ This creates a **trust model incompatible with secure wallet design**.
+
+**Assessment:** High-risk / potentially malicious implementation (based on available evidence).
+
+Client-side simulation + server-side transaction control = **high-risk wallet model**.
+
+This design violates fundamental security expectations for cryptocurrency wallets.
+
+---
+
+## ⚠️ Disclaimer
+
+This document is based on publicly available analysis and observed behavior.
+
+Use at your own risk.
