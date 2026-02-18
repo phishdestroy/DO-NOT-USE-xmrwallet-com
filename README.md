@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/img/banner.svg" width="700"/>
+<img src="1.png" width="700"/>
 
 # DO-NOT-USE-xmrwallet-com
 
