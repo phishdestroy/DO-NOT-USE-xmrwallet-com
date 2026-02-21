@@ -2,9 +2,9 @@
 
 | Domain | Status | Registered | Expires | Registrar | IP / ASN |
 |--------|--------|-----------|---------|-----------|----------|
-| `xmrwallet.com` | 🔴 Active | 2016-08-29 | 2031-08-29 | NameSilo LLC | 186.2.165.49 / AS59692 IQWeb |
-| `xmrwallet.cc` | 🔴 Active | **2026-02-04** | **2034-02-04** | PublicDomainRegistry.com | 185.129.100.248 / AS57724 DDOS-GUARD RU |
-| `xmrwallet.biz` | 🔴 Active | **2026-02-09** | **2031-02-09** | WebNic.cc | 190.115.31.40 / AS59692 IQWeb BZ |
+| [`xmrwallet.com`](xmrwallet.com/) | 🔴 Active | 2016-08-29 | 2031-08-29 | NameSilo LLC | 186.2.165.49 / AS59692 IQWeb |
+| [`xmrwallet.cc`](xmrwallet.cc/) | 🔴 Active | **2026-02-04** | **2034-02-04** | PublicDomainRegistry.com | 185.129.100.248 / AS57724 DDOS-GUARD RU |
+| [`xmrwallet.biz`](xmrwallet.biz/) | 🔴 Active | **2026-02-09** | **2031-02-09** | WebNic.cc | 190.115.31.40 / AS59692 IQWeb BZ |
 | `xmrtor3fsapuu6y26za7vpzox4vpaj6ny5viq2arbmozm7kg6jitnlid.onion` | 🔴 Active | — | — | Tor v3 | — |
 | `xmrwalletdatuxms.onion` | ⚫ Dead | — | — | Tor v2 (deprecated) | — |
 | `xmreallet.com` | ⚫ Typosquat | — | — | — | — |
