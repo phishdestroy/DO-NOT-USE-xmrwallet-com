@@ -2,6 +2,10 @@
 
 <img src="1.png" width="700"/>
 
+<img src="22.png" width="700"/>
+
+> **xmrwallet.com · xmrwallet.cc · xmrwallet.biz · .onion — same scam, nowhere to run**
+
 # DO-NOT-USE-xmrwallet-com
 
 [![Stars](https://img.shields.io/github/stars/phishdestroy/DO-NOT-USE-xmrwallet-com?style=flat-square&color=FF0000)](https://github.com/phishdestroy/DO-NOT-USE-xmrwallet-com/stargazers)
