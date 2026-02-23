@@ -45,50 +45,105 @@
 
 ## 🗑 He Deleted the Evidence Instead of Proving He's Innocent
 
-On **2026-02-23**, after both escape domains (`xmrwallet.biz` and `xmrwallet.cc`) were suspended by registrars, the operator silently deleted GitHub Issues #35 and #36 — the full technical proof of the fraud mechanism.
+<div align="center">
 
-### The situation
+### ⚠️ On 2026-02-23 the operator silently deleted GitHub Issues #35 and #36
 
-The operator purchased **two new domains** — `xmrwallet.biz` (5 years prepaid) and `xmrwallet.cc` (8 years prepaid) — and configured them as redirects to `xmrwallet.com`. Both domains were immediately flagged by antivirus vendors. Both were suspended by their registrars after abuse reports.
+**Instead of proving he's not a thief — he deleted the proof that he is one.**
 
-**Zero commits were made to the GitHub repository during the domain migration.** No code changes, no deployment updates, no configuration files — nothing. For a project that claims to be "open source," switching to new domains without a single public commit is telling. There is nothing open about this. The backend is closed-source PHP running behind DDoS-Guard (offshore, abuse-resistant hosting in Belize). There is no CI/CD pipeline, no signed builds, no verifiable link between the GitHub repository and what the server actually serves to users.
+</div>
 
-The Wayback Machine and urlscan.io have archived snapshots of both domains during the period they were active — confirming the redirects, the identical infrastructure, and the antivirus detections. These archives exist independently and cannot be deleted.
+---
 
-### What was deleted
+### 🏃 Escape Domains → Caught → Deleted Everything
 
-| Issue | Content |
-|-------|---------|
-| **#35** — *Fake Monero Wallet (Server-Side TX Hijacking)* | `raw_tx_and_hash.raw = 0` proof, session_key decoded, all PHP endpoints, 5.3yr commit gap, operator identity, loss estimates |
-| **#36** — *Steals your Monero view key — live network capture* | 139 HTTP requests captured, private view key transmitted 43 times, backdoor session `8de50123dab32`, 2 wallets compromised as proof, JSON evidence files |
+The operator purchased **two new domains** and configured them as redirects to `xmrwallet.com`:
 
-### What cannot be deleted
+| Domain | Registrar | Prepaid | Hosting | Status |
+|--------|-----------|---------|---------|--------|
+| `xmrwallet.biz` | WebNic.cc | **5 years** | IQWeb / DDoS-Guard (Belize) | ✅ **SUSPENDED** |
+| `xmrwallet.cc` | PublicDomainRegistry | **8 years** | DDoS-Guard (Russia) | ✅ **SUSPENDED** |
+
+Both domains were **immediately flagged by antivirus vendors**. Both were suspended by registrars after abuse reports. The Wayback Machine and urlscan.io archived snapshots during the active period — confirming the redirects and the AV detections.
+
+**Zero commits were made to the GitHub repository during the domain migration.** No code changes, no config updates, nothing. For a project claiming to be "open source" — switching to new domains without a single public commit says everything. This is not open source. This is closed-source PHP behind offshore hosting.
+
+---
+
+### 📸 What the operator deleted — screenshots captured before deletion
+
+<div align="center">
+
+**Issue #35 — xmrwallet.com: Fake Monero Wallet (Server-Side TX Hijacking)**
+
+<img src="xmrwallet-scammer.png" width="700"/>
+
+> *Full code analysis: `raw_tx_and_hash.raw = 0`, session_key decoded, PHP endpoints, 5.3yr commit gap, operator identity*
+
+---
+
+**Issue #35 — PHP API Endpoints (production vs GitHub divergence)**
+
+<img src="dont-cry.png" width="700"/>
+
+> *Production-only parameters `session_key`, `verification`, `data` — none present in the public GitHub repository*
+
+---
+
+**Issue #35 — Production Auth Flow (not in GitHub)**
+
+<img src="try-to-delete-true.png" width="700"/>
+
+> *GitHub: 2-part response. Production: 3-part response with `session_key = token : base64(address) : base64(viewkey)`*
+
+---
+
+**VirusTotal — 6/93 security vendors flag xmrwallet.com as malicious**
+
+<img src="old-ru-dog.png" width="700"/>
+
+> *ADMINUSLabs: Malicious · Fortinet: Phishing · CyRadar: Malicious · Lionic: Malicious · Seclookup: Malicious · Webroot: Malicious*
+
+</div>
+
+---
+
+### 🔗 What he can't delete — archived copies
 
 | Archive | Link |
 |---------|------|
-| **Full archived page with screenshots and decoded keys** | [phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) |
-| Yandex Cache — Issue #35 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html) |
-| Yandex Cache — Issue #36 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771433984&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/36&l10n=en&mime=html&sign=f6c51fe15c6b6f2be2b8e77ea03721b6&keyno=0) |
-| Wayback Machine | [web.archive.org →](https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/35) |
-| VirusTotal — 6/93 vendors flag as malicious | [virustotal.com →](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
-| This repository | All evidence reproduced below |
+| 📦 **Full archived page** (screenshots, code, decoded keys) | **[phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html)** |
+| 📋 Yandex Cache — Issue #35 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html) |
+| 📋 Yandex Cache — Issue #36 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771433984&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/36&l10n=en&mime=html&sign=f6c51fe15c6b6f2be2b8e77ea03721b6&keyno=0) |
+| 🕐 Wayback Machine | [web.archive.org →](https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/35) |
+| 🛡 VirusTotal — 6/93 malicious | [virustotal.com →](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
 
-### 8 years of operation. 21+ deleted issues. Zero technical rebuttals.
+---
 
-Not once has the operator produced:
+### ❌ 8 years. 21+ deleted issues. Zero rebuttals.
 
-- ❌ A network capture proving the view key is NOT sent to the server
-- ❌ Code proving the signed transaction IS broadcast (instead of `raw = 0`)
-- ❌ An explanation for why `session_key` contains `base64(private_viewkey)`
-- ❌ An explanation for the unexplained session `8de50123dab32`
-- ❌ An explanation for the `swept` transaction type that does not exist in Monero
-- ❌ Any technical counter-argument — ever
+In 8 years of operation the operator has **never once** produced:
 
-### Why this matters
+| What we asked | What we got |
+|---------------|-------------|
+| Network capture proving viewkey is NOT sent to server | ❌ Nothing |
+| Code proving signed TX IS broadcast (not `raw = 0`) | ❌ Nothing |
+| Explanation for `session_key` containing `base64(viewkey)` | ❌ Nothing |
+| Explanation for backdoor session `8de50123dab32` | ❌ Nothing |
+| Explanation for `swept` TX type (not in Monero) | ❌ Nothing |
+| Any technical counter-argument of any kind | ❌ **Nothing. Ever.** |
 
-It is unclear why the operator reacted so aggressively to the publication of these findings — registering escape domains within days, then deleting the evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
+---
 
-Regardless: deleting our work does not make it disappear. Every finding is archived, cached, and reproduced in this repository. And for every piece of our research that gets deleted — we will be compelled to remove a corresponding piece of the fraudulent infrastructure. The .biz and .cc suspensions were the beginning.
+### ⚠️ Consequences
+
+It is unclear why the operator reacted so aggressively — registering escape domains within days, then deleting all evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
+
+**Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we will remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning.
+
+---
+
+### 📅 Timeline
 
 ```
 2026-02-04  xmrwallet.cc registered secretly — 8yr prepaid, redirect to .com
@@ -99,7 +154,7 @@ Regardless: deleting our work does not make it disappear. Every finding is archi
 2026-02-??  ✅ xmrwallet.biz — SUSPENDED by registrar (AV detections)
 2026-02-??  ✅ xmrwallet.cc — SUSPENDED by registrar (AV detections)
 2026-02-23  🗑 Operator deletes Issues #35 + #36. No rebuttal. Just deletion.
-2026-02-23  📦 Full evidence archived permanently. This page deployed.
+2026-02-23  📦 Full evidence archived. You're reading it now.
 ```
 
 ---

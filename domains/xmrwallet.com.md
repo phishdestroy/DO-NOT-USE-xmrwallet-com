@@ -14,4 +14,4 @@
 - /support_login.html backdoor
 - URLQuery: https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06
 - VirusTotal: https://www.virustotal.com/gui/domain/www.xmrwallet.com
-- GitHub: https://github.com/XMRWallet/Website/issues/36
+- GitHub: Issues #35 & #36 — deleted by operator, archived at https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
