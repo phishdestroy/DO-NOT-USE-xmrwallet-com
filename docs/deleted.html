@@ -4,10 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DELETED EVIDENCE &#x2014; xmrwallet.com GitHub Issues #35 &amp; #36 &#x2014; Archived by PhishDestroy</title>
-<meta name="description" content="Archived GitHub issues #35 and #36 from XMRWallet/Website &#x2014; deleted by operator after .biz and .cc domains were suspended. Full technical evidence preserved.">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="xmrwallet.com DELETED evidence &#x2014; archived by PhishDestroy">
-<meta property="og:description" content="Operator deleted GitHub issues #35 and #36 after .biz and .cc were suspended. Full archive here.">
+<meta name="description" content="Operator of xmrwallet.com deleted GitHub issues #35 and #36 containing proof of server-side TX hijacking and view key theft. Full evidence archived here &#x2014; screenshots, code analysis, network captures.">
+<meta name="keywords" content="xmrwallet deleted issues, xmrwallet evidence deleted, xmrwallet.com scam proof, xmrwallet github issues, xmrwallet coverup, xmrwallet raw_tx_and_hash, xmrwallet session_key, monero wallet scam evidence, xmrwallet nathroy, phishdestroy archive">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="PhishDestroy Research">
+<link rel="canonical" href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xmrwallet.com DELETED evidence &#x2014; operator destroyed proof of theft">
+<meta property="og:description" content="GitHub issues #35 (TX hijacking) and #36 (view key theft) deleted by operator after escape domains suspended. Full archive with screenshots, code, network captures.">
+<meta property="og:url" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html">
+<meta property="og:image" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/img/issue35-overview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="xmrwallet.com deleted the evidence &#x2014; we archived it">
+<meta name="twitter:description" content="Issues #35 + #36 deleted. TX hijacking proof, view key theft, 15+ victims. Full archive.">
+<meta name="twitter:image" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/img/issue35-overview.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com operator deleted GitHub evidence of Monero theft","author":{"@type":"Organization","name":"PhishDestroy","url":"https://phishdestroy.io"},"datePublished":"2026-02-23","description":"Archived GitHub issues #35 and #36 from XMRWallet/Website — deleted by operator after escape domains were suspended. Server-side TX hijacking and view key exfiltration confirmed.","publisher":{"@type":"Organization","name":"PhishDestroy"}}</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><rect width='4' height='32' fill='%23FF2020'/><text x='8' y='24' font-family='monospace' font-size='20' fill='%23FF2020'>&#x26a0;</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
@@ -114,7 +126,45 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
 .footer-right a:hover{color:var(--text);}
 @keyframes blink{50%{opacity:0}}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.7}}
-@media(max-width:768px){.section{padding:60px 20px;}nav{padding:12px 20px;}.nav-links{display:none;}.cards-2,.vt-grid{grid-template-columns:1fr;}footer{padding:32px 20px;flex-direction:column;}.tl-date{width:100px;font-size:10px;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.section{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.section.in-view{opacity:1;transform:translateY(0);}
+.screenshot-frame{transition:transform 0.3s ease,box-shadow 0.3s ease;}
+.screenshot-frame:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,32,32,0.1);}
+.code-block{transition:border-color 0.3s ease;}
+.code-block:hover{border-color:var(--red);}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
+@media(max-width:768px){
+  .section,.deleted-hero{padding:60px 20px;}
+  .deleted-hero{padding-top:100px;min-height:auto!important;}
+  .deleted-hero h1{font-size:clamp(36px,10vw,60px)!important;}
+  nav{padding:12px 16px;}
+  .nav-links{display:none;}
+  .cards-2,.vt-grid{grid-template-columns:1fr;}
+  footer{padding:32px 20px;flex-direction:column;}
+  .tl-date{width:80px;font-size:9px;}
+  .tl-title{font-size:12px;}
+  .section-title{font-size:clamp(28px,8vw,48px);}
+  .code-block{font-size:10px;padding:14px 16px;word-break:break-all;white-space:pre-wrap;}
+  .archive-box{padding:14px 16px;font-size:11px;}
+  .del-banner{padding:16px 20px;}
+  .screenshot-frame-bar{padding:8px 12px;}
+  .issue-header{padding:16px 18px;}
+  .issue-body{padding:16px 20px;}
+  .ioc-table{font-size:10px;}
+  .ioc-table td,.ioc-table th{padding:8px 10px;}
+  div[style*="grid-template-columns:1fr 1fr 1fr 1fr 1fr"]{grid-template-columns:1fr!important;}
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+  .vt-num{font-size:48px;}
+  .vt-score{flex-direction:column;text-align:center;}
+}
+@media(max-width:480px){
+  .section{padding:40px 14px;}
+  .section-title{font-size:clamp(24px,7vw,36px);}
+  .nav-logo{font-size:9px;letter-spacing:1px;}
+}
 </style>
 </head>
 <body>
@@ -132,7 +182,7 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
 </nav>
 
 <!-- HERO -->
-<section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:120px 80px 60px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);">
+<section class="deleted-hero" style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:120px 80px 60px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);">
   <div style="position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,32,32,0.06) 0%,transparent 65%);pointer-events:none;animation:pulse 4s ease-in-out infinite;"></div>
   <div style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;">
     <span style="width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.2s step-end infinite;flex-shrink:0;display:inline-block;"></span>
@@ -187,8 +237,8 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
 <!-- DELETION TIMELINE -->
 <section class="section" id="deletion">
   <div class="section-label">Evidence of Coverup</div>
-  <h2 class="section-title">THE DELETION<br>TIMELINE</h2>
-  <p class="section-intro">After xmrwallet.biz and xmrwallet.cc were suspended by registrars, the operator silently deleted GitHub issues #35 and #36. Full documented sequence below.</p>
+  <h2 class="section-title reveal">THE DELETION<br>TIMELINE</h2>
+  <p class="section-intro reveal">After xmrwallet.biz and xmrwallet.cc were suspended by registrars, the operator silently deleted GitHub issues #35 and #36. Full documented sequence below.</p>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-date">2016-??-??</div>
@@ -297,8 +347,8 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
 <!-- SCREENSHOTS -->
 <section class="section" id="issue35">
   <div class="section-label">Archived &#x2014; GitHub Issue #35</div>
-  <h2 class="section-title">ISSUE #35<br>ORIGINAL SCREENSHOTS</h2>
-  <p class="section-intro">Captured before deletion. Status: <strong style="color:var(--green);font-weight:400;">Open</strong> at time of capture. Deleted by operator after both domains were suspended.</p>
+  <h2 class="section-title reveal">ISSUE #35<br>ORIGINAL SCREENSHOTS</h2>
+  <p class="section-intro reveal">Captured before deletion. Status: <strong style="color:var(--green);font-weight:400;">Open</strong> at time of capture. Deleted by operator after both domains were suspended.</p>
 
   <div class="screenshot-frame">
     <div class="screenshot-frame-bar">
@@ -482,8 +532,8 @@ $.ajax({{ url: <span class="c-val">'/submittransaction.php'</span>, data: {{
 <!-- ISSUE #36 -->
 <section class="section" id="issue36">
   <div class="section-label">Archived &#x2014; GitHub Issue #36</div>
-  <h2 class="section-title">ISSUE #36<br>LIVE NETWORK CAPTURE</h2>
-  <p class="section-intro">Published 2026-02-18 with two JSON artifacts attached. 109 total captured requests. View key confirmed transmitted 43 times in single session. Backdoor session detected.</p>
+  <h2 class="section-title reveal">ISSUE #36<br>LIVE NETWORK CAPTURE</h2>
+  <p class="section-intro reveal">Published 2026-02-18 with two JSON artifacts attached. 109 total captured requests. View key confirmed transmitted 43 times in single session. Backdoor session detected.</p>
 
   <div class="issue-header">
     <div class="issue-number">#36</div>
@@ -559,8 +609,8 @@ session_id = <span class="c-red">8de50123dab32</span>   &#x2192; <span class="c-
 <!-- NETWORK DATA -->
 <section class="section" id="network">
   <div class="section-label">Raw Evidence &#x2014; JSON Artifacts</div>
-  <h2 class="section-title">NETWORK CAPTURE<br>RAW DATA</h2>
-  <p class="section-intro">Two JSON files captured 2026-02-18 15:07 UTC via Firefox webRequest API. All numbers directly from JSON &#x2014; reproducible by anyone with the attached files.</p>
+  <h2 class="section-title reveal">NETWORK CAPTURE<br>RAW DATA</h2>
+  <p class="section-intro reveal">Two JSON files captured 2026-02-18 15:07 UTC via Firefox webRequest API. All numbers directly from JSON &#x2014; reproducible by anyone with the attached files.</p>
 
   <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin-bottom:16px;">// request_analytics_2026-02-18T15-07-55.json &#x2014; DOMAIN TRAFFIC</div>
   <table class="ioc-table">
@@ -656,8 +706,8 @@ session_id = <span class="c-red">8de50123dab32</span>   &#x2192; <span class="c-
 <!-- VIRUSTOTAL -->
 <section class="section" id="virustotal">
   <div class="section-label">External Validation</div>
-  <h2 class="section-title">VIRUSTOTAL<br>6 / 93 FLAGGED</h2>
-  <p class="section-intro">Captured 2026-02-18. 6 independent security vendors flagged www.xmrwallet.com as malicious or phishing. Community score: &#x2212;2. Domain operational since 2016.</p>
+  <h2 class="section-title reveal">VIRUSTOTAL<br>6 / 93 FLAGGED</h2>
+  <p class="section-intro reveal">Captured 2026-02-18. 6 independent security vendors flagged www.xmrwallet.com as malicious or phishing. Community score: &#x2212;2. Domain operational since 2016.</p>
 
   <div class="vt-score">
     <div class="vt-num">6</div>
@@ -702,7 +752,7 @@ session_id = <span class="c-red">8de50123dab32</span>   &#x2192; <span class="c-
 <!-- OPERATOR -->
 <section class="section">
   <div class="section-label">Operator Intelligence</div>
-  <h2 class="section-title">NATHALIE ROY<br>OPERATOR PROFILE</h2>
+  <h2 class="section-title reveal">NATHALIE ROY<br>OPERATOR PROFILE</h2>
   <div class="cards-2">
     <div class="card2"><div class="card2-title">GitHub Identity</div><div class="card2-val">nathroy &#xb7; ID: 39167759<br>Created: 2018-05-10 (same day as XMRWallet org)<br>XMRWallet org &#xb7; 24 forks &#xb7; 21+ issues deleted</div></div>
     <div class="card2"><div class="card2-title">Self-Identification</div><div class="card2-val" style="font-size:11px;color:#666;">"Nathalie Roy created XMRWallet to facilitate the usage of monero without having to download or compile any software. XMRWallet will always be completely free to use and rely solely on donations."<br><span style="color:#333;font-size:10px;">&#x2014; support.html (self-doxed)</span></div></div>
@@ -766,5 +816,39 @@ session_id = <span class="c-red">8de50123dab32</span>   &#x2192; <span class="c-
   </div>
 </footer>
 
+<script>
+// Reveal on scroll
+const obs = new IntersectionObserver(e => e.forEach(x => {
+  if(x.isIntersecting){
+    x.target.classList.add('visible');
+    if(x.target.tagName === 'SECTION') x.target.classList.add('in-view');
+  }
+}),{threshold:0.06});
+document.querySelectorAll('.reveal,section.section').forEach(el=>obs.observe(el));
+
+// Smooth reveal for screenshot frames
+document.querySelectorAll('.screenshot-frame,.del-banner,.archive-box,.code-block').forEach(el=>{
+  el.classList.add('reveal');
+  obs.observe(el);
+});
+
+// Animate stat numbers in hero
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const countObs = new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      const target = +el.dataset.count;
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 25));
+      const timer = setInterval(()=>{
+        current += step;
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current + (el.dataset.suffix || '');
+      }, 40);
+      countObs.disconnect();
+    }
+  },{threshold:0.5});
+  countObs.observe(el);
+});
+</script>
 </body>
 </html>
