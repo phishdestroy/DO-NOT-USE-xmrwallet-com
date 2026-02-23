@@ -122,8 +122,8 @@ Open a GitHub issue here:
 
 Or reference our investigation (operator deleted originals — full archive preserved):
 - https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
-- Yandex Cache #35: ~~expired~~ (was cached, Yandex purged after deletion)
-- Yandex Cache #36: ~~expired~~ (was cached, Yandex purged after deletion)
+- Issue #35 cached copy (full HTML): https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue35/
+- Yandex Cache #36: ~~expired~~ (Yandex purged cache)
 - Full local archive with screenshots and code: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
 
 All reports are handled confidentially. We do not publish personal information

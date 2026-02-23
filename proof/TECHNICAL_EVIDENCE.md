@@ -66,6 +66,6 @@ print(base64.b64decode(vk_b64).decode())
 ## GitHub Issues (deleted by operator — archived)
 
 - Archive: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
-- Yandex Cache #35: ~~expired~~ (was cached, Yandex purged after deletion)
-- Yandex Cache #36: ~~expired~~ (was cached, Yandex purged after deletion)
+- Issue #35 cached copy (full HTML): https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue35/
+- Yandex Cache #36: ~~expired~~ (Yandex purged cache)
 - Full local archive with screenshots and code: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html

@@ -113,8 +113,8 @@ Both domains were **immediately flagged by antivirus vendors**. Both were suspen
 | Archive | Link |
 |---------|------|
 | 📦 **Full archived page** (screenshots, code, decoded keys) | **[phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html)** |
-| 📋 Yandex Cache — Issue #35 | ~~expired~~ — was cached before deletion, Yandex purged it |
-| 📋 Yandex Cache — Issue #36 | ~~expired~~ — was cached before deletion, Yandex purged it |
+| 📋 Issue #35 — full cached copy (HTML + CSS + screenshots) | **[cache-issue35 →](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue35/)** |
+| 📋 Yandex Cache — Issue #36 | ~~expired~~ — Yandex purged cache |
 | 🕐 Wayback Machine | no snapshots captured before deletion |
 | 🛡 VirusTotal — 6/93 malicious | [virustotal.com →](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
 
