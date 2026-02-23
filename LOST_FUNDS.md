@@ -58,8 +58,9 @@ Screenshot everything. Save the URLs.
 - Europol (EU) → https://www.europol.europa.eu/report-a-crime/report-cybercrime-online
 - Canadian Anti-Fraud Centre → https://www.antifraudcentre-centreantifraude.ca
 
-**Our investigation (open an issue with your details):**
-→ https://github.com/XMRWallet/Website/issues
+**Our investigation (operator deleted issues #35 + #36 — full archive preserved):**
+→ https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
+→ https://github.com/phishdestroy/DO-NOT-USE-xmrwallet-com/issues
 
 ---
 

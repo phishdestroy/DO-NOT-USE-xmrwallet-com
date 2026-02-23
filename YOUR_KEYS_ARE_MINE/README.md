@@ -25,4 +25,4 @@ print(base64.b64decode(part).decode())
 # ↑ that's a real private view key captured from live traffic
 ```
 
-Full proof: https://github.com/XMRWallet/Website/issues/36
+Full proof (operator deleted originals, archived here): https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
