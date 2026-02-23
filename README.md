@@ -113,9 +113,9 @@ Both domains were **immediately flagged by antivirus vendors**. Both were suspen
 | Archive | Link |
 |---------|------|
 | 📦 **Full archived page** (screenshots, code, decoded keys) | **[phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html)** |
-| 📋 Yandex Cache — Issue #35 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html) |
-| 📋 Yandex Cache — Issue #36 | [yandexwebcache.net →](https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771433984&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/36&l10n=en&mime=html&sign=f6c51fe15c6b6f2be2b8e77ea03721b6&keyno=0) |
-| 🕐 Wayback Machine | [web.archive.org →](https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/35) |
+| 📋 Yandex Cache — Issue #35 | ~~expired~~ — was cached before deletion, Yandex purged it |
+| 📋 Yandex Cache — Issue #36 | ~~expired~~ — was cached before deletion, Yandex purged it |
+| 🕐 Wayback Machine | no snapshots captured before deletion |
 | 🛡 VirusTotal — 6/93 malicious | [virustotal.com →](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
 
 ---
@@ -286,8 +286,8 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 | Type | Value | Notes |
 |------|-------|-------|
 | Domain | `xmrwallet.com` | NameSilo, paid until 2031 |
-| Domain | `xmrwallet.cc` | **Active** alternative domain |
-| Domain | `xmrwallet.biz` | **Active** alternative domain |
+| Domain | `xmrwallet.cc` | ✅ **SUSPENDED** by PDR |
+| Domain | `xmrwallet.biz` | ✅ **SUSPENDED** by WebNic |
 | Tor v3 | `xmrtor3fsapuu6y26za7vpzox4vpaj6ny5viq2arbmozm7kg6jitnlid.onion` | **Active** current onion |
 | Tor v2 | `xmrwalletdatuxms.onion` | Historical (deprecated) |
 | IP | `186.2.165.49` | DDoS-Guard subsidiary AS59692 |

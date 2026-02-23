@@ -66,5 +66,6 @@ print(base64.b64decode(vk_b64).decode())
 ## GitHub Issues (deleted by operator — archived)
 
 - Archive: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
-- Yandex Cache #35: https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html
-- Yandex Cache #36: https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771433984&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/36&l10n=en&mime=html&sign=f6c51fe15c6b6f2be2b8e77ea03721b6&keyno=0
+- Yandex Cache #35: ~~expired~~ (was cached, Yandex purged after deletion)
+- Yandex Cache #36: ~~expired~~ (was cached, Yandex purged after deletion)
+- Full local archive with screenshots and code: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html
