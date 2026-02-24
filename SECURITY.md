@@ -91,10 +91,10 @@ that cannot be altered by xmrwallet.com.
 
 #### Report to the domain registrar directly
 
-Current registrar for xmrwallet.com: **NameCheap** (as of last WHOIS check)
+Current registrar for xmrwallet.com: **NameSilo** (confirmed via WHOIS)
 
-- NameCheap abuse: https://www.namecheap.com/legal/general/abuse-policy/
-- Email: abuse@namecheap.com
+- NameSilo abuse: https://www.namesilo.com/report-abuse
+- Email: abuse@namesilo.com
 
 #### Report to hosting / infrastructure
 

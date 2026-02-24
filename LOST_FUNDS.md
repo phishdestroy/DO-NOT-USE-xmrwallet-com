@@ -47,7 +47,7 @@ Screenshot everything. Save the URLs.
 2. Netcraft → https://report.netcraft.com
 3. PhishTank → https://phishtank.org/add_web_phish.php
 4. APWG → https://apwg.org/reportphishing/
-5. Registrar abuse → abuse@namecheap.com
+5. Registrar abuse → abuse@namesilo.com
 6. Host abuse → abuse@ddos-guard.net
 
 **Law enforcement (file in your country + IC3 regardless of country):**
