@@ -41,8 +41,8 @@ nav.scrolled{padding:8px 40px;box-shadow:0 4px 30px rgba(255,32,32,0.04);}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--red);transition:width 0.3s ease;}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:120px 80px 60px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(255,32,32,0.08) 0%,transparent 65%);animation:pulse 4s ease-in-out infinite;pointer-events:none;}
-.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,122,0,0.04) 0%,transparent 65%);animation:pulse 6s ease-in-out infinite reverse;pointer-events:none;}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(255,32,32,0.08) 0%,transparent 65%);animation:pulse 4s ease-in-out infinite;pointer-events:none;transform:translate(var(--px,0),var(--py,0));transition:transform 0.3s ease-out;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,122,0,0.04) 0%,transparent 65%);animation:pulse 6s ease-in-out infinite reverse;pointer-events:none;transform:translate(calc(var(--px,0) * -0.5),calc(var(--py,0) * -0.5));transition:transform 0.3s ease-out;}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.7}}
 .hero-tag{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
 .blink{width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.2s step-end infinite;flex-shrink:0;}
@@ -1359,14 +1359,42 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
 </footer>
 
 <script>
-// Reveal on scroll
+// Reveal on scroll with staggered delays
 const obs = new IntersectionObserver(e => e.forEach(x => {
   if(x.isIntersecting){
     x.target.classList.add('visible');
     if(x.target.classList.contains('section')) x.target.classList.add('in-view');
+    // Stagger children inside cards grids
+    if(x.target.classList.contains('cards')){
+      x.target.querySelectorAll('.card').forEach((c,i)=>{
+        c.style.transitionDelay = (i * 0.06) + 's';
+      });
+    }
   }
-}),{threshold:0.08});
+}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.section,.cards').forEach(el=>obs.observe(el));
+
+// Nav scroll state + active section highlighting
+const navEl = document.querySelector('nav');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = Array.from(document.querySelectorAll('.section[id]'));
+
+function updateNav(){
+  const sy = window.scrollY;
+  // Compact nav on scroll
+  if(sy > 80) navEl.classList.add('scrolled');
+  else navEl.classList.remove('scrolled');
+  // Active section link
+  let current = '';
+  sections.forEach(s => {
+    if(sy >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+window.addEventListener('scroll', updateNav, {passive:true});
+updateNav();
 
 // Accordion for attack steps
 document.querySelectorAll('.atk-step-header').forEach(h=>{
@@ -1378,20 +1406,26 @@ document.querySelectorAll('.atk-step-header').forEach(h=>{
 });
 document.querySelector('.atk-step')?.classList.add('open');
 
-// Counter animation for hero stats
+// Counter animation with easing
 function animateCounters(){
   document.querySelectorAll('.hstat-n[data-target]').forEach(el=>{
     if(el.dataset.done) return;
     const target = +el.dataset.target;
     const prefix = el.dataset.prefix || '';
     const suffix = el.dataset.suffix || '';
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 30));
-    const timer = setInterval(()=>{
-      current += step;
-      if(current >= target){ current = target; clearInterval(timer); el.dataset.done='1'; }
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now){
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutExpo
+      const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const current = Math.round(target * eased);
       el.textContent = prefix + current + suffix;
-    }, 40);
+      if(progress < 1) requestAnimationFrame(tick);
+      else el.dataset.done = '1';
+    }
+    requestAnimationFrame(tick);
   });
 }
 
@@ -1411,7 +1445,7 @@ document.querySelectorAll('.terms-header').forEach(h=>{
 });
 
 // Smooth scroll for nav links
-document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
+navLinks.forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
     const t=document.querySelector(a.getAttribute('href'));
@@ -1419,14 +1453,25 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
   });
 });
 
-// Progress bar on scroll
+// Progress bar on scroll — red gradient
 const prog = document.createElement('div');
-prog.style.cssText='position:fixed;top:0;left:0;height:2px;background:var(--red);z-index:200;transition:width 0.1s;width:0';
+prog.style.cssText='position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--orange));z-index:200;transition:width 0.15s ease-out;width:0;box-shadow:0 0 8px rgba(255,32,32,0.4);';
 document.body.appendChild(prog);
 window.addEventListener('scroll',()=>{
   const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
   prog.style.width = pct + '%';
-});
+},{passive:true});
+
+// Subtle parallax on hero background orbs
+const hero = document.querySelector('.hero');
+if(hero){
+  window.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    hero.style.setProperty('--px', x + 'px');
+    hero.style.setProperty('--py', y + 'px');
+  }, {passive:true});
+}
 </script>
 </body>
 </html>
