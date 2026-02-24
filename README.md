@@ -43,6 +43,28 @@
 
 ---
 
+## 🪞 Mirrors — You Cannot Delete What's Everywhere
+
+> **The operator deletes evidence. We multiply it. Every mirror is independently hosted, SEO-indexed, and uncensorable.**
+
+| Platform | URL | Status |
+|----------|-----|--------|
+| **GitHub Pages** | [phishdestroy.github.io/DO-NOT-USE-xmrwallet-com](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) | 🟢 Primary |
+| **Vercel** | [xmrwallet-scam.vercel.app](https://xmrwallet-scam.vercel.app/) | 🟢 Mirror |
+| **Cloudflare Pages** | [xmrwallet-scam.pages.dev](https://xmrwallet-scam.pages.dev/) | 🟢 Mirror |
+| **Netlify** | [xmrwallet-scam.netlify.app](https://xmrwallet-scam.netlify.app/) | 🟢 Mirror |
+| **Surge.sh** | [xmrwallet-scam.surge.sh](https://xmrwallet-scam.surge.sh/) | 🟢 Mirror |
+| **Render** | [xmrwallet-scam.onrender.com](https://xmrwallet-scam.onrender.com/) | 🟢 Mirror |
+| **GitLab Pages** | [phishdestroy.gitlab.io/xmrwallet-scam](https://phishdestroy.gitlab.io/xmrwallet-scam/) | 🟢 Mirror |
+| **Codeberg** | [phishdestroy.codeberg.page](https://phishdestroy.codeberg.page/) | 🟢 Mirror |
+| **IPFS** | Pin folder → permanent CID | 🟢 Mirror |
+
+Each mirror has its own SEO-optimized canonical URL, Schema.org markup, sitemap, and platform-specific configuration. Google indexes each independently.
+
+**For the operator:** you wanted us to remove the research. For every piece you delete — we deploy another mirror. The `.biz` and `.cc` suspensions were the beginning. This list will only grow.
+
+---
+
 ## 🗑 He Deleted the Evidence Instead of Proving He's Innocent
 
 <div align="center">
@@ -140,6 +162,44 @@ In 8 years of operation the operator has **never once** produced:
 It is unclear why the operator reacted so aggressively — registering escape domains within days, then deleting all evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
 
 **Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we will remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning.
+
+---
+
+## 📝 Guest Posts / Articles
+
+Detailed investigative articles covering every aspect of the xmrwallet.com scam operation:
+
+| File | Title |
+|------|-------|
+| [post-xmrwallet-scam-exposed.html](post-xmrwallet-scam-exposed.html) | **xmrwallet.com Scam Exposed** |
+| [post-xmrwallet-deleted-evidence.html](post-xmrwallet-deleted-evidence.html) | **Operator Deletes Evidence** |
+| [post-is-xmrwallet-safe.html](post-is-xmrwallet-safe.html) | **Is xmrwallet.com Safe? No.** |
+| [post-xmrwallet-alternatives.html](post-xmrwallet-alternatives.html) | **Safe Monero Wallets Instead** |
+| [post-nathalie-roy-xmrwallet.html](post-nathalie-roy-xmrwallet.html) | **Nathalie Roy: The Operator** |
+
+---
+
+## 📄 PDF Evidence Documents
+
+Downloadable PDF reports preserving technical evidence, deletion timelines, and victim advisories:
+
+| File | Description |
+|------|-------------|
+| [xmrwallet-scam-evidence-report.pdf](xmrwallet-scam-evidence-report.pdf) | **Technical Evidence Report** — Full code analysis, network captures, and decoded session keys |
+| [xmrwallet-deleted-evidence-timeline.pdf](xmrwallet-deleted-evidence-timeline.pdf) | **Deleted Evidence Timeline** — Chronological record of operator deletions and cover-up attempts |
+| [xmrwallet-victim-advisory.pdf](xmrwallet-victim-advisory.pdf) | **Victim Advisory** — Guidance for affected users, recovery steps, and law enforcement reporting |
+
+---
+
+## 🔄 Automatic Indexing
+
+To regenerate `sitemap.xml`, `llms.txt`, and all platform-specific configuration files across every mirror, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File E:\xmr\index-all.ps1
+```
+
+This script scans all HTML files in the Website directory, rebuilds the sitemap with proper `<lastmod>` timestamps, regenerates `llms.txt` for LLM discoverability, and copies updated configs to every mirror folder. Run it after adding or modifying any pages.
 
 ---
 

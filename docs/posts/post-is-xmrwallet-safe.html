@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is xmrwallet.com Safe? No. Here's the Technical Proof.</title>
+    <meta name="description" content="Is xmrwallet.com safe? No. Technical analysis proves xmrwallet.com steals private view keys, hijacks transactions, and has stolen $2M+ from 15+ victims. Full proof inside.">
+    <meta name="keywords" content="is xmrwallet safe, xmrwallet review, xmrwallet.com review, xmrwallet legit, xmrwallet.com safe, is xmrwallet legit, xmrwallet trust">
+    <meta name="author" content="PhishDestroy Research">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-is-xmrwallet-safe.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Is xmrwallet.com Safe? No. Here's the Technical Proof.">
+    <meta property="og:description" content="Technical analysis proves xmrwallet.com steals private view keys, hijacks transactions, and has stolen $2M+ from 15+ victims.">
+    <meta property="og:url" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-is-xmrwallet-safe.html">
+    <meta property="og:site_name" content="PhishDestroy Research">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Is xmrwallet.com Safe? No. Here's the Technical Proof.">
+    <meta name="twitter:description" content="Technical analysis proves xmrwallet.com steals private view keys, hijacks transactions, and has stolen $2M+ from 15+ victims.">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Is xmrwallet.com Safe? No. Here's the Technical Proof.",
+        "description": "Is xmrwallet.com safe? No. Technical analysis proves xmrwallet.com steals private view keys, hijacks transactions, and has stolen $2M+ from 15+ victims.",
+        "author": {
+            "@type": "Organization",
+            "name": "PhishDestroy Research"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PhishDestroy"
+        },
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-02-24",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-is-xmrwallet-safe.html"
+        },
+        "keywords": ["is xmrwallet safe", "xmrwallet review", "xmrwallet.com review", "xmrwallet legit"]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.75;
+            padding: 0;
+            margin: 0;
+        }
+        a { color: #ff3333; text-decoration: none; }
+        a:hover { text-decoration: underline; color: #ff6666; }
+        .header {
+            background: #111;
+            border-bottom: 2px solid #ff3333;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        .header a { font-size: 0.95rem; color: #ff3333; }
+        article {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ff3333;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+        .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #222;
+        }
+        h2 {
+            color: #ff3333;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            color: #e0e0e0;
+            font-size: 1.15rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        p { margin-bottom: 1.1rem; }
+        code {
+            background: #1a1a1a;
+            color: #ff6666;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.92em;
+        }
+        pre {
+            background: #111;
+            border: 1px solid #333;
+            border-left: 3px solid #ff3333;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        pre code { background: transparent; padding: 0; }
+        ul, ol { margin: 1rem 0 1rem 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        .verdict-box {
+            background: #1a0000;
+            border: 2px solid #ff3333;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .verdict-box .verdict { font-size: 1.8rem; color: #ff3333; font-weight: bold; }
+        .verdict-box p { margin-top: 0.5rem; margin-bottom: 0; }
+        .proof-card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+        .proof-card h3 { margin-top: 0; color: #ff3333; }
+        .warning-box {
+            background: #1a0000;
+            border: 1px solid #ff3333;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box strong { color: #ff3333; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.65rem 0.9rem;
+            border: 1px solid #333;
+            text-align: left;
+        }
+        th { background: #1a1a1a; color: #ff3333; }
+        td { background: #111; }
+        .mirrors {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 2.5rem 0 1rem;
+        }
+        .mirrors h3 { color: #ff3333; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .mirrors ul { list-style: none; margin-left: 0; }
+        .mirrors li { margin-bottom: 0.3rem; }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #555;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            article { padding: 1.5rem 1rem; }
+            table { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html">PhishDestroy Research &mdash; Back to Full Investigation</a>
+    </div>
+
+    <article>
+        <h1>Is xmrwallet.com Safe? No. Here's the Technical Proof.</h1>
+        <div class="meta">
+            By <strong>PhishDestroy Research</strong> &middot; Published February 24, 2026 &middot; Updated February 24, 2026
+        </div>
+
+        <div class="verdict-box">
+            <div class="verdict">VERDICT: NOT SAFE</div>
+            <p>xmrwallet.com is a confirmed Monero theft service. Do not use it under any circumstances.</p>
+        </div>
+
+        <p>If you are searching for whether <strong>xmrwallet.com</strong> is safe, the answer is unequivocally <strong>no</strong>. This is not speculation, opinion, or hearsay. PhishDestroy Research has conducted a full forensic analysis of the xmrwallet.com service and documented three independent categories of proof that it is a theft operation: code-level evidence, victim documentation, and behavioral evidence from the operator's response to exposure.</p>
+
+        <h2>Proof Category 1: The Code Steals Your Keys</h2>
+
+        <div class="proof-card">
+            <h3>Private View Key Theft via session_key</h3>
+            <p>Every API request xmrwallet.com makes to its server includes a parameter called <code>session_key</code>. Forensic analysis reveals that this session_key is not a random session token &mdash; it is your <strong>private view key encoded in base64</strong>.</p>
+            <pre><code>// What xmrwallet.com sends to its server:
+session_key = base64_encode(your_private_view_key)
+
+// Verification:
+base64_decode(session_key) === private_view_key  // TRUE</code></pre>
+            <p>This means the operator receives your private view key with every request. Your key is transmitted in a format that can be trivially decoded. A legitimate wallet service would never transmit your private view key to its server in any form.</p>
+        </div>
+
+        <div class="proof-card">
+            <h3>Transaction Hijacking via raw_tx_and_hash</h3>
+            <p>When you send Monero through xmrwallet.com, the server response includes a <code>raw_tx_and_hash</code> field. In a legitimate wallet, this contains the signed transaction hex. On xmrwallet.com:</p>
+            <pre><code>raw_tx_and_hash.raw = "0"</code></pre>
+            <p>A value of <code>"0"</code> cannot be a valid Monero transaction. The server is not relaying your transaction &mdash; it is discarding it and substituting its own, sending your funds to the operator's wallet while displaying a fake confirmation to you.</p>
+        </div>
+
+        <h2>Proof Category 2: 15+ Documented Victims, $2M+ Stolen</h2>
+
+        <p>Independent of the code analysis, there is a substantial body of victim reports. PhishDestroy Research has documented <strong>more than 15 individual victims</strong> who reported losing Monero through xmrwallet.com. The total estimated losses exceed <strong>$2 million USD</strong>. The operation has been active since at least 2016.</p>
+
+        <p>Victim reports follow a consistent pattern:</p>
+
+        <table>
+            <tr>
+                <th>Stage</th>
+                <th>What the User Sees</th>
+                <th>What Actually Happens</th>
+            </tr>
+            <tr>
+                <td>Login</td>
+                <td>Wallet loads normally</td>
+                <td>Private view key is sent to operator's server</td>
+            </tr>
+            <tr>
+                <td>Deposit</td>
+                <td>Balance appears correctly</td>
+                <td>Operator can now monitor all incoming funds</td>
+            </tr>
+            <tr>
+                <td>Send</td>
+                <td>"Transaction sent" confirmation</td>
+                <td>Funds redirected to operator's wallet; raw_tx = "0"</td>
+            </tr>
+            <tr>
+                <td>After</td>
+                <td>Balance drops to zero</td>
+                <td>All funds have been stolen</td>
+            </tr>
+        </table>
+
+        <h2>Proof Category 3: The Operator's Guilty Behavior</h2>
+
+        <p>After PhishDestroy Research published its findings, the operator's response was not to defend the service or provide counter-evidence. Instead, the operator:</p>
+
+        <ol>
+            <li><strong>Deleted 21+ GitHub issues</strong> containing victim reports and community discussions</li>
+            <li><strong>Wiped repository content</strong> from the GitHub repo to prevent independent code analysis</li>
+            <li><strong>Registered escape domains</strong> (<code>xmrwallet.cc</code> and <code>xmrwallet.biz</code>) to continue operations under new names</li>
+            <li><strong>Sent threatening emails</strong> via ProtonMail to researchers, attempting to suppress the investigation</li>
+            <li><strong>Claimed to be a "volunteer"</strong> rather than addressing any of the technical evidence</li>
+        </ol>
+
+        <p>Both escape domains were subsequently <strong>suspended by their registrars</strong> after being reported. The operator's Reddit account, <code>u/WiseSolution</code>, was <strong>banned from r/Monero</strong>.</p>
+
+        <h2>VirusTotal and Security Scanner Flags</h2>
+
+        <p>Multiple security scanning services have flagged xmrwallet.com. VirusTotal results show detections from various security vendors classifying the domain as malicious or phishing-related. These independent automated assessments corroborate the manual forensic analysis conducted by PhishDestroy Research.</p>
+
+        <p>When multiple independent sources &mdash; code analysis, victim reports, operator behavior, and automated security scanners &mdash; all point to the same conclusion, that conclusion is not in doubt.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is xmrwallet.com open source?</h3>
+        <p>The operator claims xmrwallet.com is open source, but the code deployed on the live site does not match any public repository. After exposure, the repository content was wiped. An "open source" claim is meaningless when the server runs different code than what is published, and the operator deletes the repository when caught.</p>
+
+        <h3>Does xmrwallet.com work at all?</h3>
+        <p>Deposits may appear to work initially. The scam is designed to look functional so that users trust it with larger amounts. The theft occurs during withdrawal or when the operator decides to drain the wallet using the stolen keys.</p>
+
+        <h3>Is any web wallet safe for Monero?</h3>
+        <p>Web wallets are inherently riskier than desktop or hardware wallets because they require trusting a server with key material. Even a well-intentioned web wallet can be compromised. For Monero specifically, use the official GUI/CLI wallet, Feather Wallet, or Cake Wallet.</p>
+
+        <h3>What should I do if I used xmrwallet.com?</h3>
+        <p>Assume your keys are compromised. Create a completely new wallet using trusted software (not a web wallet) and transfer any remaining funds to the new wallet immediately. Do not reuse any seed phrase or key that was ever entered into xmrwallet.com.</p>
+
+        <div class="warning-box">
+            <strong>The bottom line:</strong> xmrwallet.com is not safe. It has never been safe. The code steals your private view key, the server hijacks your transactions, and the operator destroys evidence when caught. Use the official Monero wallet from <a href="https://www.getmonero.org/downloads/">getmonero.org</a> instead.
+        </div>
+
+        <div class="mirrors">
+            <h3>All Investigation Mirrors</h3>
+            <ul>
+                <li><a href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.github.io/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com/">phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.gitlab.io/do-not-use-xmrwallet-com/">phishdestroy.gitlab.io/do-not-use-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com/">phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com/">phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <div class="footer">
+        &copy; 2026 PhishDestroy Research. This investigation is published in the public interest.
+    </div>
+</body>
+</html>
