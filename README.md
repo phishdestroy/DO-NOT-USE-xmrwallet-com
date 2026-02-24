@@ -143,6 +143,30 @@ It is unclear why the operator reacted so aggressively — registering escape do
 
 ---
 
+### 🚩 He Will Cry, Threaten, and Lie — Do Not Believe Him
+
+> **The operator will contact you from `royn5094@protonmail.com` or xmrwallet.com email addresses. He will claim innocence, threaten legal action, and play the victim. This is the standard playbook. Do not engage.**
+
+After every exposure, the operator follows the exact same script:
+
+| What he says | The reality |
+|--------------|-------------|
+| *"I am a volunteer, xmrwallet is free and funded by donations"* | Zero XMR donation wallet exists anywhere. $550+/month hosting, 50+ paid SEO articles, DDoS-Guard CDN — all funded by stolen XMR. |
+| *"This is defamation, I will take legal action"* | Has never produced a single technical rebuttal in 8 years. No network capture, no code audit, no evidence of any kind. Threatening researchers instead of proving innocence. |
+| *"You used a phishing clone, not the real site"* | Standard deflection to every victim on Trustpilot/Sitejabber. Meanwhile runs identical theft code on 3 domains + Tor. |
+| *"It's a sync problem"* | The "sync" works perfectly — it syncs your view key to his server 40+ times per session. The funds were not lost. They were taken. |
+| *"Remove this or else..."* | Every threatening email from `royn5094@protonmail.com` is archived. Legal action will result in full publication of all correspondence and escalation of law enforcement referrals. |
+
+**If you receive messages from this operator:**
+1. Do not respond
+2. Screenshot everything
+3. Forward to law enforcement
+4. Report to us: [open an issue](https://github.com/phishdestroy/DO-NOT-USE-xmrwallet-com/issues)
+
+The operator has had 8 years to prove he's not a thief. He chose deletion every single time.
+
+---
+
 ### 📅 Timeline
 
 ```
