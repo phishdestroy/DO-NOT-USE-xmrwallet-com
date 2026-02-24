@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DELETED EVIDENCE &#x2014; xmrwallet.com GitHub Issues #35 &amp; #36 &#x2014; Archived by PhishDestroy</title>
 <meta name="description" content="Operator of xmrwallet.com deleted GitHub issues #35 and #36 containing proof of server-side TX hijacking and view key theft. Full evidence archived here &#x2014; screenshots, code analysis, network captures.">
-<meta name="keywords" content="xmrwallet deleted issues, xmrwallet evidence deleted, xmrwallet.com scam proof, xmrwallet github issues, xmrwallet coverup, xmrwallet raw_tx_and_hash, xmrwallet session_key, monero wallet scam evidence, xmrwallet nathroy, phishdestroy archive">
+<meta name="keywords" content="xmrwallet deleted issues, xmrwallet evidence deleted, xmrwallet.com scam proof, xmrwallet github issues, xmrwallet coverup, xmrwallet raw_tx_and_hash, xmrwallet session_key, monero wallet scam evidence, xmrwallet nathroy, phishdestroy archive, xmrwallet github deleted, xmrwallet issue 35 deleted, xmrwallet issue 36 deleted, Nathalie Roy xmrwallet, xmrwallet destroyed evidence, xmrwallet.biz suspended, xmrwallet.cc suspended, xmrwallet scam, xmrwallet view key theft, xmrwallet transaction hijacking">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="author" content="PhishDestroy Research">
 <link rel="canonical" href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html">
 <meta property="og:type" content="article">
+<meta property="og:site_name" content="PhishDestroy Research">
 <meta property="og:title" content="xmrwallet.com DELETED evidence &#x2014; operator destroyed proof of theft">
 <meta property="og:description" content="GitHub issues #35 (TX hijacking) and #36 (view key theft) deleted by operator after escape domains suspended. Full archive with screenshots, code, network captures.">
 <meta property="og:url" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html">
@@ -18,7 +19,7 @@
 <meta name="twitter:title" content="xmrwallet.com deleted the evidence &#x2014; we archived it">
 <meta name="twitter:description" content="Issues #35 + #36 deleted. TX hijacking proof, view key theft, 15+ victims. Full archive.">
 <meta name="twitter:image" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/img/issue35-overview.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com operator deleted GitHub evidence of Monero theft","author":{"@type":"Organization","name":"PhishDestroy","url":"https://phishdestroy.io"},"datePublished":"2026-02-23","description":"Archived GitHub issues #35 and #36 from XMRWallet/Website — deleted by operator after escape domains were suspended. Server-side TX hijacking and view key exfiltration confirmed.","publisher":{"@type":"Organization","name":"PhishDestroy"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com operator deleted GitHub evidence of Monero theft","author":{"@type":"Organization","name":"PhishDestroy Research","url":"https://github.com/phishdestroy"},"datePublished":"2026-02-23","dateModified":"2026-02-24","description":"Archived GitHub issues #35 and #36 from XMRWallet/Website — deleted by operator nathroy (Nathalie Roy) after escape domains xmrwallet.biz and xmrwallet.cc were suspended. Server-side TX hijacking and view key exfiltration confirmed with network captures.","publisher":{"@type":"Organization","name":"PhishDestroy Research"},"mainEntityOfPage":"https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html"}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><rect width='4' height='32' fill='%23FF2020'/><text x='8' y='24' font-family='monospace' font-size='20' fill='%23FF2020'>&#x26a0;</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -65,7 +66,8 @@ nav.scrolled{padding:8px 40px;box-shadow:0 4px 30px rgba(255,32,32,0.04);}
 .archive-box-title{color:var(--blue);letter-spacing:2px;font-size:9px;font-weight:700;margin-bottom:12px;}
 .archive-box a{color:var(--blue);text-decoration:none;}
 .archive-box a:hover{text-decoration:underline;}
-.issue-header{background:var(--bg2);border:1px solid var(--border);border-top:3px solid var(--red);padding:24px 28px;margin:24px 0 0 0;}
+.issue-header{background:var(--bg2);border:1px solid var(--border);border-top:3px solid var(--red);padding:24px 28px;margin:24px 0 0 0;transition:border-top-color 0.3s,box-shadow 0.3s;}
+.issue-header:hover{box-shadow:0 -3px 12px rgba(255,32,32,0.1);}
 .issue-number{font-family:var(--display);font-size:48px;color:rgba(255,32,32,0.15);float:right;line-height:1;}
 .issue-title{font-family:var(--mono);font-size:13px;color:#fff;font-weight:700;margin-bottom:8px;}
 .issue-meta{font-family:var(--mono);font-size:10px;color:var(--muted);}
@@ -80,12 +82,14 @@ nav.scrolled{padding:8px 40px;box-shadow:0 4px 30px rgba(255,32,32,0.04);}
 .issue-body .highlight{color:var(--red);font-weight:400;}
 .issue-body code{font-family:var(--mono);font-size:11px;color:#aaa;background:#111;padding:2px 6px;border:1px solid var(--border);}
 .cards-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:24px 0;}
-.card2{background:var(--bg2);padding:22px 24px;}
+.card2{background:var(--bg2);padding:22px 24px;transition:background 0.3s,border-left 0.3s;border-left:3px solid transparent;}
+.card2:hover{background:var(--bg3);border-left-color:var(--red);}
 .card2-title{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:8px;}
 .card2-val{font-family:var(--mono);font-size:13px;color:var(--text);word-break:break-all;line-height:1.6;}
 .card2-val.red{color:var(--red);}.card2-val.green{color:var(--green);}.card2-val.orange{color:var(--orange);}
 .req-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--border);margin:24px 0;}
-.req-item{background:var(--bg2);padding:16px 18px;}
+.req-item{background:var(--bg2);padding:16px 18px;transition:background 0.3s,transform 0.2s;}
+.req-item:hover{transform:translateY(-2px);}
 .req-endpoint{font-family:var(--mono);font-size:11px;color:var(--blue);margin-bottom:4px;}
 .req-count{font-family:var(--display);font-size:36px;color:var(--red);line-height:1;}
 .req-label{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;}
@@ -112,12 +116,14 @@ nav.scrolled{padding:8px 40px;box-shadow:0 4px 30px rgba(255,32,32,0.04);}
 .sd-val{padding:14px 16px;font-family:var(--mono);font-size:11px;color:#666;word-break:break-all;line-height:1.6;}
 .sd-val .decoded{color:var(--green);display:block;font-size:11px;}
 .sd-val .label{color:var(--muted);font-size:9px;letter-spacing:1px;display:block;margin-bottom:4px;}
-.warning-big{background:#080000;border:2px solid rgba(255,32,32,0.4);padding:32px;margin:32px 0;text-align:center;}
+.warning-big{background:#080000;border:2px solid rgba(255,32,32,0.4);padding:32px;margin:32px 0;text-align:center;animation:warnBigGlow 5s ease-in-out infinite;}
+@keyframes warnBigGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,32,32,0)}50%{box-shadow:0 0 40px rgba(255,32,32,0.08),inset 0 0 40px rgba(255,32,32,0.02);}}
 .warning-big-icon{font-family:var(--display);font-size:80px;color:rgba(255,32,32,0.2);line-height:1;}
 .warning-big-text{font-family:var(--mono);font-size:14px;color:var(--red);letter-spacing:2px;margin-top:12px;}
 .warning-big-sub{font-size:13px;color:#555;margin-top:8px;line-height:1.8;}
 .vt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:24px 0;}
-.vt-item{background:var(--bg2);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.vt-item{background:var(--bg2);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;transition:background 0.3s,transform 0.2s;}
+.vt-item:hover{background:var(--bg3);transform:translateX(3px);}
 .vt-vendor{font-family:var(--mono);font-size:11px;color:#888;}
 .vt-verdict-mal{font-family:var(--mono);font-size:11px;color:var(--red);font-weight:700;}
 .vt-verdict-phi{font-family:var(--mono);font-size:11px;color:var(--orange);font-weight:700;}
@@ -138,8 +144,8 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
 .reveal.visible{opacity:1;transform:translateY(0);}
 .section{opacity:0.3;transform:translateY(20px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
 .section.in-view{opacity:1;transform:translateY(0);}
-.screenshot-frame{transition:transform 0.3s ease,box-shadow 0.3s ease;}
-.screenshot-frame:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,32,32,0.1);}
+.screenshot-frame{transition:transform 0.3s ease,box-shadow 0.3s ease,border-color 0.3s ease;}
+.screenshot-frame:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(255,32,32,0.12);border-color:var(--border2);}
 .code-block{transition:border-color 0.3s ease,box-shadow 0.3s ease,border-left-color 0.3s ease;}
 .code-block:hover{border-color:var(--border2);border-left-color:var(--orange);box-shadow:inset 3px 0 12px rgba(255,122,0,0.06),0 4px 20px rgba(0,0,0,0.3);}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
