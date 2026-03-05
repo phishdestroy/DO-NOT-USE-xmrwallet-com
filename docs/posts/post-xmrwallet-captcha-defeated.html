@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmrwallet.com Adds Custom Captcha — Reverse-Engineered and Defeated in Hours</title>
+    <meta name="description" content="The xmrwallet.com scam operator deployed a custom captcha defense system with proof-of-work and slider puzzle. PhishDestroy reverse-engineered the entire mechanism and defeated it within hours.">
+    <meta name="keywords" content="xmrwallet captcha, xmrwallet.com defense, xmrwallet bypass, xmrwallet new developer, xmrwallet.net, xmrwallet.me, monero scam captcha">
+    <meta name="author" content="PhishDestroy Research">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-xmrwallet-captcha-defeated.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="xmrwallet.com Adds Custom Captcha — Reverse-Engineered and Defeated in Hours">
+    <meta property="og:description" content="The xmrwallet.com operator deployed a custom captcha. We reverse-engineered and defeated it within hours. New domains, new developer, same scam.">
+    <meta property="og:url" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-xmrwallet-captcha-defeated.html">
+    <meta property="og:site_name" content="PhishDestroy Research">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="xmrwallet.com Adds Custom Captcha — Reverse-Engineered and Defeated in Hours">
+    <meta name="twitter:description" content="The xmrwallet.com operator deployed a custom captcha. We reverse-engineered and defeated it within hours.">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "xmrwallet.com Adds Custom Captcha — Reverse-Engineered and Defeated in Hours",
+        "description": "The xmrwallet.com scam operator deployed a custom captcha defense system. PhishDestroy reverse-engineered the entire mechanism and defeated it within hours.",
+        "author": {
+            "@type": "Organization",
+            "name": "PhishDestroy Research"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PhishDestroy"
+        },
+        "datePublished": "2026-03-04",
+        "dateModified": "2026-03-04",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-xmrwallet-captcha-defeated.html"
+        },
+        "keywords": ["xmrwallet captcha", "xmrwallet.com defense", "xmrwallet bypass", "xmrwallet.net", "xmrwallet.me"]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.75;
+            padding: 0;
+            margin: 0;
+        }
+        a { color: #ff3333; text-decoration: none; }
+        a:hover { text-decoration: underline; color: #ff6666; }
+        .header {
+            background: #111;
+            border-bottom: 2px solid #ff3333;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        .header a { font-size: 0.95rem; color: #ff3333; }
+        article {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ff3333;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+        .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #222;
+        }
+        h2 {
+            color: #ff3333;
+            font-size: 1.4rem;
+            margin: 2.5rem 0 1rem;
+        }
+        h3 {
+            color: #ff7a00;
+            font-size: 1.15rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        p { margin-bottom: 1.1rem; }
+        code {
+            background: #1a1a1a;
+            color: #ff6666;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.92em;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        pre {
+            background: #111;
+            border: 1px solid #333;
+            border-left: 3px solid #ff3333;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-size: 0.88em;
+            line-height: 1.6;
+        }
+        pre code { background: transparent; padding: 0; color: #ccc; }
+        pre .comment { color: #6a9955; }
+        pre .keyword { color: #569cd6; }
+        pre .string { color: #ce9178; }
+        pre .func { color: #dcdcaa; }
+        pre .number { color: #b5cea8; }
+        pre .op { color: #d4d4d4; }
+        blockquote {
+            border-left: 3px solid #ff3333;
+            padding: 0.75rem 1.25rem;
+            margin: 1.25rem 0;
+            background: #111;
+            border-radius: 0 4px 4px 0;
+        }
+        ul, ol { margin: 1rem 0 1rem 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        .warning-box {
+            background: #1a0000;
+            border: 1px solid #ff3333;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box strong { color: #ff3333; }
+        .success-box {
+            background: #001a0a;
+            border: 1px solid #00ff88;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .success-box strong { color: #00ff88; }
+        .info-box {
+            background: #0a0a1a;
+            border: 1px solid #4a9eff;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .info-box strong { color: #4a9eff; }
+        .orange-box {
+            background: #1a0f00;
+            border: 1px solid #ff7a00;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .orange-box strong { color: #ff7a00; }
+        .timeline {
+            border-left: 2px solid #ff3333;
+            margin: 1.5rem 0 1.5rem 0.5rem;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            margin: 0;
+        }
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0.85rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff3333;
+        }
+        .timeline li.green::before { background: #00ff88; }
+        .timeline li.orange::before { background: #ff7a00; }
+        .timeline .date { color: #888; font-family: monospace; font-size: 0.9em; }
+        .timeline .event { color: #e0e0e0; }
+        .timeline .note { color: #ff7a00; font-size: 0.85em; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+        }
+        th { background: #1a1a1a; color: #ff3333; }
+        td { background: #0f0f0f; }
+        .mirrors {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 2.5rem 0 1rem;
+        }
+        .mirrors h3 { color: #ff3333; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .mirrors ul { list-style: none; margin-left: 0; }
+        .mirrors li { margin-bottom: 0.3rem; }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #555;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+        }
+        .defeated {
+            text-decoration: line-through;
+            color: #666;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: 600;
+            font-family: monospace;
+        }
+        .tag-red { background: #330000; color: #ff3333; border: 1px solid #ff3333; }
+        .tag-green { background: #003300; color: #00ff88; border: 1px solid #00ff88; }
+        .tag-orange { background: #331a00; color: #ff7a00; border: 1px solid #ff7a00; }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            article { padding: 1.5rem 1rem; }
+            pre { font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html">PhishDestroy Research &mdash; Back to Full Investigation</a>
+    </div>
+
+    <article>
+        <h1>xmrwallet.com Adds Custom Captcha &mdash; Reverse-Engineered and Defeated in Hours</h1>
+        <div class="meta">
+            By <strong>PhishDestroy Research</strong> &middot; Published March 4, 2026 &middot; Updated March 4, 2026
+        </div>
+
+        <div class="warning-box">
+            <strong>TL;DR:</strong> The xmrwallet.com operator panicked. After losing two domains and facing sustained pressure, they deployed a custom captcha system with proof-of-work and slider puzzle across all remaining domains. They also registered two new escape domains &mdash; <code>xmrwallet.net</code> and <code>xmrwallet.me</code> &mdash; reusing the exact same server IPs from their suspended domains. The captcha was reverse-engineered from their JavaScript source and <strong>defeated within hours</strong>. Their code now has comments. Someone new is writing code for the scam.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>The Timeline: From Suspension to Panic</h2>
+
+        <p>In February 2026, PhishDestroy published technical evidence that xmrwallet.com is a Monero theft operation. The investigation led to the suspension of two escape domains. The operator's response was immediate and reveals an active, funded criminal operation &mdash; not an abandoned side project.</p>
+
+        <ul class="timeline">
+            <li class="green">
+                <span class="date">2026-02-13</span> &mdash;
+                <span class="event">PhishDestroy publishes full investigation</span>
+            </li>
+            <li class="green">
+                <span class="date">2026-02-23</span> &mdash;
+                <span class="event">xmrwallet.cc <strong>SUSPENDED</strong> by PublicDomainRegistry</span><br>
+                <span class="note">IP was 185.129.100.248 (AS57724 DDoS-Guard, Russia)</span>
+            </li>
+            <li class="green">
+                <span class="date">2026-02-23</span> &mdash;
+                <span class="event">xmrwallet.biz <strong>SUSPENDED</strong> by WebNic.cc</span><br>
+                <span class="note">IP was 190.115.31.40 (AS59692 IQWeb, Belize)</span>
+            </li>
+            <li>
+                <span class="date">2026-02-26</span> &mdash;
+                <span class="event">xmrwallet.net registered</span><br>
+                <span class="note">IP: 190.115.31.40 &larr; same server as suspended .biz</span>
+            </li>
+            <li>
+                <span class="date">2026-02-26</span> &mdash;
+                <span class="event">xmrwallet.me registered</span><br>
+                <span class="note">IP: 185.129.100.248 &larr; same server as suspended .cc</span>
+            </li>
+            <li class="orange">
+                <span class="date">2026-03</span> &mdash;
+                <span class="event">Custom captcha system deployed across all domains</span><br>
+                <span class="note">PoW + slider puzzle + trajectory tracking &mdash; first code change in years</span>
+            </li>
+            <li class="green">
+                <span class="date">2026-03-04</span> &mdash;
+                <span class="event">Captcha reverse-engineered and <strong>defeated</strong></span>
+            </li>
+        </ul>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>New Escape Domains: Same IPs, Same Scam</h2>
+
+        <p>Three days after losing .cc and .biz, the operator registered two replacement domains. They didn't even change the servers &mdash; the new domains point to the exact same IP addresses:</p>
+
+        <table>
+            <tr>
+                <th>Suspended Domain</th>
+                <th>IP Address</th>
+                <th>Replacement Domain</th>
+            </tr>
+            <tr>
+                <td>xmrwallet.biz <span class="tag tag-green">SUSPENDED</span></td>
+                <td><code>190.115.31.40</code></td>
+                <td>xmrwallet.net <span class="tag tag-red">ACTIVE</span></td>
+            </tr>
+            <tr>
+                <td>xmrwallet.cc <span class="tag tag-green">SUSPENDED</span></td>
+                <td><code>185.129.100.248</code></td>
+                <td>xmrwallet.me <span class="tag tag-red">ACTIVE</span></td>
+            </tr>
+        </table>
+
+        <p>Both new domains were registered on <strong>the same day</strong> (February 26, 2026), at <strong>two different registrars</strong> (NICENIC International for .net, Key-Systems GmbH for .me). Using different registrars is deliberate &mdash; it forces abuse teams to coordinate across multiple organizations, slowing down takedown efforts.</p>
+
+        <p>Both are paid <strong>10 years in advance</strong> (until 2036). For comparison, .biz was 5 years and .cc was 8 years. The operator is spending more money on each generation of escape domains.</p>
+
+        <div class="info-box">
+            <strong>Single-operator proof:</strong> All five xmrwallet domains (including suspended ones) share identical MX records &mdash; <code>mx1/mx2.privateemail.com</code> &mdash; pointing to the same email inbox. Same DDoS-Guard nameservers. Same IPs recycled between generations. This is one person operating under multiple registrar accounts.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>The Captcha: A New Developer Enters</h2>
+
+        <p>For the first time since the 5.3-year commit gap documented in our initial investigation, someone made <em>real</em> code changes to the xmrwallet application. The operator deployed a custom captcha system &mdash; not an off-the-shelf solution like reCAPTCHA or hCaptcha, but a bespoke implementation built specifically for this scam site.</p>
+
+        <p>This is notable because the xmrwallet.com codebase has been essentially frozen since 2018. The original operator ("nathroy" on GitHub) last committed meaningful code in November 2018. The captcha system is written in a different style &mdash; properly commented, cleanly structured JavaScript with modern patterns. <strong>Someone new is writing code for this scam.</strong></p>
+
+        <div class="orange-box">
+            <strong>Code style change detected:</strong> The original xmrwallet.com JavaScript is minified, obfuscated, and has zero comments. The new captcha code has inline comments like <code>// Captcha loading functions</code>, <code>// Mining function</code>, and proper variable naming. Different developer. The old operator appears to have brought in outside help to fight back against the investigation.
+        </div>
+
+        <h3>How the Captcha Works</h3>
+
+        <p>The system has three components designed to prove human interaction:</p>
+
+        <ol>
+            <li><strong>Proof-of-Work (PoW)</strong> &mdash; a computational puzzle the browser must solve</li>
+            <li><strong>Slider Puzzle</strong> &mdash; drag a red dot to a dark circle on a PNG image</li>
+            <li><strong>Trajectory Tracking</strong> &mdash; the browser records mouse movement coordinates and timestamps during the drag</li>
+        </ol>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Step 1: The Proof-of-Work</h2>
+
+        <p>When authentication fails (error codes 75&ndash;80), the client fetches <code>/captcha_api.php</code>, which returns a JSON payload:</p>
+
+        <pre><code>{
+  <span class="string">"status"</span>: <span class="string">"success"</span>,
+  <span class="string">"image"</span>:  <span class="string">"data:image/png;base64,iVBORw0KGgo..."</span>,
+  <span class="string">"pow_c"</span>:  <span class="number">834729</span>,
+  <span class="string">"pow_t"</span>:  <span class="number">291047</span>,
+  <span class="string">"pow_prime"</span>: <span class="number">999983</span>,
+  <span class="string">"start_x"</span>: <span class="number">150</span>,
+  <span class="string">"start_y"</span>: <span class="number">75</span>
+}</code></pre>
+
+        <p>The client must find a <code>nonce</code> such that:</p>
+
+        <pre><code>(nonce * nonce + pow_c) % pow_prime == pow_t</code></pre>
+
+        <p>This is their "mining function" from the JavaScript source:</p>
+
+        <pre><code><span class="comment">// Mining function — from xmrwallet captcha JS</span>
+<span class="keyword">function</span> <span class="func">minePoW</span>(pow_c, pow_t, pow_prime) {
+    <span class="keyword">for</span> (<span class="keyword">let</span> nonce = <span class="number">0</span>; nonce &lt;= <span class="number">5000000</span>; nonce++) {
+        <span class="keyword">if</span> ((nonce * nonce + pow_c) % pow_prime === pow_t) {
+            <span class="keyword">return</span> nonce;
+        }
+    }
+    <span class="keyword">return</span> <span class="keyword">null</span>;
+}</code></pre>
+
+        <div class="success-box">
+            <strong>Defeated:</strong> It's a simple quadratic brute-force over at most 5 million integers. A Python loop solves it in ~0.1 seconds. No GPU needed. No complexity. This "proof of work" provides essentially zero protection.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Step 2: The Slider Puzzle</h2>
+
+        <p>The captcha image is a PNG with a noise background and a small dark circle somewhere in the image. The user must drag a red dot from a starting position to the center of the dark circle.</p>
+
+        <p>The server validates:</p>
+        <ul>
+            <li><code>final_x</code>, <code>final_y</code> &mdash; where the user dropped the dot</li>
+            <li><code>trajectory</code> &mdash; JSON array of <code>{x, y, t}</code> mouse positions with timestamps</li>
+            <li><code>pow_nonce</code> &mdash; the solved PoW value</li>
+        </ul>
+
+        <div class="success-box">
+            <strong>Defeated:</strong> The dark circle is trivially detectable with basic image analysis. Convert the PNG to grayscale, scan for clusters of pixels below a darkness threshold, compute the centroid. 15 lines of Python with Pillow. The noise background provides no meaningful camouflage &mdash; the target circle is always significantly darker than the surrounding pattern.
+        </div>
+
+        <pre><code><span class="comment"># Find the dark circle — the entire "AI" needed</span>
+img = Image.<span class="func">open</span>(BytesIO(b64decode(data))).<span class="func">convert</span>(<span class="string">"L"</span>)
+pixels = img.<span class="func">load</span>()
+
+<span class="keyword">for</span> threshold <span class="keyword">in</span> [<span class="number">40</span>, <span class="number">60</span>, <span class="number">80</span>, <span class="number">100</span>]:
+    dark = [(x,y) <span class="keyword">for</span> y <span class="keyword">in</span> <span class="func">range</span>(h) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="func">range</span>(w)
+            <span class="keyword">if</span> pixels[x,y] &lt; threshold]
+    <span class="keyword">if</span> <span class="func">len</span>(dark) &gt;= <span class="number">20</span>: <span class="keyword">break</span>
+
+target_x = <span class="func">sum</span>(p[<span class="number">0</span>] <span class="keyword">for</span> p <span class="keyword">in</span> dark) / <span class="func">len</span>(dark)
+target_y = <span class="func">sum</span>(p[<span class="number">1</span>] <span class="keyword">for</span> p <span class="keyword">in</span> dark) / <span class="func">len</span>(dark)</code></pre>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Step 3: The Trajectory</h2>
+
+        <p>The captcha tracks mouse movement during the drag and sends it as a JSON array:</p>
+
+        <pre><code>[
+  {<span class="string">"x"</span>: <span class="number">150</span>, <span class="string">"y"</span>: <span class="number">75</span>, <span class="string">"t"</span>: <span class="number">1709312847100</span>},
+  {<span class="string">"x"</span>: <span class="number">152</span>, <span class="string">"y"</span>: <span class="number">74</span>, <span class="string">"t"</span>: <span class="number">1709312847105</span>},
+  {<span class="string">"x"</span>: <span class="number">158</span>, <span class="string">"y"</span>: <span class="number">73</span>, <span class="string">"t"</span>: <span class="number">1709312847112</span>},
+  <span class="comment">... 40-60 more points ...</span>
+  {<span class="string">"x"</span>: <span class="number">243</span>, <span class="string">"y"</span>: <span class="number">108</span>, <span class="string">"t"</span>: <span class="number">1709312847450</span>}
+]</code></pre>
+
+        <p>This is meant to verify that a human physically dragged their mouse. The server presumably checks for straight-line robotic movement.</p>
+
+        <div class="success-box">
+            <strong>Defeated:</strong> Generate synthetic trajectory with an ease-out curve (mimicking natural mouse deceleration), add Gaussian noise for human-like wobble, and space timestamps 3&ndash;8ms apart. 20 lines of Python produces trajectories indistinguishable from real mouse input. The server's validation is too weak to differentiate.
+        </div>
+
+        <pre><code><span class="comment"># Synthetic trajectory with human-like motion</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="func">range</span>(num_points):
+    progress = i / (num_points - <span class="number">1</span>)
+    eased = <span class="number">1</span> - (<span class="number">1</span> - progress) ** <span class="number">2</span>    <span class="comment"># ease-out curve</span>
+
+    x = start_x + (end_x - start_x) * eased
+    y = start_y + (end_y - start_y) * eased
+    x += random.<span class="func">gauss</span>(<span class="number">0</span>, <span class="number">1.5</span>)      <span class="comment"># horizontal wobble</span>
+    y += random.<span class="func">gauss</span>(<span class="number">0</span>, <span class="number">1.0</span>)      <span class="comment"># vertical wobble</span>
+
+    t += random.<span class="func">randint</span>(<span class="number">3</span>, <span class="number">8</span>)      <span class="comment"># 3-8ms between points</span></code></pre>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>The Complete Flow &mdash; From Trigger to Bypass</h2>
+
+        <p>The captcha is not loaded on every page visit. It triggers only after an authentication attempt fails with specific error codes (75&ndash;80). The normal flow for a real user:</p>
+
+        <ol>
+            <li>User submits login form &rarr; <code>POST /auth.php</code></li>
+            <li>Server responds with <code>0:75</code> through <code>0:80</code> (captcha required)</li>
+            <li>Client fetches <code>GET /captcha_api.php</code> (returns image + PoW params)</li>
+            <li>Browser mines PoW in a loop (up to 5M iterations)</li>
+            <li>User drags red dot to dark circle while browser records trajectory</li>
+            <li>Client resubmits <code>POST /auth.php</code> with captcha fields added:
+                <ul>
+                    <li><code>final_x</code>, <code>final_y</code> &mdash; drop position</li>
+                    <li><code>trajectory</code> &mdash; JSON mouse path</li>
+                    <li><code>pow_nonce</code> &mdash; solved PoW value</li>
+                </ul>
+            </li>
+            <li>Server validates and returns session</li>
+        </ol>
+
+        <p>Our automated bypass follows the same flow: detect error code, fetch captcha, brute-force PoW (0.1s), analyze image (pixel scan), generate synthetic trajectory, resubmit. The entire captcha is solved programmatically in under 2 seconds per attempt. <strong>100% success rate.</strong></p>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Why This Captcha Failed</h2>
+
+        <p>Every component of this captcha has a fundamental weakness:</p>
+
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Intended Defense</th>
+                <th>Why It Failed</th>
+            </tr>
+            <tr>
+                <td>Proof-of-Work</td>
+                <td>Computational cost</td>
+                <td>5M iterations is trivial. Solves in 0.1s on a single CPU core. Would need 10<sup>12</sup>+ iterations to matter.</td>
+            </tr>
+            <tr>
+                <td>Slider Puzzle</td>
+                <td>Visual recognition</td>
+                <td>Dark circle on noise background is trivially detectable with basic pixel thresholding. No distortion, no decoys, no color variation.</td>
+            </tr>
+            <tr>
+                <td>Trajectory Tracking</td>
+                <td>Human behavior verification</td>
+                <td>No ML-based analysis on server side. Simple synthetic curves with Gaussian noise pass validation. The server likely only checks that the array is non-empty and endpoints match.</td>
+            </tr>
+            <tr>
+                <td>Custom Implementation</td>
+                <td>Obscurity</td>
+                <td>Client-side JavaScript is fully readable. The entire algorithm is exposed in the page source. Security through obscurity is not security.</td>
+            </tr>
+        </table>
+
+        <p>The captcha was built by someone who understands web development but not adversarial machine learning or anti-bot systems. A real captcha service (reCAPTCHA, hCaptcha, Cloudflare Turnstile) would have been significantly harder to bypass &mdash; but those services require domain verification and would expose the operator to takedown through the captcha provider. <strong>The operator can't use legitimate services because their operation is criminal.</strong></p>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Evidence of a New Developer</h2>
+
+        <p>The code style shift is unmistakable. The original xmrwallet.com JavaScript (dating back to 2018) is heavily minified, obfuscated, with zero comments and single-letter variable names. The new captcha code is a completely different hand:</p>
+
+        <h3>The Actual Source Code (from the live site)</h3>
+
+        <p>Here's the captcha PoW miner as it appears in the site's login page &mdash; note the inline comments, clean structure, and explanatory notes. This was <strong>not</strong> written by the same person who wrote the original wallet code:</p>
+
+        <pre><code><span class="comment">// CPU-Intensive Proof of Work Function</span>
+<span class="keyword">async function</span> <span class="func">minePoW</span>() {
+    <span class="keyword">if</span> (!powParams) <span class="keyword">return</span>;
+    document.<span class="func">getElementById</span>(<span class="string">'pow-status'</span>).textContent =
+        <span class="string">"Verifying cryptographic proof... (Generating CPU load)"</span>;
+    submitBtn.disabled = <span class="keyword">true</span>;
+
+    <span class="comment">// Yield to browser UI render before locking up CPU</span>
+    <span class="keyword">await new</span> Promise(r => <span class="func">setTimeout</span>(r, <span class="number">50</span>));
+
+    <span class="keyword">const</span> { pow_c, pow_t, pow_prime } = powParams;
+    <span class="keyword">let</span> nonce = <span class="number">0</span>;
+
+    <span class="comment">// Mining Loop: Find (nonce^2 + C) % Prime == T</span>
+    <span class="keyword">while</span> (<span class="keyword">true</span>) {
+        <span class="comment">// Because JavaScript numbers are double precision floats,</span>
+        <span class="comment">// Number.MAX_SAFE_INTEGER easily supports this math.</span>
+        <span class="keyword">let</span> calc = ((nonce * nonce) + pow_c) % pow_prime;
+        <span class="keyword">if</span> (calc === pow_t) {
+            solvedNonce = nonce;
+            <span class="keyword">break</span>;
+        }
+        nonce++;
+
+        <span class="comment">// Failsafe to prevent freezing forever</span>
+        <span class="keyword">if</span> (nonce > <span class="number">5000000</span>) <span class="keyword">break</span>;
+    }
+
+    document.<span class="func">getElementById</span>(<span class="string">'pow-status'</span>).textContent =
+        <span class="string">"Security verified. Ready."</span>;
+    submitBtn.disabled = <span class="keyword">false</span>;
+    submitBtn.<span class="func">click</span>();
+}</code></pre>
+
+        <p>And the captcha loader with its clean comments and error handling:</p>
+
+        <pre><code><span class="comment">// Connect to Backend Generator</span>
+<span class="keyword">async function</span> <span class="func">loadCaptcha</span>() {
+    <span class="comment">// 1. Show Container, Show Loader, Hide Puzzle</span>
+    captchaContainer.style.display = <span class="string">'block'</span>;
+    dropZone.style.display = <span class="string">'none'</span>;
+    captchaLoader.style.display = <span class="string">'block'</span>;
+    captchaInstructions.textContent = <span class="string">"Loading secure challenge..."</span>;
+
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="func">fetch</span>(<span class="string">'captcha_api.php'</span>);
+        <span class="keyword">const</span> data = <span class="keyword">await</span> res.<span class="func">json</span>();
+
+        <span class="keyword">if</span> (data.status === <span class="string">'success'</span>) {
+            <span class="comment">// 2. Data arrived. Hide Loader, Show Puzzle</span>
+            captchaLoader.style.display = <span class="string">'none'</span>;
+            dropZone.style.display = <span class="string">'block'</span>;
+            captchaInstructions.textContent =
+                <span class="string">"Drag the red dot entirely inside the dark circle."</span>;
+
+            document.<span class="func">getElementById</span>(<span class="string">'captcha-bg'</span>).src = data.image;
+            powParams = {
+                pow_c: data.pow_c,
+                pow_t: data.pow_t,
+                pow_prime: data.pow_prime
+            };
+            <span class="comment">// Reset drag item</span>
+            dragItem.style.left = data.start_x + <span class="string">'px'</span>;
+            dragItem.style.top = data.start_y + <span class="string">'px'</span>;
+            trajectory = [];
+            solvedNonce = <span class="keyword">null</span>;
+        }
+    } <span class="keyword">catch</span> (error) {
+        msgBox.innerHTML = <span class="string">"Failed to load security challenge."</span>;
+    }
+}</code></pre>
+
+        <p>Compare the clean, commented style above with the theft code on the <strong>same page</strong> &mdash; the line that steals your view key, written by the original operator years ago:</p>
+
+        <pre><code><span class="comment">// Line 628 of login page — the theft itself, original code style:</span>
+session_key = returned_data[<span class="number">2</span>] + <span class="string">":"</span> + <span class="func">btoa</span>(xmrwallet_address)
+    + <span class="string">":"</span> + <span class="func">btoa</span>(xmrwallet_viewkey);  <span class="comment">// ← YOUR PRIVATE VIEW KEY, base64-encoded, sent to the scammer's server on every subsequent request</span></code></pre>
+
+        <p>This <code>session_key</code> is then transmitted on <strong>40+ API requests per session</strong> &mdash; to <code>auth.php</code>, <code>getheightsync.php</code>, <code>gettransactions.php</code>, <code>getbalance.php</code>, <code>getsubaddresses.php</code>, <code>getoutputs.php</code>, and the backdoor <code>support_login.html</code>. The captcha "protects" the login flow, but the theft mechanism behind it remains identical.</p>
+
+        <div class="orange-box">
+            <strong>Two hands, one scam:</strong> The captcha code has numbered step comments (<code>// 1. Show Container</code>, <code>// 2. Data arrived</code>), explanatory notes about JavaScript precision (<code>// Because JavaScript numbers are double precision floats</code>), and async/await patterns. The original theft code uses jQuery <code>$.ajax</code>, inline <code>btoa()</code> key exfiltration, and zero comments. These are two different developers working on the same criminal application. The old operator brought in someone young.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>What This Means</h2>
+
+        <p>The captcha deployment proves several things:</p>
+
+        <ol>
+            <li><strong>The operation is active and monitored.</strong> The operator detected automated traffic within days and responded with countermeasures. This is not an abandoned project.</li>
+            <li><strong>The operation has resources.</strong> Two new domains (10 years prepaid each), new registrar accounts, custom development work. Someone is funding this.</li>
+            <li><strong>The operator has collaborators.</strong> The code style change proves at least two people are involved: the original operator and a newer developer. A decade-old solo scam is now a team effort.</li>
+            <li><strong>Their defenses are inadequate.</strong> A custom captcha built in-house is no match for focused reverse engineering. Every component was defeated within hours of deployment. They cannot use legitimate anti-bot services because those services would shut them down.</li>
+        </ol>
+
+        <div class="warning-box">
+            <strong>xmrwallet.com, xmrwallet.net, and xmrwallet.me are actively stealing Monero.</strong> New domains, new code, and new defenses do not change what the site does: it exfiltrates your private view key via <code>session_key</code> and hijacks your transactions server-side. Do not use any xmrwallet domain under any circumstances.
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Current Domain Status</h2>
+
+        <table>
+            <tr>
+                <th>Domain</th>
+                <th>Status</th>
+                <th>Registrar</th>
+                <th>Expires</th>
+            </tr>
+            <tr>
+                <td><code>xmrwallet.com</code></td>
+                <td><span class="tag tag-red">ACTIVE</span></td>
+                <td>NameSilo</td>
+                <td>2031</td>
+            </tr>
+            <tr>
+                <td><code>xmrwallet.net</code></td>
+                <td><span class="tag tag-red">ACTIVE</span></td>
+                <td>NICENIC International</td>
+                <td>2036</td>
+            </tr>
+            <tr>
+                <td><code>xmrwallet.me</code></td>
+                <td><span class="tag tag-red">ACTIVE</span></td>
+                <td>Key-Systems GmbH</td>
+                <td>2036</td>
+            </tr>
+            <tr>
+                <td><code>xmrwallet.cc</code></td>
+                <td><span class="tag tag-green">SUSPENDED</span></td>
+                <td>PublicDomainRegistry</td>
+                <td>2034</td>
+            </tr>
+            <tr>
+                <td><code>xmrwallet.biz</code></td>
+                <td><span class="tag tag-green">SUSPENDED</span></td>
+                <td>WebNic.cc</td>
+                <td>2031</td>
+            </tr>
+        </table>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <h2>Report These Domains</h2>
+
+        <p>Every abuse report helps. The suspension of .cc and .biz proves that registrars act when presented with evidence. These are the contacts for the active domains:</p>
+
+        <table>
+            <tr>
+                <th>Domain</th>
+                <th>Abuse Contact</th>
+            </tr>
+            <tr>
+                <td>xmrwallet.com</td>
+                <td><code>abuse@namesilo.com</code></td>
+            </tr>
+            <tr>
+                <td>xmrwallet.net</td>
+                <td><code>abuse@nicenic.net</code></td>
+            </tr>
+            <tr>
+                <td>xmrwallet.me</td>
+                <td><code>abuse@key-systems.net</code></td>
+            </tr>
+            <tr>
+                <td>All (hosting)</td>
+                <td><code>abuse@ddos-guard.net</code></td>
+            </tr>
+        </table>
+
+        <p>Report to scanners:</p>
+        <ul>
+            <li><a href="https://safebrowsing.google.com/safebrowsing/report_phish/" rel="nofollow">Google Safe Browsing</a></li>
+            <li><a href="https://report.netcraft.com/report" rel="nofollow">Netcraft</a></li>
+            <li><a href="https://phishtank.org/add_web_phish.php" rel="nofollow">PhishTank</a></li>
+            <li><a href="https://phish.report/" rel="nofollow">Phish.Report</a> (auto-reports to 6+ platforms)</li>
+        </ul>
+
+        <div class="mirrors">
+            <h3>All Investigation Mirrors</h3>
+            <ul>
+                <li><a href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.github.io/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com/">phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.gitlab.io/do-not-use-xmrwallet-com/">phishdestroy.gitlab.io/do-not-use-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com/">phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="https://phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com/">phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <div class="footer">
+        &copy; 2026 PhishDestroy Research. This investigation is published in the public interest.
+    </div>
+</body>
+</html>

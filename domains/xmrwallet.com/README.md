@@ -30,8 +30,10 @@
 See [DNSDumpster map](../../docs/img/dnsmap-xmrwallet-com.png)
 
 ## Related Escape Domains
-- [xmrwallet.cc](../xmrwallet.cc/) — registered 2026-02-04
-- [xmrwallet.biz](../xmrwallet.biz/) — registered 2026-02-09
+- [xmrwallet.cc](../xmrwallet.cc/) — registered 2026-02-04 — ✅ SUSPENDED
+- [xmrwallet.biz](../xmrwallet.biz/) — registered 2026-02-09 — ✅ SUSPENDED
+- [xmrwallet.net](../xmrwallet.net/) — registered 2026-02-26 — 🔴 ACTIVE (reuses .biz IP)
+- [xmrwallet.me](../xmrwallet.me/) — registered 2026-02-26 — 🔴 ACTIVE (reuses .cc IP)
 
 ## Report Abuse
 - abuse@namesilo.com
