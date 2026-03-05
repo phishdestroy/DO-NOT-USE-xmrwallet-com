@@ -4,7 +4,7 @@
 
 <img src="22.png" width="700"/>
 
-> **xmrwallet.com · xmrwallet.cc · xmrwallet.biz · .onion — same scam, nowhere to run**
+> **xmrwallet.com · xmrwallet.net · xmrwallet.me — active scam | xmrwallet.cc · xmrwallet.biz — suspended**
 
 # DO-NOT-USE-xmrwallet-com
 
@@ -18,7 +18,7 @@
 **Security analysis of xmrwallet.com — confirmed private key exfiltration and server-side transaction hijacking.**
 15+ documented victims. $2M+ estimated stolen. Operating since 2016.
 
-[**🌐 Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**🗑 Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**🚨 Report Abuse**](#-report-abuse) · [**✅ Safe Alternatives**](#-safe-alternatives)
+[**Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**Report Abuse**](#-report-abuse) · [**Safe Alternatives**](#-safe-alternatives)
 
 [![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/)
 
@@ -26,50 +26,30 @@
 
 ---
 
-## 🚨 Summary
+## Summary
 
 > **xmrwallet.com transmits your private Monero view key to their server on every API request. Transactions are hijacked server-side. The GitHub repository is a facade — 5.3 years of zero commits while the real theft infrastructure evolved separately.**
 
 | Finding | Status |
 |---------|--------|
-| Private view key sent to server in plaintext | 🔴 **CONFIRMED** |
-| `session_key` encodes viewkey — re-sent 40+ times per session | 🔴 **CONFIRMED** |
-| `raw_tx_and_hash.raw = 0` — client TX discarded, server redirects funds | 🔴 **CONFIRMED** |
-| 4 Google trackers (GTM, UA, GA4, DoubleClick) inside wallet | 🔴 **CONFIRMED** |
-| GitHub repo has 5.3-year commit gap (2018–2024) | 🔴 **CONFIRMED** |
-| Operator banned from r/Monero, deleted 21+ GitHub issues | 🔴 **CONFIRMED** |
-| 2 escape domains (.biz, .cc) registered, suspended, evidence deleted | 🔴 **CONFIRMED** |
-| 50+ paid SEO articles, zero donation wallet | 🔴 **CONFIRMED** |
+| Private view key sent to server in plaintext | **CONFIRMED** |
+| `session_key` encodes viewkey — re-sent 40+ times per session | **CONFIRMED** |
+| `raw_tx_and_hash.raw = 0` — client TX discarded, server redirects funds | **CONFIRMED** |
+| 4 Google trackers (GTM, UA, GA4, DoubleClick) inside wallet | **CONFIRMED** |
+| GitHub repo has 5.3-year commit gap (2018–2024) | **CONFIRMED** |
+| Operator banned from r/Monero, deleted 21+ GitHub issues | **CONFIRMED** |
+| 4 escape domains registered — 2 suspended, 2 active (IP recycled) | **CONFIRMED** |
+| Custom captcha deployed — reverse-engineered and defeated | **CONFIRMED** |
+| New developer involved — code comments prove second author | **CONFIRMED** |
+| 50+ paid SEO articles, zero donation wallet | **CONFIRMED** |
 
 ---
 
-## 🪞 Mirrors — You Cannot Delete What's Everywhere
-
-> **The operator deletes evidence. We multiply it. Every mirror is independently hosted, SEO-indexed, and uncensorable.**
-
-| Platform | URL | Status |
-|----------|-----|--------|
-| **GitHub Pages** | [phishdestroy.github.io/DO-NOT-USE-xmrwallet-com](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) | 🟢 Primary |
-| **Vercel** | [xmrwallet-scam.vercel.app](https://xmrwallet-scam.vercel.app/) | 🟢 Mirror |
-| **Cloudflare Pages** | [xmrwallet-scam.pages.dev](https://xmrwallet-scam.pages.dev/) | 🟢 Mirror |
-| **Netlify** | [xmrwallet-scam.netlify.app](https://xmrwallet-scam.netlify.app/) | 🟢 Mirror |
-| **Surge.sh** | [xmrwallet-scam.surge.sh](https://xmrwallet-scam.surge.sh/) | 🟢 Mirror |
-| **Render** | [xmrwallet-scam.onrender.com](https://xmrwallet-scam.onrender.com/) | 🟢 Mirror |
-| **GitLab Pages** | [phishdestroy.gitlab.io/xmrwallet-scam](https://phishdestroy.gitlab.io/xmrwallet-scam/) | 🟢 Mirror |
-| **Codeberg** | [phishdestroy.codeberg.page](https://phishdestroy.codeberg.page/) | 🟢 Mirror |
-| **IPFS** | Pin folder → permanent CID | 🟢 Mirror |
-
-Each mirror has its own SEO-optimized canonical URL, Schema.org markup, sitemap, and platform-specific configuration. Google indexes each independently.
-
-**For the operator:** you wanted us to remove the research. For every piece you delete — we deploy another mirror. The `.biz` and `.cc` suspensions were the beginning. This list will only grow.
-
----
-
-## 🗑 He Deleted the Evidence Instead of Proving He's Innocent
+## He Deleted the Evidence Instead of Proving He's Innocent
 
 <div align="center">
 
-### ⚠️ On 2026-02-23 the operator silently deleted GitHub Issues #35 and #36
+### On 2026-02-23 the operator silently deleted GitHub Issues #35 and #36
 
 **Instead of proving he's not a thief — he deleted the proof that he is one.**
 
@@ -77,22 +57,32 @@ Each mirror has its own SEO-optimized canonical URL, Schema.org markup, sitemap,
 
 ---
 
-### 🏃 Escape Domains → Caught → Deleted Everything
+### Escape Domains — Caught, Replaced, Caught Again
 
-The operator purchased **two new domains** and configured them as redirects to `xmrwallet.com`:
+The operator purchased **four escape domains**. Two were suspended. Two more were registered 3 days later — reusing the exact same server IPs:
 
-| Domain | Registrar | Prepaid | Hosting | Status |
-|--------|-----------|---------|---------|--------|
-| `xmrwallet.biz` | WebNic.cc | **5 years** | IQWeb / DDoS-Guard (Belize) | ✅ **SUSPENDED** |
-| `xmrwallet.cc` | PublicDomainRegistry | **8 years** | DDoS-Guard (Russia) | ✅ **SUSPENDED** |
+| Domain | Registrar | Prepaid | IP | Status |
+|--------|-----------|---------|-----|--------|
+| `xmrwallet.cc` | PublicDomainRegistry | 8 years | 185.129.100.248 | **SUSPENDED** |
+| `xmrwallet.biz` | WebNic.cc | 5 years | 190.115.31.40 | **SUSPENDED** |
+| `xmrwallet.net` | NICENIC International | **10 years** | **190.115.31.40** ← same IP as .biz | **ACTIVE** |
+| `xmrwallet.me` | Key-Systems GmbH | **10 years** | **185.129.100.248** ← same IP as .cc | **ACTIVE** |
 
-Both domains were **immediately flagged by antivirus vendors**. Both were suspended by registrars after abuse reports. The Wayback Machine and urlscan.io archived snapshots during the active period — confirming the redirects and the AV detections.
+The operator didn't even change servers — the new domains point to the exact same IPs. Four different registrars used deliberately to slow coordinated takedowns.
 
-**Zero commits were made to the GitHub repository during the domain migration.** No code changes, no config updates, nothing. For a project claiming to be "open source" — switching to new domains without a single public commit says everything. This is not open source. This is closed-source PHP behind offshore hosting.
+**Zero commits were made to the GitHub repository during any domain migration.** No code changes, no config updates, nothing. For a project claiming to be "open source" — switching to new domains without a single public commit says everything.
 
 ---
 
-### 📸 What the operator deleted — screenshots captured before deletion
+### Custom Captcha Deployed — Defeated in Hours
+
+In March 2026, the operator deployed a custom captcha system (proof-of-work + slider puzzle + trajectory tracking) across all active domains. The code reveals a **second developer** — properly commented JavaScript with numbered steps, `// FIX:` annotations, and modern patterns. The original theft code has zero comments.
+
+The captcha was [reverse-engineered and defeated within hours](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-xmrwallet-captcha-defeated.html). 100% bypass rate.
+
+---
+
+### Screenshots captured before deletion
 
 <div align="center">
 
@@ -130,80 +120,64 @@ Both domains were **immediately flagged by antivirus vendors**. Both were suspen
 
 ---
 
-### 🔗 What he can't delete — archived copies
+### What he can't delete — archived copies
 
 | Archive | Link |
 |---------|------|
-| 📦 **Full archived page** (screenshots, code, decoded keys) | **[phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html)** |
-| 📋 Issue #35 — full cached copy (HTML + CSS + screenshots) | **[cache-issue35 →](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue35/)** |
-| 📋 Issue #36 — full cached copy (HTML + CSS + screenshots) | **[cache-issue36 →](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue36/)** |
-| 🕐 Wayback Machine | no snapshots captured before deletion |
-| 🛡 VirusTotal — 6/93 malicious | [virustotal.com →](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
+| **Full archived page** (screenshots, code, decoded keys) | **[phishdestroy.github.io/.../deleted.html](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html)** |
+| Issue #35 — full cached copy (HTML + CSS + screenshots) | **[cache-issue35](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue35/)** |
+| Issue #36 — full cached copy (HTML + CSS + screenshots) | **[cache-issue36](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/cache-issue36/)** |
+| VirusTotal — 6/93 malicious | [virustotal.com](https://www.virustotal.com/gui/domain/www.xmrwallet.com) |
 
 ---
 
-### ❌ 8 years. 21+ deleted issues. Zero rebuttals.
+### 8 years. 21+ deleted issues. Zero rebuttals.
 
 In 8 years of operation the operator has **never once** produced:
 
 | What we asked | What we got |
 |---------------|-------------|
-| Network capture proving viewkey is NOT sent to server | ❌ Nothing |
-| Code proving signed TX IS broadcast (not `raw = 0`) | ❌ Nothing |
-| Explanation for `session_key` containing `base64(viewkey)` | ❌ Nothing |
-| Explanation for backdoor session `8de50123dab32` | ❌ Nothing |
-| Explanation for `swept` TX type (not in Monero) | ❌ Nothing |
-| Any technical counter-argument of any kind | ❌ **Nothing. Ever.** |
+| Network capture proving viewkey is NOT sent to server | Nothing |
+| Code proving signed TX IS broadcast (not `raw = 0`) | Nothing |
+| Explanation for `session_key` containing `base64(viewkey)` | Nothing |
+| Explanation for backdoor session `8de50123dab32` | Nothing |
+| Explanation for `swept` TX type (not in Monero) | Nothing |
+| Any technical counter-argument of any kind | **Nothing. Ever.** |
 
 ---
 
-### ⚠️ Consequences
+### Consequences
 
 It is unclear why the operator reacted so aggressively — registering escape domains within days, then deleting all evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
 
-**Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we will remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning.
+**Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we will remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning. The `.net` and `.me` takedowns are next.
 
 ---
 
-## 📝 Guest Posts / Articles
-
-Detailed investigative articles covering every aspect of the xmrwallet.com scam operation:
+## Guest Posts / Articles
 
 | File | Title |
 |------|-------|
-| [post-xmrwallet-scam-exposed.html](post-xmrwallet-scam-exposed.html) | **xmrwallet.com Scam Exposed** |
-| [post-xmrwallet-deleted-evidence.html](post-xmrwallet-deleted-evidence.html) | **Operator Deletes Evidence** |
-| [post-is-xmrwallet-safe.html](post-is-xmrwallet-safe.html) | **Is xmrwallet.com Safe? No.** |
-| [post-xmrwallet-alternatives.html](post-xmrwallet-alternatives.html) | **Safe Monero Wallets Instead** |
-| [post-nathalie-roy-xmrwallet.html](post-nathalie-roy-xmrwallet.html) | **Nathalie Roy: The Operator** |
+| [post-xmrwallet-scam-exposed.html](docs/posts/post-xmrwallet-scam-exposed.html) | **xmrwallet.com Scam Exposed** |
+| [post-xmrwallet-deleted-evidence.html](docs/posts/post-xmrwallet-deleted-evidence.html) | **Operator Deletes Evidence** |
+| [post-is-xmrwallet-safe.html](docs/posts/post-is-xmrwallet-safe.html) | **Is xmrwallet.com Safe? No.** |
+| [post-xmrwallet-alternatives.html](docs/posts/post-xmrwallet-alternatives.html) | **Safe Monero Wallets Instead** |
+| [post-nathalie-roy-xmrwallet.html](docs/posts/post-nathalie-roy-xmrwallet.html) | **Nathalie Roy: The Operator** |
+| [post-xmrwallet-captcha-defeated.html](docs/posts/post-xmrwallet-captcha-defeated.html) | **Captcha Reverse-Engineered and Defeated** |
 
 ---
 
-## 📄 PDF Evidence Documents
-
-Downloadable PDF reports preserving technical evidence, deletion timelines, and victim advisories:
+## PDF Evidence Documents
 
 | File | Description |
 |------|-------------|
-| [xmrwallet-scam-evidence-report.pdf](xmrwallet-scam-evidence-report.pdf) | **Technical Evidence Report** — Full code analysis, network captures, and decoded session keys |
-| [xmrwallet-deleted-evidence-timeline.pdf](xmrwallet-deleted-evidence-timeline.pdf) | **Deleted Evidence Timeline** — Chronological record of operator deletions and cover-up attempts |
-| [xmrwallet-victim-advisory.pdf](xmrwallet-victim-advisory.pdf) | **Victim Advisory** — Guidance for affected users, recovery steps, and law enforcement reporting |
+| [xmrwallet-scam-evidence-report.pdf](docs/pdf/xmrwallet-scam-evidence-report.pdf) | Technical Evidence Report |
+| [xmrwallet-deleted-evidence-timeline.pdf](docs/pdf/xmrwallet-deleted-evidence-timeline.pdf) | Deleted Evidence Timeline |
+| [xmrwallet-victim-advisory.pdf](docs/pdf/xmrwallet-victim-advisory.pdf) | Victim Advisory |
 
 ---
 
-## 🔄 Automatic Indexing
-
-To regenerate `sitemap.xml`, `llms.txt`, and all platform-specific configuration files across every mirror, run:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File E:\xmr\index-all.ps1
-```
-
-This script scans all HTML files in the Website directory, rebuilds the sitemap with proper `<lastmod>` timestamps, regenerates `llms.txt` for LLM discoverability, and copies updated configs to every mirror folder. Run it after adding or modifying any pages.
-
----
-
-### 🚩 He Will Cry, Threaten, and Lie — Do Not Believe Him
+### He Will Cry, Threaten, and Lie — Do Not Believe Him
 
 > **The operator will contact you from `royn5094@protonmail.com` or xmrwallet.com email addresses. He will claim innocence, threaten legal action, and play the victim. This is the standard playbook. Do not engage.**
 
@@ -227,23 +201,25 @@ The operator has had 8 years to prove he's not a thief. He chose deletion every 
 
 ---
 
-### 📅 Timeline
+### Timeline
 
 ```
-2026-02-04  xmrwallet.cc registered secretly — 8yr prepaid, redirect to .com
-2026-02-09  xmrwallet.biz registered secretly — 5yr prepaid, redirect to .com
-            Zero GitHub commits. No code changes. "Open source."
+2016-08-29  xmrwallet.com  registered — primary scam domain
+2026-02-04  xmrwallet.cc   registered secretly — 8yr prepaid
+2026-02-09  xmrwallet.biz  registered secretly — 5yr prepaid
 2026-02-13  Issue #35 published — TX hijacking mechanism exposed
 2026-02-18  Issue #36 published — live network capture, 43 viewkey transmissions
-2026-02-??  ✅ xmrwallet.biz — SUSPENDED by registrar (AV detections)
-2026-02-??  ✅ xmrwallet.cc — SUSPENDED by registrar (AV detections)
-2026-02-23  🗑 Operator deletes Issues #35 + #36. No rebuttal. Just deletion.
-2026-02-23  📦 Full evidence archived. You're reading it now.
+2026-02-23  xmrwallet.cc   SUSPENDED by registrar
+2026-02-23  xmrwallet.biz  SUSPENDED by registrar
+2026-02-23  Operator deletes Issues #35 + #36. No rebuttal. Just deletion.
+2026-02-26  xmrwallet.net  registered — 10yr prepaid, same IP as .biz (190.115.31.40)
+2026-02-26  xmrwallet.me   registered — 10yr prepaid, same IP as .cc (185.129.100.248)
+2026-03     Custom captcha deployed — reverse-engineered and defeated in hours
 ```
 
 ---
 
-## 🔍 Technical Evidence
+## Technical Evidence
 
 ### 1. View Key Exfiltration
 
@@ -311,7 +287,7 @@ GET stats.g.doubleclick.net        ×1  — ad tracker
 
 ---
 
-## 🕵️ Operator Profile
+## Operator Profile
 
 | Attribute | Value |
 |-----------|-------|
@@ -339,18 +315,18 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ### Cover-Up Pattern
 
-- ❌ Banned from r/Monero after self-promotion in 2018
-- ❌ GitHub Issue #13 deleted by repository owner
-- ❌ Standard theft deflection: *"sync problem — try Monero CLI"* (funds already gone)
-- ❌ 50+ paid/sponsored articles on crypto media — PhishDestroy contacted all publishers, majority removed them
-- ❌ 100+ blog posts, 10 languages, DDoS-Guard CDN, Android app, active Trustpilot management
-- ❌ **Zero donation wallet address** — claimed "volunteer project" funded by no one
+- Banned from r/Monero after self-promotion in 2018
+- GitHub Issue #13 deleted by repository owner
+- Standard theft deflection: *"sync problem — try Monero CLI"* (funds already gone)
+- 50+ paid/sponsored articles on crypto media — PhishDestroy contacted all publishers, majority removed them
+- 100+ blog posts, 10 languages, DDoS-Guard CDN, Android app, active Trustpilot management
+- **Zero donation wallet address** — claimed "volunteer project" funded by no one
 
 > A volunteer open-source project does not bulk-purchase sponsored articles. With no donation wallet, the money comes from stolen XMR.
 
 ---
 
-## 👥 Victim Reports
+## Victim Reports
 
 | Amount | Source | Notes |
 |--------|--------|-------|
@@ -365,20 +341,23 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## 🌐 Infrastructure IOCs
+## Infrastructure IOCs
 
 | Type | Value | Notes |
 |------|-------|-------|
 | Domain | `xmrwallet.com` | NameSilo, paid until 2031 |
-| Domain | `xmrwallet.cc` | ✅ **SUSPENDED** by PDR |
-| Domain | `xmrwallet.biz` | ✅ **SUSPENDED** by WebNic |
-| Tor v3 | `xmrtor3fsapuu6y26za7vpzox4vpaj6ny5viq2arbmozm7kg6jitnlid.onion` | **Active** current onion |
-| Tor v2 | `xmrwalletdatuxms.onion` | Historical (deprecated) |
-| IP | `186.2.165.49` | DDoS-Guard subsidiary AS59692 |
-| MX | `mail.privateemail.com` | Namecheap private email |
+| Domain | `xmrwallet.net` | NICENIC, paid until 2036 — **ACTIVE** |
+| Domain | `xmrwallet.me` | Key-Systems, paid until 2036 — **ACTIVE** |
+| Domain | `xmrwallet.cc` | **SUSPENDED** by PDR |
+| Domain | `xmrwallet.biz` | **SUSPENDED** by WebNic |
+| Tor v3 | `xmrtor3fsapuu6y26za7vpzox4vpaj6ny5viq2arbmozm7kg6jitnlid.onion` | Active |
+| IP | `186.2.165.49` | xmrwallet.com — AS59692 IQWeb |
+| IP | `190.115.31.40` | xmrwallet.net (recycled from .biz) — AS59692 IQWeb |
+| IP | `185.129.100.248` | xmrwallet.me (recycled from .cc) — AS57724 DDoS-Guard |
+| MX | `mx1/mx2.privateemail.com` | Same across all 5 domains |
+| NS | `ns1/ns2.ddos-guard.net` | Same across all 5 domains |
 | Cookies | `__ddg8_` `__ddg9_` `__ddg10_` `__ddg1_` | DDoS-Guard tracking |
 | Analytics | `UA-116766241-1` | Google Analytics |
-| Typosquats | `xmreallet.com` `xmrqallet.com` `xmrwalley.com` `xmrwallrt.com` `xmrwallwt.com` | |
 | session_key | `[blob]:[b64_address]:[b64_viewkey]` | **Key exfiltration vector** |
 | TX marker | `type == 'swept'` | Server-initiated theft |
 | Backdoor | `/support_login.html` `session_id=8de50123dab32` | Not user-initiated |
@@ -391,28 +370,30 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## 📢 Report Abuse
+## Report Abuse
 
 <div align="center">
 
 | Platform | Link |
 |----------|------|
-| 🇺🇸 FBI IC3 | [ic3.gov](https://ic3.gov) |
-| 🇺🇸 FTC | [reportfraud.ftc.gov](https://reportfraud.ftc.gov) |
-| 🇬🇧 Action Fraud | [actionfraud.police.uk](https://www.actionfraud.police.uk) |
-| 🇨🇦 CAFC | [antifraudcentre.ca](https://www.antifraudcentre-centreantifraude.ca) |
-| 🌍 Interpol | [interpol.int/Crimes/Cybercrime](https://www.interpol.int/Crimes/Cybercrime) |
+| FBI IC3 | [ic3.gov](https://ic3.gov) |
+| FTC | [reportfraud.ftc.gov](https://reportfraud.ftc.gov) |
+| Action Fraud | [actionfraud.police.uk](https://www.actionfraud.police.uk) |
+| CAFC | [antifraudcentre.ca](https://www.antifraudcentre-centreantifraude.ca) |
+| Interpol | [interpol.int/Crimes/Cybercrime](https://www.interpol.int/Crimes/Cybercrime) |
 | Google Safe Browsing | [report_phish](https://safebrowsing.google.com/safebrowsing/report_phish/) |
 | Netcraft | [report.netcraft.com](https://report.netcraft.com) |
-| VirusTotal | [virustotal.com/gui/domain/xmrwallet.com](https://www.virustotal.com/gui/domain/xmrwallet.com) |
-| Registrar | abuse@namesilo.com |
+| VirusTotal | [virustotal.com](https://www.virustotal.com/gui/domain/xmrwallet.com) |
+| Registrar (.com) | abuse@namesilo.com |
+| Registrar (.net) | abuse@nicenic.net |
+| Registrar (.me) | abuse@key-systems.net |
 | Hosting | abuse@ddos-guard.net |
 
 </div>
 
 ---
 
-## ✅ Safe Alternatives
+## Safe Alternatives
 
 | Wallet | Platform | Link |
 |--------|----------|------|
@@ -421,11 +402,11 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 | **Monerujo** | Android | [monerujo.io](https://monerujo.io) |
 | **Cake Wallet** | iOS / Android | [cakewallet.com](https://cakewallet.com) |
 
-> ⚠️ **Never use a web wallet that asks for your private key or seed phrase.**
+> **Never use a web wallet that asks for your private key or seed phrase.**
 
 ---
 
-## 🔗 Related Projects
+## Related Projects
 
 | Project | Description | Stars |
 |---------|-------------|-------|
@@ -434,21 +415,21 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## 📡 Connect
+## Connect
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/🌐_WEBSITE-FF0000?style=for-the-badge)](https://phishdestroy.io)
-[![Telegram](https://img.shields.io/badge/📢_TELEGRAM-000000?style=for-the-badge)](https://t.me/destroy_phish)
-[![Bot](https://img.shields.io/badge/🤖_BOT-000000?style=for-the-badge)](https://t.me/PhishDestroy_bot)
-[![Twitter](https://img.shields.io/badge/🐦_TWITTER-000000?style=for-the-badge)](https://x.com/Phish_Destroy)
-[![API](https://img.shields.io/badge/⚡_API-FF0000?style=for-the-badge)](https://api.destroy.tools)
+[![Website](https://img.shields.io/badge/WEBSITE-FF0000?style=for-the-badge)](https://phishdestroy.io)
+[![Telegram](https://img.shields.io/badge/TELEGRAM-000000?style=for-the-badge)](https://t.me/destroy_phish)
+[![Bot](https://img.shields.io/badge/BOT-000000?style=for-the-badge)](https://t.me/PhishDestroy_bot)
+[![Twitter](https://img.shields.io/badge/TWITTER-000000?style=for-the-badge)](https://x.com/Phish_Destroy)
+[![API](https://img.shields.io/badge/API-FF0000?style=for-the-badge)](https://api.destroy.tools)
 
 </div>
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This repository contains evidence of criminal activity published for research, public safety, and law enforcement purposes. Data is provided as-is based on observed behavior and publicly available analysis. Independent verification recommended.
 
