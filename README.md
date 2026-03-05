@@ -63,10 +63,10 @@ The operator purchased **four escape domains**. Two were suspended. Two more wer
 
 | Domain | Registrar | Prepaid | IP | Status |
 |--------|-----------|---------|-----|--------|
-| `xmrwallet.cc` | PublicDomainRegistry | 8 years | 185.129.100.248 | **SUSPENDED** |
-| `xmrwallet.biz` | WebNic.cc | 5 years | 190.115.31.40 | **SUSPENDED** |
-| `xmrwallet.net` | NICENIC International | **10 years** | **190.115.31.40** ← same IP as .biz | **ACTIVE** |
-| `xmrwallet.me` | Key-Systems GmbH | **10 years** | **185.129.100.248** ← same IP as .cc | **ACTIVE** |
+| `xmrwallet.cc` | PublicDomainRegistry | 8 years | 185.129.100.248 | ✅ **SUSPENDED** |
+| `xmrwallet.biz` | WebNic.cc | 5 years | 190.115.31.40 | ✅ **SUSPENDED** |
+| `xmrwallet.net` | NICENIC International | **10 years** | **190.115.31.40** ← same IP as .biz | 🔴 **ACTIVE** |
+| `xmrwallet.me` | Key-Systems GmbH | **10 years** | **185.129.100.248** ← same IP as .cc | 🔴 **ACTIVE** |
 
 The operator didn't even change servers — the new domains point to the exact same IPs. Four different registrars used deliberately to slow coordinated takedowns.
 
@@ -137,16 +137,16 @@ In 8 years of operation the operator has **never once** produced:
 
 | What we asked | What we got |
 |---------------|-------------|
-| Network capture proving viewkey is NOT sent to server | Nothing |
-| Code proving signed TX IS broadcast (not `raw = 0`) | Nothing |
-| Explanation for `session_key` containing `base64(viewkey)` | Nothing |
-| Explanation for backdoor session `8de50123dab32` | Nothing |
-| Explanation for `swept` TX type (not in Monero) | Nothing |
-| Any technical counter-argument of any kind | **Nothing. Ever.** |
+| Network capture proving viewkey is NOT sent to server | ❌ Nothing |
+| Code proving signed TX IS broadcast (not `raw = 0`) | ❌ Nothing |
+| Explanation for `session_key` containing `base64(viewkey)` | ❌ Nothing |
+| Explanation for backdoor session `8de50123dab32` | ❌ Nothing |
+| Explanation for `swept` TX type (not in Monero) | ❌ Nothing |
+| Any technical counter-argument of any kind | ❌ **Nothing. Ever.** |
 
 ---
 
-### Consequences
+### ⚠️ Consequences
 
 It is unclear why the operator reacted so aggressively — registering escape domains within days, then deleting all evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
 
@@ -154,7 +154,7 @@ It is unclear why the operator reacted so aggressively — registering escape do
 
 ---
 
-## Guest Posts / Articles
+## 📝 Guest Posts / Articles
 
 | File | Title |
 |------|-------|
@@ -167,7 +167,7 @@ It is unclear why the operator reacted so aggressively — registering escape do
 
 ---
 
-## PDF Evidence Documents
+## 📄 PDF Evidence Documents
 
 | File | Description |
 |------|-------------|
@@ -177,7 +177,7 @@ It is unclear why the operator reacted so aggressively — registering escape do
 
 ---
 
-### He Will Cry, Threaten, and Lie — Do Not Believe Him
+### 🚩 He Will Cry, Threaten, and Lie — Do Not Believe Him
 
 > **The operator will contact you from `royn5094@protonmail.com` or xmrwallet.com email addresses. He will claim innocence, threaten legal action, and play the victim. This is the standard playbook. Do not engage.**
 
@@ -201,7 +201,7 @@ The operator has had 8 years to prove he's not a thief. He chose deletion every 
 
 ---
 
-### Timeline
+### 📅 Timeline
 
 ```
 2016-08-29  xmrwallet.com  registered — primary scam domain
@@ -219,7 +219,7 @@ The operator has had 8 years to prove he's not a thief. He chose deletion every 
 
 ---
 
-## Technical Evidence
+## 🔍 Technical Evidence
 
 ### 1. View Key Exfiltration
 
@@ -287,7 +287,7 @@ GET stats.g.doubleclick.net        ×1  — ad tracker
 
 ---
 
-## Operator Profile
+## 🕵️ Operator Profile
 
 | Attribute | Value |
 |-----------|-------|
@@ -326,7 +326,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Victim Reports
+## 👥 Victim Reports
 
 | Amount | Source | Notes |
 |--------|--------|-------|
@@ -341,7 +341,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Infrastructure IOCs
+## 🌐 Infrastructure IOCs
 
 | Type | Value | Notes |
 |------|-------|-------|
@@ -370,7 +370,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Report Abuse
+## 📢 Report Abuse
 
 <div align="center">
 
@@ -393,7 +393,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Safe Alternatives
+## ✅ Safe Alternatives
 
 | Wallet | Platform | Link |
 |--------|----------|------|
@@ -406,7 +406,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Related Projects
+## 🔗 Related Projects
 
 | Project | Description | Stars |
 |---------|-------------|-------|
@@ -415,21 +415,21 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 
 ---
 
-## Connect
+## 📡 Connect
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/WEBSITE-FF0000?style=for-the-badge)](https://phishdestroy.io)
-[![Telegram](https://img.shields.io/badge/TELEGRAM-000000?style=for-the-badge)](https://t.me/destroy_phish)
-[![Bot](https://img.shields.io/badge/BOT-000000?style=for-the-badge)](https://t.me/PhishDestroy_bot)
-[![Twitter](https://img.shields.io/badge/TWITTER-000000?style=for-the-badge)](https://x.com/Phish_Destroy)
-[![API](https://img.shields.io/badge/API-FF0000?style=for-the-badge)](https://api.destroy.tools)
+[![Website](https://img.shields.io/badge/🌐_WEBSITE-FF0000?style=for-the-badge)](https://phishdestroy.io)
+[![Telegram](https://img.shields.io/badge/📢_TELEGRAM-000000?style=for-the-badge)](https://t.me/destroy_phish)
+[![Bot](https://img.shields.io/badge/🤖_BOT-000000?style=for-the-badge)](https://t.me/PhishDestroy_bot)
+[![Twitter](https://img.shields.io/badge/🐦_TWITTER-000000?style=for-the-badge)](https://x.com/Phish_Destroy)
+[![API](https://img.shields.io/badge/⚡_API-FF0000?style=for-the-badge)](https://api.destroy.tools)
 
 </div>
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This repository contains evidence of criminal activity published for research, public safety, and law enforcement purposes. Data is provided as-is based on observed behavior and publicly available analysis. Independent verification recommended.
 
