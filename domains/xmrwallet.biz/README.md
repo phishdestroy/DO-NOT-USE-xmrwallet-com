@@ -71,5 +71,3 @@ See [DNSDumpster map](../../docs/img/dnsmap-xmrwallet-biz.png)
 - https://safebrowsing.google.com/safebrowsing/report_phish/
 - https://phish.report/
 
-## Full Evidence
-https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>xmrwallet.com Scam — Private Key Stolen, Funds Hijacked | Security Analysis</title>
 <meta name="description" content="xmrwallet.com steals your Monero private view key AND hijacks transactions server-side. 15+ victims, $2M+ stolen. Full technical analysis with code proof.">
-<meta name="keywords" content="xmrwallet scam, xmrwallet.com review, xmrwallet stolen funds, xmrwallet private key, monero wallet scam, xmr wallet scam, xmrwallet lost funds, xmrwallet trustpilot, is xmrwallet safe, xmrwallet security, monero web wallet danger, xmrwallet view key, xmrwallet google analytics, xmrwallet phishing, Nathalie Roy scam, nathroy github scam, xmrwallet deleted issues, xmrwallet evidence deleted, xmrwallet coverup, xmrwallet github deleted, xmrwallet.cc suspended, xmrwallet.biz suspended, xmrwallet escape domains">
+<meta name="keywords" content="xmrwallet scam, xmrwallet.com review, xmrwallet.net scam, xmrwallet.me scam, xmrwallet stolen funds, xmrwallet private key, monero wallet scam, xmr wallet scam, xmrwallet lost funds, xmrwallet trustpilot, is xmrwallet safe, xmrwallet security, monero web wallet danger, xmrwallet view key, xmrwallet captcha, xmrwallet phishing, Nathalie Roy scam, nathroy github scam, xmrwallet deleted issues, xmrwallet evidence deleted, xmrwallet coverup, xmrwallet github deleted, xmrwallet.cc suspended, xmrwallet.biz suspended, xmrwallet.net, xmrwallet.me, xmrwallet escape domains, xmrwallet new domains">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="author" content="PhishDestroy Research">
 <link rel="canonical" href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/">
@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="Private view key stolen on every request. Transactions hijacked server-side (raw_tx_and_hash.raw=0). 15+ victims, $2M+ stolen. Operator deleted GitHub evidence — we archived it.">
 <meta name="twitter:image" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/img/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is xmrwallet.com a scam?","acceptedAnswer":{"@type":"Answer","text":"Yes. xmrwallet.com performs server-side transaction hijacking: the client builds a transaction then discards it (raw_tx_and_hash.raw=0), sending only metadata to the server. The server constructs its own transaction and can redirect funds to any address. Additionally, the private view key is transmitted to the server on every API request."}},{"@type":"Question","name":"Who runs xmrwallet.com?","acceptedAnswer":{"@type":"Answer","text":"The operator is identified as Nathalie Roy (Canada). GitHub: nathroy (ID 39167759). Email: admin@xmrwallet.com. Reddit: u/WiseSolution — banned from r/Monero."}},{"@type":"Question","name":"Is xmrwallet.com safe?","acceptedAnswer":{"@type":"Answer","text":"No. xmrwallet.com is not safe. It performs server-side transaction hijacking, collects private view keys, loads 4 Google trackers, uses DDoS-Guard offshore hosting to evade takedowns, and has manipulated reviews on Trustpilot."}},{"@type":"Question","name":"Did xmrwallet.com delete evidence?","acceptedAnswer":{"@type":"Answer","text":"Yes. After PhishDestroy published GitHub issues #35 and #36 documenting server-side TX hijacking and view key theft, and after both escape domains (xmrwallet.biz and xmrwallet.cc) were suspended, the operator (nathroy / Nathalie Roy) deleted the issues and wiped repository content. All evidence was archived before deletion."}},{"@type":"Question","name":"What is the best Monero wallet?","acceptedAnswer":{"@type":"Answer","text":"Use only official wallets: Monero GUI (getmonero.org), Feather Wallet, Monerujo (Android), Cake Wallet (iOS/Android). Never use web wallets requiring your private key."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com Scam — Private Key Stolen, Funds Hijacked","author":{"@type":"Organization","name":"PhishDestroy Research","url":"https://github.com/phishdestroy"},"datePublished":"2026-02-13","dateModified":"2026-02-24","description":"xmrwallet.com steals your Monero private view key and hijacks transactions server-side. 15+ victims, $2M+ stolen. Operator deleted evidence after exposure — full archive preserved.","publisher":{"@type":"Organization","name":"PhishDestroy Research"},"mainEntityOfPage":"https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com Scam — Private Key Stolen, Funds Hijacked","author":{"@type":"Organization","name":"PhishDestroy Research","url":"https://github.com/phishdestroy"},"datePublished":"2026-02-13","dateModified":"2026-03-04","description":"xmrwallet.com steals your Monero private view key and hijacks transactions server-side. 15+ victims, $2M+ stolen. Now operating on xmrwallet.net and xmrwallet.me after .cc and .biz suspended. Custom captcha defeated.","publisher":{"@type":"Organization","name":"PhishDestroy Research"},"mainEntityOfPage":"https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><rect width='4' height='32' fill='%23FF2020'/><text x='8' y='24' font-family='monospace' font-size='20' fill='%23FF2020'>⚠</text></svg>">
@@ -257,6 +257,10 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
     <span style="color:var(--red);letter-spacing:2px;font-size:9px;">⚠ ALL DOMAINS — SAME OPERATION</span><br>
     <span style="color:#555;">xmrwallet.</span><span style="color:#c00">com</span>
     <span style="color:#222;margin:0 8px">·</span>
+    <span style="color:#555;">xmrwallet.</span><span style="color:#c00">net</span> <span style="color:#c00;font-size:9px;letter-spacing:1px">NEW</span>
+    <span style="color:#222;margin:0 8px">·</span>
+    <span style="color:#555;">xmrwallet.</span><span style="color:#c00">me</span> <span style="color:#c00;font-size:9px;letter-spacing:1px">NEW</span>
+    <span style="color:#222;margin:0 8px">·</span>
     <span style="color:#333;text-decoration:line-through">xmrwallet.cc</span> <span style="color:#00cc66;font-size:9px;letter-spacing:1px">✅ SUSPENDED</span>
     <span style="color:#222;margin:0 8px">·</span>
     <span style="color:#333;text-decoration:line-through">xmrwallet.biz</span> <span style="color:#00cc66;font-size:9px;letter-spacing:1px">✅ SUSPENDED</span>
@@ -466,6 +470,8 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
     <thead><tr><th>TYPE</th><th>VALUE</th><th>NOTES</th></tr></thead>
     <tbody>
       <tr><td>Domain</td><td>xmrwallet.com</td><td>NameSilo · registered 2016-08-29 · paid until 2031</td></tr>
+      <tr><td>Domain</td><td style="color:#c00">xmrwallet.net</td><td><span style="color:#c00;font-family:var(--mono);font-size:10px">🔴 ACTIVE</span> — NICENIC International · registered 2026-02-26 · <strong>10yr prepaid</strong> (until 2036) · IP <strong>190.115.31.40</strong> ← same as .biz · AS59692 IQWeb BZ</td></tr>
+      <tr><td>Domain</td><td style="color:#c00">xmrwallet.me</td><td><span style="color:#c00;font-family:var(--mono);font-size:10px">🔴 ACTIVE</span> — Key-Systems GmbH · registered 2026-02-26 · <strong>10yr prepaid</strong> (until 2036) · IP <strong>185.129.100.248</strong> ← same as .cc · AS57724 DDOS-GUARD RU</td></tr>
       <tr><td>Domain</td><td style="text-decoration:line-through;color:#333">xmrwallet.cc</td><td><span style="color:#00cc66;font-family:var(--mono);font-size:10px">✅ SUSPENDED</span> — PublicDomainRegistry.com · registered 2026-02-04 · was paid 8 years (until 2034) · AS57724 DDOS-GUARD RU</td></tr>
       <tr><td>Domain</td><td style="text-decoration:line-through;color:#333">xmrwallet.biz</td><td><span style="color:#00cc66;font-family:var(--mono);font-size:10px">✅ SUSPENDED</span> — WebNic.cc · registered 2026-02-09 · AS59692 IQWeb BZ · 4 lock flags · 23 VT file hashes</td></tr>
       <tr><td>Tor v3</td><td class="red">xmrtor3fsapuu6y26za7vpzox4vpaj6ny5viq2arbmozm7kg6jitnlid.onion</td><td class="red">Active onion — current</td></tr>
@@ -499,9 +505,13 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
   </p>
 
   <div style="background:#000a03;border:1px solid rgba(0,255,136,0.15);border-left:4px solid var(--green);padding:20px 26px;margin-bottom:36px;font-family:var(--mono);font-size:12px;line-height:2.2;" class="reveal">
-    <span style="color:var(--green);letter-spacing:2px;font-size:9px;font-weight:700;">✅ UPDATE — FEBRUARY 2026 — BOTH ESCAPE DOMAINS SUSPENDED</span><br><br>
+    <span style="color:var(--green);letter-spacing:2px;font-size:9px;font-weight:700;">✅ UPDATE — FEBRUARY 2026 — .CC AND .BIZ SUSPENDED</span><br><br>
     <span style="color:#00cc6688;">xmrwallet.biz</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">WebNic.cc suspended the domain following abuse reports. <code style="color:#2a2a2a">serverTransferProhibited</code> and all 4 locks did not prevent takedown.</span><br>
     <span style="color:#00cc6688;">xmrwallet.cc</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">PublicDomainRegistry.com suspended the domain. 8-year prepayment wasted.</span><br><br>
+    <span style="color:var(--red);letter-spacing:2px;font-size:9px;font-weight:700;">⚠ UPDATE — MARCH 2026 — OPERATOR REPLACED DOMAINS + ADDED CAPTCHA</span><br><br>
+    <span style="color:rgba(255,80,80,0.7);">xmrwallet.net</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">Registered 2026-02-26 (3 days after suspensions). NICENIC International. Same IP as .biz (190.115.31.40). 10yr prepaid.</span><br>
+    <span style="color:rgba(255,80,80,0.7);">xmrwallet.me</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">Registered 2026-02-26. Key-Systems GmbH. Same IP as .cc (185.129.100.248). 10yr prepaid.</span><br>
+    <span style="color:#ff7a00;">captcha</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">Custom PoW + slider captcha deployed across all domains. New developer involved. <a href="posts/post-xmrwallet-captcha-defeated.html" style="color:#ff7a00;text-decoration:none;">Reverse-engineered and defeated →</a></span><br><br>
     <span style="color:var(--red)">Operator response:</span> <span style="color:#666;">deleted GitHub issues, wiped repo content, panicked. Cached evidence preserved below and at <a href="deleted.html" style="color:#555">Deleted Issues Archive →</a></span><br><br>
     <span style="color:#2a2a2a;">// xmrwallet.com still active. NameSilo has not yet acted. Keep reporting.</span>
   </div>
@@ -575,7 +585,7 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
 
     <div class="escape-event" style="border-color:rgba(255,60,60,0.15)">
       <div class="escape-date">OPERATOR STATEMENT — VERBATIM</div>
-      <div class="escape-title" style="color:#555">"Circumvent Country Blockages: Our official domains: xmrwallet.com, xmrwallet.cc, xmrwallet.biz"</div>
+      <div class="escape-title" style="color:#555">"Circumvent Country Blockages: Our official domains: xmrwallet.com, <span style="text-decoration:line-through">xmrwallet.cc</span>, <span style="text-decoration:line-through">xmrwallet.biz</span>" <span style="color:var(--green);font-size:11px">(both suspended)</span> — now replaced by xmrwallet<span style="color:var(--red)">.net</span> and xmrwallet<span style="color:var(--red)">.me</span></div>
       <div class="escape-comment" style="border-color:rgba(255,60,60,0.15);color:#444;">
         He calls it "circumventing country blocks". Legitimate privacy tools (Tor, Monero itself, Feather Wallet) use GitHub Pages and IPFS — free, open, censorship-resistant by design. 
         He instead pays for offshore bullet-proof hosting on <em>three</em> domains across <em>two</em> different registrars with maximum lock flags. 
@@ -595,14 +605,72 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
       </div>
     </div>
 
+    <div class="escape-event">
+      <div class="escape-date" style="color:var(--red)">2026-02-26 — 3 DAYS AFTER SUSPENSIONS — OPERATOR REPLACES DOMAINS</div>
+      <div class="escape-title">xmrwallet<span style="color:var(--red)">.net</span> — <strong style="color:rgba(255,80,80,0.7)">reuses exact IP of suspended .biz</strong></div>
+      <div class="escape-grid">
+        <div class="escape-field"><div class="escape-field-k">REGISTERED</div><div class="escape-field-v red">2026-02-26</div></div>
+        <div class="escape-field"><div class="escape-field-k">EXPIRES</div><div class="escape-field-v red">2036-02-26 — 10 YEARS PREPAID</div></div>
+        <div class="escape-field"><div class="escape-field-k">REGISTRAR</div><div class="escape-field-v">NICENIC INTERNATIONAL GROUP CO., LIMITED</div></div>
+        <div class="escape-field"><div class="escape-field-k">IP</div><div class="escape-field-v red">190.115.31.40 ← SAME AS SUSPENDED .BIZ</div></div>
+        <div class="escape-field"><div class="escape-field-k">ASN / HOSTING</div><div class="escape-field-v red">AS59692 IQWeb FZ-LLC · Belize 🇧🇿</div></div>
+        <div class="escape-field"><div class="escape-field-k">NAMESERVERS</div><div class="escape-field-v">NS1/NS2.DDOS-GUARD.NET</div></div>
+        <div class="escape-field"><div class="escape-field-k">MX</div><div class="escape-field-v red">mx1/mx2.privateemail.com ← IDENTICAL TO .COM</div></div>
+        <div class="escape-field"><div class="escape-field-k">LOCKS</div><div class="escape-field-v red">clientDeleteProhibited · clientTransferProhibited</div></div>
+      </div>
+      <div>
+        <span class="escape-badge red">SAME IP AS .BIZ</span>
+        <span class="escape-badge red">10YR PREPAID</span>
+        <span class="escape-badge red">NEW REGISTRAR</span>
+      </div>
+      <div class="escape-comment">
+        Registered 3 days after .cc and .biz were suspended. Points to the exact same server (190.115.31.40) that xmrwallet.biz used.
+        10 years prepaid — the longest commitment yet. Different registrar from all previous domains — diversifying to slow coordinated takedowns.
+      </div>
+    </div>
+
+    <div class="escape-event">
+      <div class="escape-date" style="color:var(--red)">2026-02-26 — SAME DAY, DIFFERENT REGISTRAR</div>
+      <div class="escape-title">xmrwallet<span style="color:var(--red)">.me</span> — <strong style="color:rgba(255,80,80,0.7)">reuses exact IP of suspended .cc</strong></div>
+      <div class="escape-grid">
+        <div class="escape-field"><div class="escape-field-k">REGISTERED</div><div class="escape-field-v red">2026-02-26</div></div>
+        <div class="escape-field"><div class="escape-field-k">EXPIRES</div><div class="escape-field-v red">2036-02-26 — 10 YEARS PREPAID</div></div>
+        <div class="escape-field"><div class="escape-field-k">REGISTRAR</div><div class="escape-field-v">Key-Systems GmbH</div></div>
+        <div class="escape-field"><div class="escape-field-k">IP</div><div class="escape-field-v red">185.129.100.248 ← SAME AS SUSPENDED .CC</div></div>
+        <div class="escape-field"><div class="escape-field-k">ASN / HOSTING</div><div class="escape-field-v red">AS57724 DDOS-GUARD LTD · Russia 🇷🇺</div></div>
+        <div class="escape-field"><div class="escape-field-k">NAMESERVERS</div><div class="escape-field-v">NS1/NS2.DDOS-GUARD.NET</div></div>
+        <div class="escape-field"><div class="escape-field-k">MX</div><div class="escape-field-v red">mx1/mx2.privateemail.com ← IDENTICAL TO .COM</div></div>
+        <div class="escape-field"><div class="escape-field-k">LOCKS</div><div class="escape-field-v red">clientTransferProhibited</div></div>
+      </div>
+      <div>
+        <span class="escape-badge red">SAME IP AS .CC</span>
+        <span class="escape-badge red">10YR PREPAID</span>
+        <span class="escape-badge red">5TH REGISTRAR</span>
+      </div>
+      <div class="escape-comment">
+        Registered the same day as .net but at a different registrar (Key-Systems GmbH). The operator now uses 5 different registrars — each with its own abuse process. Same privateemail.com inbox across all 5 domains.
+      </div>
+    </div>
+
+    <div class="escape-event us" style="border-color:rgba(255,122,0,0.3)">
+      <div class="escape-date" style="color:#ff7a00">MARCH 2026 — CUSTOM CAPTCHA DEPLOYED</div>
+      <div class="escape-title">New developer brought in. Custom captcha + proof-of-work + trajectory tracking added to all domains.</div>
+      <div class="escape-comment" style="border-color:rgba(255,122,0,0.3);color:#555;">
+        First real code change since 2018. The new JavaScript has inline comments, numbered steps, and modern patterns — a completely different coding style from the original theft code.
+        The old operator brought in someone young. The captcha was <strong style="color:#ff7a00">reverse-engineered and defeated within hours</strong>.
+        <br><br>
+        <a href="posts/post-xmrwallet-captcha-defeated.html" style="font-family:var(--mono);font-size:10px;color:#ff7a00;text-decoration:none;">→ Full captcha analysis and bypass — with source code</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- DNS INFRASTRUCTURE PROOF -->
   <div class="reveal" style="margin-top:32px;">
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin-bottom:16px;">// DNS FINGERPRINT — ALL THREE DOMAINS IDENTICAL</div>
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--red);margin-bottom:16px;">// DNS FINGERPRINT — ALL FIVE DOMAINS IDENTICAL MX/NS</div>
 
     <style>
-    .dns-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:1px;}
+    .dns-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);margin-bottom:1px;}
     .dns-col{background:var(--bg2);padding:16px 18px;}
     .dns-col-title{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:#333;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
     .dns-col-title span{color:var(--red);}
@@ -656,15 +724,39 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
         <div class="dns-row"><span class="dns-k">GVERIFY</span><span class="dns-v" style="color:#2a2a2a;font-size:9px">OXmFcc_ivkHH...hNac</span></div>
         <div class="dns-row"><span class="dns-k">WOT</span><span class="dns-v red" style="font-size:9px">8a5554c915e3c17278a7</span></div>
       </div>
+      <div class="dns-col">
+        <div class="dns-col-title">xmrwallet<span>.net</span> · <span style="color:var(--red)">active</span></div>
+        <div class="dns-row"><span class="dns-k">A</span><span class="dns-v red">190.115.31.40</span></div>
+        <div class="dns-row"><span class="dns-k">ASN</span><span class="dns-v red">AS59692 IQWEB, BZ</span></div>
+        <div class="dns-row"><span class="dns-k">MX10</span><span class="dns-v match">mx1.privateemail.com</span></div>
+        <div class="dns-row"><span class="dns-k">MX20</span><span class="dns-v match">mx2.privateemail.com</span></div>
+        <div class="dns-row"><span class="dns-k">NS1</span><span class="dns-v match">ns1.ddos-guard.net</span></div>
+        <div class="dns-row"><span class="dns-k">NS2</span><span class="dns-v match">ns2.ddos-guard.net</span></div>
+        <div class="dns-row"><span class="dns-k">REG</span><span class="dns-v" style="color:#555;font-size:9px">NICENIC International</span></div>
+        <div class="dns-row"><span class="dns-k">PAID</span><span class="dns-v red">2036 — 10 YEARS</span></div>
+        <div class="dns-row"><span class="dns-k">IP</span><span class="dns-v red" style="font-size:9px">← SAME AS .BIZ</span></div>
+      </div>
+      <div class="dns-col">
+        <div class="dns-col-title">xmrwallet<span>.me</span> · <span style="color:var(--red)">active</span></div>
+        <div class="dns-row"><span class="dns-k">A</span><span class="dns-v red">185.129.100.248</span></div>
+        <div class="dns-row"><span class="dns-k">ASN</span><span class="dns-v red">AS57724 DDOS-GUARD RU</span></div>
+        <div class="dns-row"><span class="dns-k">MX10</span><span class="dns-v match">mx1.privateemail.com</span></div>
+        <div class="dns-row"><span class="dns-k">MX20</span><span class="dns-v match">mx2.privateemail.com</span></div>
+        <div class="dns-row"><span class="dns-k">NS1</span><span class="dns-v match">ns1.ddos-guard.net</span></div>
+        <div class="dns-row"><span class="dns-k">NS2</span><span class="dns-v match">ns2.ddos-guard.net</span></div>
+        <div class="dns-row"><span class="dns-k">REG</span><span class="dns-v" style="color:#555;font-size:9px">Key-Systems GmbH</span></div>
+        <div class="dns-row"><span class="dns-k">PAID</span><span class="dns-v red">2036 — 10 YEARS</span></div>
+        <div class="dns-row"><span class="dns-k">IP</span><span class="dns-v red" style="font-size:9px">← SAME AS .CC</span></div>
+      </div>
     </div>
 
     <div class="dns-smoking-gun">
       <span style="color:var(--red);font-family:var(--mono);font-size:9px;letter-spacing:2px;">⚠ SMOKING GUN — SINGLE OPERATOR PROOF</span><br><br>
-      All three domains share <strong style="color:#888;font-weight:400">identical MX records</strong> (mx1/mx2.privateemail.com via Namecheap) and <strong style="color:#888;font-weight:400">identical NS records</strong> (ns1/ns2.ddos-guard.net).
-      This is not a coincidence — email infrastructure cannot be shared across "independent" domains. One inbox. One operator. Three domains.<br><br>
-      Additionally: <code style="font-family:var(--mono);color:rgba(255,80,80,0.6)">wot-verification: 8a5554c915e3c17278a7</code> found on .cc and .biz —
-      the operator registered all domains on <strong style="color:#888;font-weight:400">Web of Trust</strong> to actively manage trust scores and suppress scam warnings in WOT browser extensions.
-      Reputation manipulation infrastructure built before the domains were even publicized.
+      All five domains share <strong style="color:#888;font-weight:400">identical MX records</strong> (mx1/mx2.privateemail.com via Namecheap) and <strong style="color:#888;font-weight:400">identical NS records</strong> (ns1/ns2.ddos-guard.net).
+      One inbox. One operator. Five domains. <strong style="color:#888;font-weight:400">IP addresses are recycled</strong> between domain generations: .biz (suspended) → .net (same IP), .cc (suspended) → .me (same IP).<br><br>
+      <code style="font-family:var(--mono);color:rgba(255,80,80,0.6)">wot-verification: 8a5554c915e3c17278a7</code> found on .cc and .biz.
+      The operator uses <strong style="color:#888;font-weight:400">5 different registrars</strong> across 5 domains to make coordinated takedowns harder.
+      After suspensions, new domains appear within 3 days — with 10-year prepaid registrations.
     </div>
 
     <div class="dns-maps">

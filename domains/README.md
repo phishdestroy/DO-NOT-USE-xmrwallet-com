@@ -84,4 +84,3 @@ After years of static code, the operator deployed a custom captcha system across
 
 ---
 
-Full evidence: https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/

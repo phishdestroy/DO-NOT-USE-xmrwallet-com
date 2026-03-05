@@ -68,5 +68,3 @@ After February 2026, the operator added a custom captcha system across all domai
 - https://phish.report/
 - https://www.virustotal.com/gui/domain/xmrwallet.me
 
-## Full Evidence
-https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/
