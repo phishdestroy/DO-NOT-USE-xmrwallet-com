@@ -26,6 +26,25 @@
 
 ---
 
+---
+
+---
+
+I wonder why the project adds some kind of CAPTCHA — without updating the code on GitHub?  
+Can a wallet that runs on the client side really load the system — it should be able to work offline, right? Or not?  
+
+Do you have someone entering lots of wallets? That’s not good!  
+You decided to add an ugly CAPTCHA so you only steal targeted ones?
+Dude, ask the coder next time to add more comments.  
+https://raw.githubusercontent.com/phishdestroy/DO-NOT-USE-xmrwallet-com/refs/heads/master/captchajs.txt
+But if you think adding hCaptcha will reduce the number of victims for your phishing — it won’t.  
+Open your pockets wider — you always have many victims.  
+You just wait and sooner or later someone will refill them.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8c7fc8e9-f47e-4657-8fe3-7f636261d7e3" width="520">
+</p>
+
 ## 🚨 Summary
 
 > **xmrwallet.com transmits your private Monero view key to their server on every API request. Transactions are hijacked server-side. The GitHub repository is a facade — 5.3 years of zero commits while the real theft infrastructure evolved separately.**
