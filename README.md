@@ -18,7 +18,7 @@
 **Security analysis of xmrwallet.com — confirmed private key exfiltration and server-side transaction hijacking.**
 15+ documented victims. $2M+ estimated stolen. Operating since 2016.
 
-[**Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**Report Abuse**](#-report-abuse) · [**Safe Alternatives**](#-safe-alternatives)
+[**🌐 Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**🗑 Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**🚨 Report Abuse**](#-report-abuse) · [**✅ Safe Alternatives**](#-safe-alternatives)
 
 [![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/)
 
@@ -26,26 +26,26 @@
 
 ---
 
-## Summary
+## 🚨 Summary
 
 > **xmrwallet.com transmits your private Monero view key to their server on every API request. Transactions are hijacked server-side. The GitHub repository is a facade — 5.3 years of zero commits while the real theft infrastructure evolved separately.**
 
 | Finding | Status |
 |---------|--------|
-| Private view key sent to server in plaintext | **CONFIRMED** |
-| `session_key` encodes viewkey — re-sent 40+ times per session | **CONFIRMED** |
-| `raw_tx_and_hash.raw = 0` — client TX discarded, server redirects funds | **CONFIRMED** |
-| 4 Google trackers (GTM, UA, GA4, DoubleClick) inside wallet | **CONFIRMED** |
-| GitHub repo has 5.3-year commit gap (2018–2024) | **CONFIRMED** |
-| Operator banned from r/Monero, deleted 21+ GitHub issues | **CONFIRMED** |
-| 4 escape domains registered — 2 suspended, 2 active (IP recycled) | **CONFIRMED** |
-| Custom captcha deployed — reverse-engineered and defeated | **CONFIRMED** |
-| New developer involved — code comments prove second author | **CONFIRMED** |
-| 50+ paid SEO articles, zero donation wallet | **CONFIRMED** |
+| Private view key sent to server in plaintext | 🔴 **CONFIRMED** |
+| `session_key` encodes viewkey — re-sent 40+ times per session | 🔴 **CONFIRMED** |
+| `raw_tx_and_hash.raw = 0` — client TX discarded, server redirects funds | 🔴 **CONFIRMED** |
+| 4 Google trackers (GTM, UA, GA4, DoubleClick) inside wallet | 🔴 **CONFIRMED** |
+| GitHub repo has 5.3-year commit gap (2018–2024) | 🔴 **CONFIRMED** |
+| Operator banned from r/Monero, deleted 21+ GitHub issues | 🔴 **CONFIRMED** |
+| 4 escape domains registered — 2 suspended, 2 active (IP recycled) | 🔴 **CONFIRMED** |
+| Custom captcha deployed — reverse-engineered and defeated | 🔴 **CONFIRMED** |
+| New developer involved — code comments prove second author | 🔴 **CONFIRMED** |
+| 50+ paid SEO articles, zero donation wallet | 🔴 **CONFIRMED** |
 
 ---
 
-## He Deleted the Evidence Instead of Proving He's Innocent
+## 🗑 He Deleted the Evidence Instead of Proving He's Innocent
 
 <div align="center">
 
@@ -57,7 +57,7 @@
 
 ---
 
-### Escape Domains — Caught, Replaced, Caught Again
+### 🏃 Escape Domains — Caught, Replaced, Caught Again
 
 The operator purchased **four escape domains**. Two were suspended. Two more were registered 3 days later — reusing the exact same server IPs:
 
@@ -74,7 +74,7 @@ The operator didn't even change servers — the new domains point to the exact s
 
 ---
 
-### Custom Captcha Deployed — Defeated in Hours
+### 🛡 Custom Captcha Deployed — Defeated in Hours
 
 In March 2026, the operator deployed a custom captcha system (proof-of-work + slider puzzle + trajectory tracking) across all active domains. The code reveals a **second developer** — properly commented JavaScript with numbered steps, `// FIX:` annotations, and modern patterns. The original theft code has zero comments.
 
@@ -82,7 +82,7 @@ The captcha was [reverse-engineered and defeated within hours](https://phishdest
 
 ---
 
-### Screenshots captured before deletion
+### 📸 Screenshots captured before deletion
 
 <div align="center">
 
@@ -120,7 +120,7 @@ The captcha was [reverse-engineered and defeated within hours](https://phishdest
 
 ---
 
-### What he can't delete — archived copies
+### 🔗 What he can't delete — archived copies
 
 | Archive | Link |
 |---------|------|
@@ -131,7 +131,7 @@ The captcha was [reverse-engineered and defeated within hours](https://phishdest
 
 ---
 
-### 8 years. 21+ deleted issues. Zero rebuttals.
+### ❌ 8 years. 21+ deleted issues. Zero rebuttals.
 
 In 8 years of operation the operator has **never once** produced:
 
