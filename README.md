@@ -4,7 +4,7 @@
 
 <img src="22.png" width="700"/>
 
-> **xmrwallet.com · xmrwallet.net · xmrwallet.me — active scam | xmrwallet.cc · xmrwallet.biz — suspended**
+> **xmrwallet.com · xmrwallet.me — active scam | xmrwallet.cc · xmrwallet.biz — suspended | xmrwallet.net — DNS dead, abuse reported**
 
 # DO-NOT-USE-xmrwallet-com
 
@@ -58,7 +58,7 @@ You just wait and sooner or later someone will refill them.
 | 4 Google trackers (GTM, UA, GA4, DoubleClick) inside wallet | 🔴 **CONFIRMED** |
 | GitHub repo has 5.3-year commit gap (2018–2024) | 🔴 **CONFIRMED** |
 | Operator banned from r/Monero, deleted 21+ GitHub issues | 🔴 **CONFIRMED** |
-| 4 escape domains registered — 2 suspended, 2 active (IP recycled) | 🔴 **CONFIRMED** |
+| 4 escape domains registered — 2 suspended, 1 DNS dead (abuse reported), 1 active | 🔴 **CONFIRMED** |
 | Custom captcha deployed — reverse-engineered and defeated | 🔴 **CONFIRMED** |
 | New developer involved — code comments prove second author | 🔴 **CONFIRMED** |
 | 50+ paid SEO articles, zero donation wallet | 🔴 **CONFIRMED** |
@@ -85,10 +85,10 @@ The operator purchased **four escape domains**. Two were suspended. Two more wer
 |--------|-----------|---------|-----|--------|
 | `xmrwallet.cc` | PublicDomainRegistry | 8 years | 185.129.100.248 | ✅ **SUSPENDED** |
 | `xmrwallet.biz` | WebNic.cc | 5 years | 190.115.31.40 | ✅ **SUSPENDED** |
-| `xmrwallet.net` | NICENIC International | **10 years** | **190.115.31.40** ← same IP as .biz | 🔴 **ACTIVE** |
+| `xmrwallet.net` | NICENIC International | **10 years** | **190.115.31.40** ← same IP as .biz | 💀 **DNS DEAD** — abuse reported |
 | `xmrwallet.me` | Key-Systems GmbH | **10 years** | **185.129.100.248** ← same IP as .cc | 🔴 **ACTIVE** |
 
-The operator didn't even change servers — the new domains point to the exact same IPs. Four different registrars used deliberately to slow coordinated takedowns.
+The operator didn't even change servers — the new domains point to the exact same IPs. Four different registrars used deliberately to slow coordinated takedowns. **xmrwallet.net** — bought for 10 years at NICENIC International — was reported for abuse and is now DNS dead. That's 3 out of 4 escape domains neutralized.
 
 **Zero commits were made to the GitHub repository during any domain migration.** No code changes, no config updates, nothing. For a project claiming to be "open source" — switching to new domains without a single public commit says everything.
 
@@ -170,7 +170,7 @@ In 8 years of operation the operator has **never once** produced:
 
 It is unclear why the operator reacted so aggressively — registering escape domains within days, then deleting all evidence after both were suspended. This level of urgency suggests the exposure may lead to consequences the operator did not anticipate.
 
-**Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we will remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning. The `.net` and `.me` takedowns are next.
+**Deleting our work does not make it disappear.** Every finding is archived, cached, and reproduced in this repository. For every piece of our research that gets deleted — we remove a corresponding piece of the fraudulent infrastructure. The `.biz` and `.cc` suspensions were the beginning. `.net` — bought for 10 years — is now DNS dead. Three out of four escape domains have been neutralized. `.me` is next.
 
 ---
 
@@ -221,20 +221,77 @@ The operator has had 8 years to prove he's not a thief. He chose deletion every 
 
 ---
 
-### 📅 Timeline
+### 📅 Timeline — The Fight Against xmrwallet.com
+
+Every time the operator runs — we follow. Every domain he buys — we report. Every piece of evidence he deletes — we archive first.
 
 ```
-2016-08-29  xmrwallet.com  registered — primary scam domain
-2026-02-04  xmrwallet.cc   registered secretly — 8yr prepaid
-2026-02-09  xmrwallet.biz  registered secretly — 5yr prepaid
-2026-02-13  Issue #35 published — TX hijacking mechanism exposed
-2026-02-18  Issue #36 published — live network capture, 43 viewkey transmissions
-2026-02-23  xmrwallet.cc   SUSPENDED by registrar
-2026-02-23  xmrwallet.biz  SUSPENDED by registrar
-2026-02-23  Operator deletes Issues #35 + #36. No rebuttal. Just deletion.
-2026-02-26  xmrwallet.net  registered — 10yr prepaid, same IP as .biz (190.115.31.40)
-2026-02-26  xmrwallet.me   registered — 10yr prepaid, same IP as .cc (185.129.100.248)
-2026-03     Custom captcha deployed — reverse-engineered and defeated in hours
+──── PHASE 0: THE SCAM (2016–2025) ──────────────────────────────────────
+
+2016-08-29  xmrwallet.com registered — primary scam domain begins operation
+2016–2025   Thousands of wallets created, view keys silently exfiltrated
+            Victims report stolen XMR on Trustpilot, Sitejabber, Reddit
+            Operator u/WiseSolution banned from r/Monero
+            50+ paid SEO articles published to bury negative reviews
+            GitHub repo left stale for 5.3 years (2018–2024) while
+            production theft code evolves separately
+
+──── PHASE 1: EXPOSURE (Feb 2026) ───────────────────────────────────────
+
+2026-02-04  xmrwallet.cc registered secretly by operator — 8yr prepaid
+2026-02-09  xmrwallet.biz registered secretly — 5yr prepaid
+            ↑ Operator senses exposure coming. Prepares escape domains.
+
+2026-02-13  ██ Issue #35 published — full TX hijacking mechanism exposed
+            session_key = base64(viewkey), raw_tx_and_hash.raw = 0,
+            backdoor session 8de50123dab32, 5.3yr commit gap
+
+2026-02-18  ██ Issue #36 published — live network capture
+            43 viewkey transmissions in single session, 4 Google trackers,
+            URL analysis + request analytics archived as JSON evidence
+
+──── PHASE 2: FIRST TAKEDOWNS (Feb 23, 2026) ───────────────────────────
+
+2026-02-23  ✅ xmrwallet.cc  SUSPENDED by PublicDomainRegistry
+2026-02-23  ✅ xmrwallet.biz SUSPENDED by WebNic.cc
+2026-02-23  Operator panics — deletes Issues #35 + #36 from GitHub
+            No technical rebuttal. No proof of innocence. Just deletion.
+            All evidence already archived: cached HTML, screenshots, PDFs
+
+──── PHASE 3: OPERATOR BUYS NEW DOMAINS (Feb 26, 2026) ─────────────────
+
+2026-02-26  xmrwallet.net registered — NICENIC International, 10yr prepaid
+            Points to 190.115.31.40 ← exact same IP as suspended .biz
+2026-02-26  xmrwallet.me  registered — Key-Systems GmbH, 10yr prepaid
+            Points to 185.129.100.248 ← exact same IP as suspended .cc
+            ↑ 4 different registrars used to slow coordinated takedowns.
+              Zero GitHub commits. No code changes. Same theft infrastructure.
+
+──── PHASE 4: CAPTCHA & COUNTERMEASURES (Mar 2026) ─────────────────────
+
+2026-03     Operator deploys custom captcha (PoW + slider + trajectory)
+            New developer involved — code comments reveal second author
+            Captcha reverse-engineered and defeated within hours
+            100% automated bypass rate achieved
+
+──── PHASE 5: CONTINUED TAKEDOWNS (Mar 2026) ───────────────────────────
+
+2026-03     ██ Abuse report filed against xmrwallet.net at NICENIC
+            Domain bought for 10 YEARS — taken down anyway
+2026-03-08  💀 xmrwallet.net DNS DEAD — no longer resolves
+            Third escape domain neutralized. $0 refund on 10yr registration.
+
+──── SCOREBOARD ─────────────────────────────────────────────────────────
+
+  xmrwallet.cc   ✅ SUSPENDED   (8yr prepaid — wasted)
+  xmrwallet.biz  ✅ SUSPENDED   (5yr prepaid — wasted)
+  xmrwallet.net  💀 DNS DEAD    (10yr prepaid — wasted)
+  xmrwallet.me   🔴 ACTIVE      (10yr prepaid — next target)
+  xmrwallet.com  🔴 ACTIVE      (primary — paid until 2031)
+
+  Escape domains neutralized:  3 / 4
+  Years of prepaid registration wasted:  23 years
+  Operator's mass-registration strategy:  FAILED
 ```
 
 ---
@@ -366,7 +423,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 | Type | Value | Notes |
 |------|-------|-------|
 | Domain | `xmrwallet.com` | NameSilo, paid until 2031 |
-| Domain | `xmrwallet.net` | NICENIC, paid until 2036 — **ACTIVE** |
+| Domain | `xmrwallet.net` | NICENIC, paid 10yr until 2036 — 💀 **DNS DEAD** (abuse reported) |
 | Domain | `xmrwallet.me` | Key-Systems, paid until 2036 — **ACTIVE** |
 | Domain | `xmrwallet.cc` | **SUSPENDED** by PDR |
 | Domain | `xmrwallet.biz` | **SUSPENDED** by WebNic |
