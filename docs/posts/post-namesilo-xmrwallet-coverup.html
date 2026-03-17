@@ -31,7 +31,7 @@
         "author": {"@type": "Organization", "name": "PhishDestroy Research", "url": "https://phishdestroy.io"},
         "publisher": {"@type": "Organization", "name": "PhishDestroy Research"},
         "datePublished": "2026-03-16",
-        "dateModified": "2026-03-16",
+        "dateModified": "2026-03-17",
         "mainEntityOfPage": "https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-namesilo-xmrwallet-coverup.html",
         "keywords": ["NameSilo", "xmrwallet scam", "registrar fraud", "ICANN complaint", "Monero scam"]
     }
@@ -107,6 +107,8 @@
             <a href="https://dev.to/phishdestroy/xmrwallet-com-scam">dev.to</a>
         </div>
 
+        <img class="evidence" src="https://i.ibb.co/bjhDQBf6/xmrwallet-hero-namesilo-corporate-shield.webp" alt="NameSilo shielding xmrwallet.com operator from accountability — 3 registrars suspended, NameSilo refused" loading="lazy" style="margin-bottom:1.5rem;">
+
         <div class="warning-box">
             <strong>SUMMARY:</strong> NameSilo claimed xmrwallet.com was "compromised" &mdash; hacked by a third party. The operator's own emails to PhishDestroy, written <strong>before</strong> NameSilo got involved, prove the "hack" story was fabricated. Three other registrars suspended the operator's domains after reviewing the same evidence. NameSilo was the only one that refused &mdash; and then wrote a cover story.
         </div>
@@ -115,6 +117,8 @@
         <h2>Why This Matters</h2>
 
         <p>Our investigation started because of what the code does: <code>session_key = Base64(private_view_key)</code> exfiltrates your Monero private view key on every API request. <code>raw_tx_and_hash.raw = 0</code> discards the client-built transaction so the server can build its own and redirect funds. <code>type == 'swept'</code> is a custom theft marker not found anywhere in the Monero protocol.</p>
+
+        <img class="evidence" src="https://i.ibb.co/VYGJV4rv/xmrwallet-session-key-theft-exfiltration.png" alt="xmrwallet.com session_key = Base64(private_view_key) exfiltration proof from network capture" loading="lazy">
 
         <p>We published the technical evidence. The operator's domains started getting suspended. That's when NameSilo entered the picture &mdash; not as a neutral registrar, but as the operator's press secretary.</p>
 
@@ -203,6 +207,9 @@
             <div class="email-analysis">ANALYSIS: Sent the same day xmrwallet.cc and xmrwallet.biz were suspended. Panic mode. The lawyer never appeared. "Trezor and Ledger also get view keys" is technically illiterate &mdash; Trezor is a hardware wallet with no server. Still no mention of any hack or compromise. Still defends the code as his own work.</div>
         </div>
 
+        <img class="evidence" src="https://i.ibb.co/R4hRJsN0/xmrwallet-operator-email-4-feb23-lawyer-threats.png" alt="xmrwallet operator email February 23 claiming hired lawyer after domains suspended" loading="lazy">
+
+        <h3>PhishDestroy Response</h3>
         <img class="evidence" src="https://i.ibb.co/NgdDryWH/xmrwallet-phishdestroy-response-feb18-enough-whining-fixed.png" alt="PhishDestroy response to operator with technical evidence" loading="lazy">
 
         <!-- ============================================ -->
@@ -245,6 +252,8 @@
 
         <p>The operator emailed us four times. In every single email, he used first person: <em>"we are," "this is how the website is run," "this is the data we need."</em> He defended the code. He defended the data collection. He never once mentioned a hack, a compromise, an unauthorized third party, or anything resembling the story NameSilo later told.</p>
 
+        <img class="evidence" src="https://i.ibb.co/KzW9j735/xmrwallet-escape-domains-network-burned.png" alt="xmrwallet operator registered escape domains xmrwallet.cc and xmrwallet.biz — both suspended" loading="lazy">
+
         <p>The "compromise" narrative appeared for the first time on March 4 &mdash; in NameSilo's response. Not from the operator. From NameSilo.</p>
 
         <p><strong>NameSilo invented the "hack" story after the fact, after three other registrars had already suspended the operator's domains, to justify keeping xmrwallet.com online.</strong></p>
@@ -263,6 +272,8 @@
         </ul>
 
         <p>This is not negligence. This is active assistance.</p>
+
+        <img class="evidence" src="https://i.ibb.co/3m2bgg5K/xmrwallet-deleted-evidence-cached-permanent.png" alt="xmrwallet operator deleted 21+ GitHub issues containing victim reports — evidence cached by PhishDestroy" loading="lazy">
 
         <!-- ============================================ -->
         <h2>NameSilo's "Compromise" vs. the Operator's Emails</h2>
