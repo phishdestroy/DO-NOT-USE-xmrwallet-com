@@ -16,9 +16,14 @@
 [![Stolen](https://img.shields.io/badge/stolen-$2M%2B_estimated-FF0000?style=flat-square)](#-victim-reports)
 
 **Security analysis of xmrwallet.com — confirmed private key exfiltration and server-side transaction hijacking.**
-15+ documented victims. $2M+ estimated stolen. Operating since 2016.
+15+ documented victims. $2M+ estimated stolen. Operating since 2016. **NameSilo knows — and is covering for the operator.**
 
-[**🌐 Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**🗑 Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**🚨 Report Abuse**](#-report-abuse) · [**✅ Safe Alternatives**](#-safe-alternatives)
+[**🌐 Full Evidence Page**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) · [**🗑 Deleted Issues Archive**](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/deleted.html) · [**🚨 Report Abuse**](#-report-abuse) · [**✅ Safe Alternatives**](#-safe-alternatives) · [**🏛 NameSilo Cover-Up**](#-namesilo-lied--the-operators-own-emails-prove-it)
+
+[![Medium](https://img.shields.io/badge/Medium-Full_Article-FF0000?style=flat-square&logo=medium)](https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79)
+[![dev.to](https://img.shields.io/badge/dev.to-Technical_Writeup-FF0000?style=flat-square&logo=devdotto)](https://dev.to/phishdestroy/xmrwallet-com-scam)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-6%2F93_Malicious-FF0000?style=flat-square)](https://www.virustotal.com/gui/domain/www.xmrwallet.com)
+[![NameSilo](https://img.shields.io/badge/NameSilo-Covering_for_Operator-FF7A00?style=flat-square)](#-namesilo-lied--the-operators-own-emails-prove-it)
 
 [![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/)
 
@@ -62,6 +67,9 @@ You just wait and sooner or later someone will refill them.
 | Custom captcha deployed — reverse-engineered and defeated | 🔴 **CONFIRMED** |
 | New developer involved — code comments prove second author | 🔴 **CONFIRMED** |
 | 50+ paid SEO articles, zero donation wallet | 🔴 **CONFIRMED** |
+| NameSilo fabricated "compromise" story — operator's emails prove it | 🔴 **CONFIRMED** |
+| Operator told us "subpoena the registrar" BEFORE abuse report filed | 🔴 **CONFIRMED** |
+| NameSilo helped operator remove VirusTotal warnings | 🔴 **CONFIRMED** |
 
 ---
 
@@ -174,6 +182,63 @@ It is unclear why the operator reacted so aggressively — registering escape do
 
 ---
 
+## 🏛 NameSilo Lied — The Operator's Own Emails Prove It
+
+Three registrars independently suspended the operator's domains after reviewing the same evidence. **NameSilo was the only one that refused — and then fabricated a "compromise" story.**
+
+| Domain | Registrar | Action |
+|--------|-----------|--------|
+| `xmrwallet.cc` | PDR | ✅ **SUSPENDED** |
+| `xmrwallet.biz` | WebNic | ✅ **SUSPENDED** |
+| `xmrwallet.net` | NICENIC | 💀 **DNS DEAD** |
+| `xmrwallet.com` | **NameSilo** | ❌ **"The registrant is the victim"** |
+
+NameSilo claimed the site was "compromised" — hacked by a third party. **Zero evidence provided.** The operator's own emails to PhishDestroy, written **before** NameSilo got involved, prove the "hack" story was fabricated:
+
+### The Operator's Own Words
+
+| Date | What the operator wrote | What it proves |
+|------|------------------------|----------------|
+| **Feb 16** | *"We don't store seeds or keys, everything is done in your browser locally."* | First person — "we" — his site, his code. No hack mentioned. |
+| **Feb 17** | *"This is the data we need to offer the service."* | Contradicts himself in 24hrs. Yesterday: no keys. Today: we need the data. |
+| **Feb 17** | *"Feel free to subpoena the domain registrar for my information."* | **Written BEFORE we contacted NameSilo.** He already knew they would protect him. |
+| **Feb 23** | *"I've hired a lawyer and a private investigator."* | Sent the day .cc and .biz were suspended. Lawyer never appeared. |
+| **Feb 23** | *"Trezor and Ledger also get their view keys."* | Trezor is a hardware wallet. No server. Technically illiterate defense. |
+
+### Why "Subpoena the Registrar" Changes Everything
+
+The operator wrote this on **Feb 17** — before we filed any abuse report with NameSilo. Before the "compromise" story existed.
+
+A scam operator running $550/month bulletproof hosting behind DDoS-Guard does not invite registrar scrutiny — **unless he already knows the registrar will side with him.**
+
+He didn't say "subpoena the hosting provider." He specifically said **"subpoena the registrar"** — NameSilo — with complete confidence.
+
+Three days later, NameSilo called him "the victim."
+
+### What NameSilo Did
+
+- **Fabricated the "compromise" narrative** — zero technical evidence
+- **Called the operator "the victim"** — despite proof of credential theft
+- **Helped remove VirusTotal warnings** — flagged by Fortinet, ESET, Sophos
+- **Ignored 3 other registrars** — who suspended after reviewing the same evidence
+
+> **NameSilo's abuse team is compromised or complicit. File ICANN complaint: https://www.icann.org/compliance/complaint**
+
+**Full analysis with email screenshots:** [NameSilo Cover-Up — Dedicated Page](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-namesilo-xmrwallet-coverup.html)
+
+---
+
+## 📰 Articles & Publications
+
+| Platform | Link |
+|----------|------|
+| **Medium** | [xmrwallet.com — Full Investigation](https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79) |
+| **dev.to** | [xmrwallet.com Scam Exposed](https://dev.to/phishdestroy/xmrwallet-com-scam) |
+| **GitHub Pages** | [Full Evidence Page](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/) |
+| **NameSilo Analysis** | [NameSilo Lied — Proof](https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/posts/post-namesilo-xmrwallet-coverup.html) |
+
+---
+
 ## 📝 Guest Posts / Articles
 
 | File | Title |
@@ -184,6 +249,7 @@ It is unclear why the operator reacted so aggressively — registering escape do
 | [post-xmrwallet-alternatives.html](docs/posts/post-xmrwallet-alternatives.html) | **Safe Monero Wallets Instead** |
 | [post-nathalie-roy-xmrwallet.html](docs/posts/post-nathalie-roy-xmrwallet.html) | **Nathalie Roy: The Operator** |
 | [post-xmrwallet-captcha-defeated.html](docs/posts/post-xmrwallet-captcha-defeated.html) | **Captcha Reverse-Engineered and Defeated** |
+| [post-namesilo-xmrwallet-coverup.html](docs/posts/post-namesilo-xmrwallet-coverup.html) | **NameSilo Lied — Operator Emails Prove It** |
 
 ---
 
@@ -250,6 +316,20 @@ Every time the operator runs — we follow. Every domain he buys — we report. 
             43 viewkey transmissions in single session, 4 Google trackers,
             URL analysis + request analytics archived as JSON evidence
 
+──── PHASE 1.5: OPERATOR EMAILS (Feb 16–23, 2026) ────────────────────
+
+2026-02-16  Operator emails PhishDestroy from royn5094@protonmail.com:
+            "We don't store seeds or keys, everything is done locally."
+            ↑ LIE — live capture: session_key = Base64(viewkey), 40+ times/session
+2026-02-17  "This is the data we need to offer the service."
+            ↑ Contradicts himself in 24 hours
+2026-02-17  "Feel free to subpoena the domain registrar."
+            ↑ BEFORE any abuse report filed. He knew NameSilo would protect him.
+2026-02-23  "I've hired a lawyer and a private investigator."
+            ↑ Same day .cc and .biz suspended. Lawyer never appeared.
+            "Trezor and Ledger also get their view keys."
+            ↑ Trezor is a hardware wallet. No server. Technically illiterate.
+
 ──── PHASE 2: FIRST TAKEDOWNS (Feb 23, 2026) ───────────────────────────
 
 2026-02-23  ✅ xmrwallet.cc  SUSPENDED by PublicDomainRegistry
@@ -280,6 +360,18 @@ Every time the operator runs — we follow. Every domain he buys — we report. 
             Domain bought for 10 YEARS — taken down anyway
 2026-03-08  💀 xmrwallet.net DNS DEAD — no longer resolves
             Third escape domain neutralized. $0 refund on 10yr registration.
+
+──── PHASE 6: NAMESILO COVER-UP (Mar 2026) ────────────────────────────
+
+2026-03-04  NameSilo responds to abuse report:
+            "The registrant is the victim" — site was "compromised"
+            ↑ ZERO evidence provided. No forensic report. No server logs.
+            ↑ Operator's own emails (Feb 16-17) contradict this completely.
+            ↑ He said "we" — first person — defended the code as his own.
+2026-03-04  NameSilo helps operator remove VirusTotal security warnings
+            ↑ Flagged by Fortinet, ESET, Sophos — NameSilo overrode them all
+2026-03-16  Medium + dev.to articles published with full email evidence
+            NameSilo cover-up page published on GitHub Pages
 
 ──── SCOREBOARD ─────────────────────────────────────────────────────────
 
@@ -461,7 +553,8 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 | Google Safe Browsing | [report_phish](https://safebrowsing.google.com/safebrowsing/report_phish/) |
 | Netcraft | [report.netcraft.com](https://report.netcraft.com) |
 | VirusTotal | [virustotal.com](https://www.virustotal.com/gui/domain/xmrwallet.com) |
-| Registrar (.com) | abuse@namesilo.com |
+| **ICANN Complaint** | **[icann.org/compliance/complaint](https://www.icann.org/compliance/complaint)** — **bypass NameSilo** |
+| Registrar (.com) | abuse@namesilo.com — ⚠️ **sided with operator** |
 | Registrar (.net) | abuse@nicenic.net |
 | Registrar (.me) | abuse@key-systems.net |
 | Hosting | abuse@ddos-guard.net |
@@ -500,6 +593,7 @@ current     v0.18.4.1 production      ← additional changes NOT in GitHub
 [![Telegram](https://img.shields.io/badge/📢_TELEGRAM-000000?style=for-the-badge)](https://t.me/destroy_phish)
 [![Bot](https://img.shields.io/badge/🤖_BOT-000000?style=for-the-badge)](https://t.me/PhishDestroy_bot)
 [![Twitter](https://img.shields.io/badge/🐦_TWITTER-000000?style=for-the-badge)](https://x.com/Phish_Destroy)
+[![Medium](https://img.shields.io/badge/📰_MEDIUM-000000?style=for-the-badge)](https://phishdestroy.medium.com)
 [![API](https://img.shields.io/badge/⚡_API-FF0000?style=for-the-badge)](https://api.destroy.tools)
 
 </div>
