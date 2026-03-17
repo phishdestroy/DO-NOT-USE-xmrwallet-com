@@ -176,6 +176,25 @@
             table { font-size: 0.8rem; }
             th, td { padding: 0.4rem 0.5rem; }
         }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,51,51,0.3); } 50% { box-shadow: 0 0 20px 4px rgba(255,51,51,0.15); } }
+        h1 { animation: fadeInUp 0.6s ease-out; }
+        h2 { animation: fadeInUp 0.5s ease-out; }
+        .warning-box { animation: fadeInUp 0.6s ease-out; transition: border-color 0.3s; }
+        .warning-box:hover { border-color: #ff6666; }
+
+        /* Page navigation */
+        .page-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 2.5rem 0; }
+        .page-nav a { display: block; background: #111; border: 1px solid #222; border-radius: 6px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.3s, transform 0.2s, background 0.3s; }
+        .page-nav a:hover { border-color: #ff3333; transform: translateY(-2px); background: #1a1a1a; text-decoration: none; }
+        .page-nav .nav-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+        .page-nav .nav-title { font-size: 0.95rem; color: #e0e0e0; }
+        .page-nav a:hover .nav-title { color: #ff3333; }
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, #ff3333, transparent); margin: 2.5rem 0; }
+        @media (max-width: 600px) { .page-nav { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -315,6 +334,31 @@
         </div>
 
         <p>Your old seed phrase and keys are in the hands of the xmrwallet.com operator. Even if your funds have not been stolen yet, they can be taken at any time. A clean break with completely new keys is the only safe path.</p>
+
+        <div class="divider"></div>
+
+        <div class="page-nav">
+            <a href="post-is-xmrwallet-safe.html">
+                <div class="nav-label">Previous</div>
+                <div class="nav-title">Is xmrwallet Safe?</div>
+            </a>
+            <a href="post-xmrwallet-captcha-defeated.html" style="text-align:right;">
+                <div class="nav-label">Next</div>
+                <div class="nav-title">Captcha Defeated</div>
+            </a>
+            <a href="post-namesilo-xmrwallet-coverup.html">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">NameSilo Cover-Up</div>
+            </a>
+            <a href="post-nathalie-roy-xmrwallet.html">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">Nathalie Roy</div>
+            </a>
+            <a href="post-xmrwallet-scam-exposed.html" style="grid-column: 1 / -1; text-align: center;">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">Scam Exposed</div>
+            </a>
+        </div>
 
         <div class="warning-box" style="border-color: #ff7a00;">
             <strong style="color: #ff7a00;">UPDATE — March 2026: NameSilo is protecting the xmrwallet operator.</strong> Three registrars suspended his domains. NameSilo called him "the victim" and fabricated a story about the site being "hacked." His own emails prove otherwise.

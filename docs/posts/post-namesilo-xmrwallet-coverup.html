@@ -91,7 +91,36 @@
         .cta-box { background: #111; border: 2px solid #ff7a00; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
         .cta-box a { display: inline-block; background: #ff3333; color: #fff; padding: 12px 28px; border-radius: 4px; font-weight: bold; margin-top: 0.75rem; text-decoration: none; }
         .cta-box a:hover { background: #cc0000; text-decoration: none; }
-        @media (max-width: 600px) { h1 { font-size: 1.5rem; } article { padding: 1.5rem 1rem; } }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,51,51,0.3); } 50% { box-shadow: 0 0 20px 4px rgba(255,51,51,0.15); } }
+        @keyframes glow { 0%, 100% { text-shadow: 0 0 5px rgba(255,51,51,0.3); } 50% { text-shadow: 0 0 20px rgba(255,51,51,0.6); } }
+
+        h1 { animation: fadeInUp 0.6s ease-out; }
+        h2 { animation: fadeInUp 0.5s ease-out; }
+        .warning-box { animation: fadeInUp 0.6s ease-out; }
+        .email-block { animation: slideIn 0.5s ease-out; transition: border-color 0.3s, transform 0.2s; }
+        .email-block:hover { border-color: #ff3333; transform: translateX(4px); }
+        .vs-table { animation: fadeInUp 0.6s ease-out; }
+        .cta-box { animation: pulse 3s infinite; }
+        img.evidence { animation: fadeInUp 0.7s ease-out; transition: transform 0.3s, box-shadow 0.3s; }
+        img.evidence:hover { transform: scale(1.02); box-shadow: 0 4px 20px rgba(255,51,51,0.15); }
+        .verdict-no { animation: glow 2s infinite; }
+
+        /* Page navigation */
+        .page-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 2.5rem 0; }
+        .page-nav a { display: block; background: #111; border: 1px solid #222; border-radius: 6px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.3s, transform 0.2s, background 0.3s; }
+        .page-nav a:hover { border-color: #ff3333; transform: translateY(-2px); background: #1a1a1a; text-decoration: none; }
+        .page-nav .nav-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+        .page-nav .nav-title { font-size: 0.95rem; color: #e0e0e0; }
+        .page-nav a:hover .nav-title { color: #ff3333; }
+
+        /* Divider */
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, #ff3333, transparent); margin: 2.5rem 0; }
+
+        @media (max-width: 600px) { h1 { font-size: 1.5rem; } article { padding: 1.5rem 1rem; } .page-nav { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -207,7 +236,7 @@
             <div class="email-analysis">ANALYSIS: Sent the same day xmrwallet.cc and xmrwallet.biz were suspended. Panic mode. The lawyer never appeared. "Trezor and Ledger also get view keys" is technically illiterate &mdash; Trezor is a hardware wallet with no server. Still no mention of any hack or compromise. Still defends the code as his own work.</div>
         </div>
 
-        <img class="evidence" src="https://i.ibb.co/R4hRJsN0/xmrwallet-operator-email-4-feb23-lawyer-threats.png" alt="xmrwallet operator email February 23 claiming hired lawyer after domains suspended" loading="lazy">
+        <!-- Email #4 screenshot: needs correct imgbb URL -->
 
         <h3>PhishDestroy Response</h3>
         <img class="evidence" src="https://i.ibb.co/NgdDryWH/xmrwallet-phishdestroy-response-feb18-enough-whining-fixed.png" alt="PhishDestroy response to operator with technical evidence" loading="lazy">
@@ -364,29 +393,61 @@
 
         <!-- ============================================ -->
 
+        <div class="divider"></div>
+
+        <div class="page-nav">
+            <a href="post-xmrwallet-scam-exposed.html">
+                <div class="nav-label">&larr; Previous</div>
+                <div class="nav-title">xmrwallet.com Scam Exposed</div>
+            </a>
+            <a href="post-xmrwallet-deleted-evidence.html" style="text-align:right;">
+                <div class="nav-label">Next &rarr;</div>
+                <div class="nav-title">Operator Deletes Evidence</div>
+            </a>
+        </div>
+
+        <div class="page-nav" style="grid-template-columns: 1fr 1fr 1fr;">
+            <a href="post-is-xmrwallet-safe.html">
+                <div class="nav-label">Safety</div>
+                <div class="nav-title">Is xmrwallet Safe? No.</div>
+            </a>
+            <a href="post-nathalie-roy-xmrwallet.html">
+                <div class="nav-label">Operator</div>
+                <div class="nav-title">Nathalie Roy</div>
+            </a>
+            <a href="post-xmrwallet-alternatives.html">
+                <div class="nav-label">Alternatives</div>
+                <div class="nav-title">Safe Monero Wallets</div>
+            </a>
+        </div>
+
         <div class="mirrors">
             <h3>Full Investigation</h3>
             <ul>
                 <li><a href="../index.html">GitHub Pages &mdash; Full Technical Evidence</a></li>
-                <li><a href="https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79">Medium Article</a></li>
-                <li><a href="https://dev.to/phishdestroy/xmrwallet-com-scam">dev.to Article</a></li>
-                <li><a href="../deleted.html">Deleted GitHub Issues &mdash; Archived</a></li>
+                <li><a href="https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79">Medium &mdash; Full Article</a></li>
+                <li><a href="https://dev.to/phishdestroy/xmrwallet-com-scam">dev.to &mdash; Technical Writeup</a></li>
+                <li><a href="../deleted.html">Deleted GitHub Issues &mdash; Archived Evidence</a></li>
+                <li><a href="post-xmrwallet-captcha-defeated.html">Captcha Reverse-Engineered &mdash; 100% Bypass</a></li>
             </ul>
         </div>
 
         <div class="mirrors">
             <h3>Connect</h3>
             <ul>
-                <li>Website: <a href="https://phishdestroy.io">phishdestroy.io</a></li>
-                <li>Twitter/X: <a href="https://x.com/Phish_Destroy">@Phish_Destroy</a></li>
-                <li>GitHub: <a href="https://github.com/phishdestroy">phishdestroy</a></li>
-                <li>Medium: <a href="https://phishdestroy.medium.com">phishdestroy.medium.com</a></li>
+                <li><a href="https://phishdestroy.io">phishdestroy.io</a></li>
+                <li><a href="https://x.com/Phish_Destroy">Twitter/X: @Phish_Destroy</a></li>
+                <li><a href="https://github.com/phishdestroy">GitHub: phishdestroy</a></li>
+                <li><a href="https://phishdestroy.medium.com">Medium: phishdestroy.medium.com</a></li>
+                <li><a href="https://t.me/destroy_phish">Telegram: @destroy_phish</a></li>
             </ul>
         </div>
     </article>
 
     <div class="footer">
-        &copy; 2026 PhishDestroy Research &middot; Evidence is permanent &middot; <a href="../index.html">Back to investigation</a>
+        &copy; 2026 PhishDestroy Research &middot; Evidence is permanent &middot;
+        <a href="../index.html">Full Investigation</a> &middot;
+        <a href="https://phishdestroy.io">phishdestroy.io</a>
     </div>
 </body>
 </html>

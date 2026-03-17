@@ -200,6 +200,25 @@
             article { padding: 1.5rem 1rem; }
             .domain-card { flex-direction: column; align-items: flex-start; }
         }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,51,51,0.3); } 50% { box-shadow: 0 0 20px 4px rgba(255,51,51,0.15); } }
+        h1 { animation: fadeInUp 0.6s ease-out; }
+        h2 { animation: fadeInUp 0.5s ease-out; }
+        .warning-box { animation: fadeInUp 0.6s ease-out; transition: border-color 0.3s; }
+        .warning-box:hover { border-color: #ff6666; }
+
+        /* Page navigation */
+        .page-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 2.5rem 0; }
+        .page-nav a { display: block; background: #111; border: 1px solid #222; border-radius: 6px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.3s, transform 0.2s, background 0.3s; }
+        .page-nav a:hover { border-color: #ff3333; transform: translateY(-2px); background: #1a1a1a; text-decoration: none; }
+        .page-nav .nav-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+        .page-nav .nav-title { font-size: 0.95rem; color: #e0e0e0; }
+        .page-nav a:hover .nav-title { color: #ff3333; }
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, #ff3333, transparent); margin: 2.5rem 0; }
+        @media (max-width: 600px) { .page-nav { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -336,6 +355,31 @@
 
         <div class="warning-box">
             <strong>Do not use xmrwallet.com or any domain associated with this operator.</strong> If you have used xmrwallet.com, assume your keys are compromised. Create a new wallet using the official Monero software from <a href="https://www.getmonero.org/downloads/">getmonero.org</a> and transfer your funds immediately.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="page-nav">
+            <a href="post-namesilo-xmrwallet-coverup.html">
+                <div class="nav-label">Previous</div>
+                <div class="nav-title">NameSilo Cover-Up</div>
+            </a>
+            <a href="post-xmrwallet-deleted-evidence.html" style="text-align:right;">
+                <div class="nav-label">Next</div>
+                <div class="nav-title">Deleted Evidence</div>
+            </a>
+            <a href="post-xmrwallet-scam-exposed.html">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">Scam Exposed</div>
+            </a>
+            <a href="post-is-xmrwallet-safe.html">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">Is xmrwallet Safe?</div>
+            </a>
+            <a href="post-xmrwallet-captcha-defeated.html" style="grid-column: 1 / -1; text-align: center;">
+                <div class="nav-label">Related</div>
+                <div class="nav-title">Captcha Defeated</div>
+            </a>
         </div>
 
         <div class="warning-box" style="border-color: #ff7a00;">
