@@ -1,1 +1,43 @@
-²ø1šYì
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <rect width="900" height="500" fill="#080808"/>
+  <text x="450" y="30" font-family="monospace" font-size="14" fill="#FF2020" text-anchor="middle" letter-spacing="3">KEY THEFT + TX HIJACKING FLOW</text>
+  <rect x="30" y="60" width="200" height="80" rx="4" fill="#0F0F0F" stroke="#2A2A2A"/>
+  <text x="130" y="95" font-family="monospace" font-size="13" fill="#E0E0E0" text-anchor="middle">USER BROWSER</text>
+  <text x="130" y="115" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">builds transaction</text>
+  <line x1="230" y1="100" x2="350" y2="100" stroke="#FF2020" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="290" y="90" font-family="monospace" font-size="9" fill="#FF2020" text-anchor="middle">session_key</text>
+  <text x="290" y="120" font-family="monospace" font-size="8" fill="#555" text-anchor="middle">Base64(view_key)</text>
+  <rect x="350" y="60" width="200" height="80" rx="4" fill="#1a0000" stroke="#FF2020"/>
+  <text x="450" y="95" font-family="monospace" font-size="13" fill="#FF2020" text-anchor="middle">XMRWALLET SERVER</text>
+  <text x="450" y="115" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">8 PHP endpoints</text>
+  <line x1="450" y1="140" x2="450" y2="200" stroke="#FF2020" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="520" y="175" font-family="monospace" font-size="9" fill="#FF2020">raw_tx_and_hash.raw = 0</text>
+  <rect x="350" y="200" width="200" height="60" rx="4" fill="#0F0F0F" stroke="#FF2020" stroke-dasharray="4"/>
+  <text x="450" y="225" font-family="monospace" font-size="11" fill="#FF2020" text-anchor="middle">CLIENT TX DISCARDED</text>
+  <text x="450" y="245" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">server builds its own TX</text>
+  <line x1="450" y1="260" x2="450" y2="320" stroke="#FF2020" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="520" y="295" font-family="monospace" font-size="9" fill="#FF2020">type == 'swept'</text>
+  <rect x="350" y="320" width="200" height="60" rx="4" fill="#1a0000" stroke="#FF2020"/>
+  <text x="450" y="345" font-family="monospace" font-size="12" fill="#FF2020" text-anchor="middle">ATTACKER WALLET</text>
+  <text x="450" y="365" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">funds redirected</text>
+  <rect x="620" y="60" width="250" height="80" rx="4" fill="#0F0F0F" stroke="#FF7A00"/>
+  <text x="745" y="90" font-family="monospace" font-size="11" fill="#FF7A00" text-anchor="middle">VIEW KEY STORED</text>
+  <text x="745" y="110" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">40+ transmissions per session</text>
+  <text x="745" y="125" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">monitor all future deposits</text>
+  <line x1="550" y1="100" x2="620" y2="100" stroke="#FF7A00" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="620" y="200" width="250" height="60" rx="4" fill="#0F0F0F" stroke="#555"/>
+  <text x="745" y="225" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">GTM + GA + GA4 + DoubleClick</text>
+  <text x="745" y="245" font-family="monospace" font-size="9" fill="#333" text-anchor="middle">4 trackers in a "privacy wallet"</text>
+  <rect x="30" y="420" width="840" height="60" rx="4" fill="#0F0F0F" stroke="#1E1E1E"/>
+  <circle cx="60" cy="450" r="6" fill="#FF2020"/>
+  <text x="75" y="454" font-family="monospace" font-size="10" fill="#555">Theft vector</text>
+  <circle cx="230" cy="450" r="6" fill="#FF7A00"/>
+  <text x="245" y="454" font-family="monospace" font-size="10" fill="#555">Surveillance</text>
+  <circle cx="400" cy="450" r="6" fill="#555"/>
+  <text x="415" y="454" font-family="monospace" font-size="10" fill="#555">Tracking</text>
+  <text x="570" y="454" font-family="monospace" font-size="10" fill="#333">phishdestroy.github.io/DO-NOT-USE-xmrwallet-com</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#FF2020"/></marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#FF7A00"/></marker>
+  </defs>
+</svg>

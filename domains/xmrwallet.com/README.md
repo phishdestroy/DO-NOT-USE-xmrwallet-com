@@ -32,9 +32,14 @@ See [DNSDumpster map](../../docs/img/dnsmap-xmrwallet-com.png)
 - [xmrwallet.net](../xmrwallet.net/) — ACTIVE
 - [xmrwallet.me](../xmrwallet.me/) — ACTIVE
 
+## NameSilo Cover-Up
+
+NameSilo received the same evidence that led 3 other registrars to suspend. NameSilo called the operator "the victim," claimed the site was "compromised," and helped remove VirusTotal warnings. The operator's own emails contradict NameSilo's "hack" story.
+
 ## Report
 
-- abuse@namesilo.com
+- **ICANN complaint (recommended):** https://www.icann.org/compliance/complaint
+- abuse@namesilo.com (warning: NameSilo sided with operator)
 - abuse@ddos-guard.net
 - https://safebrowsing.google.com/safebrowsing/report_phish/
 - https://phish.report/

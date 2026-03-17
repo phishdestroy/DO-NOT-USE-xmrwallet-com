@@ -22,18 +22,28 @@ xmrwallet.cc   (suspended)  →  185.129.100.248  →  xmrwallet.me   (active)
 2026-02-04  xmrwallet.cc   registered   (8yr prepaid)
 2026-02-09  xmrwallet.biz  registered   (5yr prepaid)
 2026-02-13  PhishDestroy publishes investigation
+2026-02-16  Operator emails: "We don't store keys" (lie)
+2026-02-17  Operator: "This is the data we need" (contradicts Feb 16)
+2026-02-17  Operator: "Subpoena the registrar" (before any abuse report)
 2026-02-23  xmrwallet.cc   SUSPENDED
 2026-02-23  xmrwallet.biz  SUSPENDED
+2026-02-23  Operator: "I've hired a lawyer" (never appeared)
 2026-02-26  xmrwallet.net  registered   (10yr prepaid)
 2026-02-26  xmrwallet.me   registered   (10yr prepaid)
 2026-03     Captcha system deployed
+2026-03-04  NameSilo claims "compromise" — contradicted by operator's emails
+2026-03-16  Medium + dev.to articles published with email evidence
 ```
+
+## NameSilo Cover-Up
+
+NameSilo is the only registrar that refused to act. They called the operator "the victim" and claimed the site was "compromised." The operator's own emails (Feb 16-17) contradict this — he defended the code as his own before NameSilo invented the hack story. File ICANN complaint: https://www.icann.org/compliance/complaint
 
 ## Abuse Contacts
 
 | Domain | Registrar Abuse | Hosting |
 |--------|----------------|---------|
-| xmrwallet.com | abuse@namesilo.com | abuse@ddos-guard.net |
+| xmrwallet.com | abuse@namesilo.com (**sided with operator**) | abuse@ddos-guard.net |
 | xmrwallet.net | abuse@nicenic.net | abuse@ddos-guard.net |
 | xmrwallet.me | abuse@key-systems.net | abuse@ddos-guard.net |
 

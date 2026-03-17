@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="Private view key stolen on every request. Transactions hijacked server-side (raw_tx_and_hash.raw=0). 15+ victims, $2M+ stolen. Operator deleted GitHub evidence — we archived it.">
 <meta name="twitter:image" content="https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/img/og-image.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is xmrwallet.com a scam?","acceptedAnswer":{"@type":"Answer","text":"Yes. xmrwallet.com performs server-side transaction hijacking: the client builds a transaction then discards it (raw_tx_and_hash.raw=0), sending only metadata to the server. The server constructs its own transaction and can redirect funds to any address. Additionally, the private view key is transmitted to the server on every API request."}},{"@type":"Question","name":"Who runs xmrwallet.com?","acceptedAnswer":{"@type":"Answer","text":"The operator is identified as Nathalie Roy (Canada). GitHub: nathroy (ID 39167759). Email: admin@xmrwallet.com. Reddit: u/WiseSolution — banned from r/Monero."}},{"@type":"Question","name":"Is xmrwallet.com safe?","acceptedAnswer":{"@type":"Answer","text":"No. xmrwallet.com is not safe. It performs server-side transaction hijacking, collects private view keys, loads 4 Google trackers, uses DDoS-Guard offshore hosting to evade takedowns, and has manipulated reviews on Trustpilot."}},{"@type":"Question","name":"Did xmrwallet.com delete evidence?","acceptedAnswer":{"@type":"Answer","text":"Yes. After PhishDestroy published GitHub issues #35 and #36 documenting server-side TX hijacking and view key theft, and after both escape domains (xmrwallet.biz and xmrwallet.cc) were suspended, the operator (nathroy / Nathalie Roy) deleted the issues and wiped repository content. All evidence was archived before deletion."}},{"@type":"Question","name":"What is the best Monero wallet?","acceptedAnswer":{"@type":"Answer","text":"Use only official wallets: Monero GUI (getmonero.org), Feather Wallet, Monerujo (Android), Cake Wallet (iOS/Android). Never use web wallets requiring your private key."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com Scam — Private Key Stolen, Funds Hijacked","author":{"@type":"Organization","name":"PhishDestroy Research","url":"https://github.com/phishdestroy"},"datePublished":"2026-02-13","dateModified":"2026-03-04","description":"xmrwallet.com steals your Monero private view key and hijacks transactions server-side. 15+ victims, $2M+ stolen. Now operating on xmrwallet.net and xmrwallet.me after .cc and .biz suspended. Custom captcha defeated.","publisher":{"@type":"Organization","name":"PhishDestroy Research"},"mainEntityOfPage":"https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"xmrwallet.com Scam — Private Key Stolen, Funds Hijacked","author":{"@type":"Organization","name":"PhishDestroy Research","url":"https://github.com/phishdestroy"},"datePublished":"2026-02-13","dateModified":"2026-03-16","description":"xmrwallet.com steals your Monero private view key and hijacks transactions server-side. 15+ victims, $2M+ stolen. Now operating on xmrwallet.net and xmrwallet.me after .cc and .biz suspended. Custom captcha defeated.","publisher":{"@type":"Organization","name":"PhishDestroy Research"},"mainEntityOfPage":"https://phishdestroy.github.io/DO-NOT-USE-xmrwallet-com/"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><rect width='4' height='32' fill='%23FF2020'/><text x='8' y='24' font-family='monospace' font-size='20' fill='%23FF2020'>⚠</text></svg>">
@@ -234,6 +234,7 @@ footer{padding:40px 80px;border-top:1px solid var(--border);display:flex;align-i
   <div class="nav-links">
     <a href="#attack">Attack</a>
     <a href="#coverup">Operator</a>
+    <a href="#namesilo" style="color:var(--red);">NameSilo</a>
     <a href="#escape">Escape Attempt</a>
     <a href="#tracking">Tracking</a>
     <a href="#terms">Terms vs Reality</a>
@@ -495,6 +496,51 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
   </div>
 </section>
 
+<!-- NAMESILO COVER-UP -->
+<section class="section" id="namesilo">
+  <div class="section-label">Finding #3 — Registrar Complicity</div>
+  <h2 class="section-title reveal">NAMESILO LIED<br>&amp; COVERED FOR THE OPERATOR</h2>
+  <p class="section-intro reveal">Three registrars independently suspended the operator's domains after reviewing the same evidence. NameSilo was the only one that refused — and then fabricated a "compromise" story to justify it.</p>
+
+  <div class="cards reveal">
+    <div class="card"><div class="card-num" style="color:#00cc66">01</div><div class="card-title">3 Registrars Suspended</div><div class="card-body"><strong>xmrwallet.cc</strong> — PDR: SUSPENDED<br><strong>xmrwallet.biz</strong> — WebNic: SUSPENDED<br><strong>xmrwallet.net</strong> — DNS DEAD<br><br>Same evidence, same conclusion. Only NameSilo disagreed.</div></div>
+    <div class="card"><div class="card-num" style="color:var(--red)">02</div><div class="card-title">NameSilo: "The Victim"</div><div class="card-body">NameSilo's response to our abuse report: the operator is <em>"the victim"</em> of a compromise. The site was allegedly hacked. No technical evidence provided. No investigation conducted.</div></div>
+    <div class="card"><div class="card-num" style="color:var(--red)">03</div><div class="card-title">"Subpoena the Registrar"</div><div class="card-body">The operator emailed us on <strong>Feb 17</strong>: <em>"Feel free to subpoena the domain registrar."</em> This was <strong>before</strong> we filed any abuse report with NameSilo. He already knew they would protect him.</div></div>
+    <div class="card"><div class="card-num" style="color:var(--red)">04</div><div class="card-title">Operator's Own Words</div><div class="card-body">Feb 16: <em>"We don't store keys"</em><br>Feb 17: <em>"This is the data we need"</em><br>First person. His site. His code. No hack mentioned. Ever.<br><br>NameSilo's "compromise" story contradicts the operator himself.</div></div>
+    <div class="card"><div class="card-num" style="color:var(--red)">05</div><div class="card-title">VirusTotal Removal</div><div class="card-body">NameSilo actively helped the operator remove VirusTotal security warnings — flagged by <strong>Fortinet, ESET, Sophos</strong> and others. They didn't just ignore the scam. They cleaned up after it.</div></div>
+    <div class="card"><div class="card-num" style="color:var(--orange)">06</div><div class="card-title">File ICANN Complaint</div><div class="card-body">NameSilo's abuse team is compromised or complicit. Report directly to ICANN:<br><br><a href="https://www.icann.org/compliance/complaint" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:11px;">icann.org/compliance/complaint →</a></div></div>
+  </div>
+
+  <div class="section-label reveal" style="margin-top:40px">Operator Email Timeline — Before NameSilo Got Involved</div>
+  <div class="code-block reveal"><span class="c-muted">// The operator emailed PhishDestroy directly. These are his words.</span>
+<span class="c-muted">// Written BEFORE NameSilo invented the "compromise" story.</span>
+
+<span class="c-val">2026-02-16</span>  <span class="c-yellow">"We don't store seeds or keys, everything is done in your browser locally."</span>
+               <span class="c-red">↑ Live capture: session_key = Base64(private view key). 40+ transmissions per session.</span>
+
+<span class="c-val">2026-02-17</span>  <span class="c-yellow">"This is the data we need to offer the service."</span>
+               <span class="c-red">↑ Contradicts himself in 24 hours. Yesterday: no keys. Today: we need the data.</span>
+
+<span class="c-val">2026-02-17</span>  <span class="c-yellow">"Feel free to subpoena the domain registrar for my information."</span>
+               <span class="c-red">↑ BEFORE any abuse report. He knew NameSilo would protect him.</span>
+
+<span class="c-val">2026-02-23</span>  <span class="c-yellow">"I've hired a lawyer and a private investigator."</span>
+               <span class="c-red">↑ Sent the day .cc and .biz were suspended. Lawyer never appeared.</span>
+               <span class="c-red">↑ Also claimed "Trezor and Ledger also get their view keys." Trezor is a hardware wallet.</span>
+
+<span class="c-muted">// Zero technical rebuttals in any email. Just threats and lies.</span>
+<span class="c-muted">// NameSilo later said "compromised." The operator never said "hacked." Not once.</span>
+<span class="c-red">// The "compromise" was fabricated after NameSilo needed an excuse to close the case.</span></div>
+
+  <div class="warning-box reveal" style="margin-top:32px">
+    <div class="warning-box-title">Full Email Evidence + Analysis</div>
+    <p>The complete email exchange with screenshots is published in our articles and on a <a href="posts/post-namesilo-xmrwallet-coverup.html" style="color:var(--blue)">dedicated page →</a><br><br>
+    <a href="https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:12px;">Medium: xmrwallet.com — Full Investigation →</a><br>
+    <a href="https://dev.to/phishdestroy/xmrwallet-com-scam" target="_blank" style="color:var(--blue);font-family:var(--mono);font-size:12px;">dev.to: xmrwallet.com Scam Exposed →</a>
+    </p>
+  </div>
+</section>
+
 <!-- ESCAPE ATTEMPT -->
 <section class="section" id="escape">
   <div class="section-label">Plot Twist</div>
@@ -513,7 +559,7 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
     <span style="color:rgba(255,80,80,0.7);">xmrwallet.me</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">Registered 2026-02-26. Key-Systems GmbH. Same IP as .cc (185.129.100.248). 10yr prepaid.</span><br>
     <span style="color:#ff7a00;">captcha</span> <span style="color:#2a2a2a;">—</span> <span style="color:#444;">Custom PoW + slider captcha deployed across all domains. New developer involved. <a href="posts/post-xmrwallet-captcha-defeated.html" style="color:#ff7a00;text-decoration:none;">Reverse-engineered and defeated →</a></span><br><br>
     <span style="color:var(--red)">Operator response:</span> <span style="color:#666;">deleted GitHub issues, wiped repo content, panicked. Cached evidence preserved below and at <a href="deleted.html" style="color:#555">Deleted Issues Archive →</a></span><br><br>
-    <span style="color:#2a2a2a;">// xmrwallet.com still active. NameSilo has not yet acted. Keep reporting.</span>
+    <span style="color:#2a2a2a;">// xmrwallet.com still active. NameSilo sided with the operator. <a href="#namesilo" style="color:#333;text-decoration:underline;">Full details below →</a></span>
   </div>
 
   <style>
@@ -1181,11 +1227,18 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
       <div class="rpt-url">spamhaus.org</div>
     </a>
 
-    <a class="rpt-card" href="mailto:abuse@namesilo.com">
+    <a class="rpt-card" href="mailto:abuse@namesilo.com" style="border-color:rgba(255,32,32,0.3);">
       <span class="rpt-flag">📧</span>
-      <div class="rpt-country">Domain Registrar</div>
+      <div class="rpt-country" style="color:var(--red);">⚠ Sided with operator — <a href="#namesilo" style="color:var(--red);">details</a></div>
       <div class="rpt-name">NameSilo Abuse</div>
       <div class="rpt-url">abuse@namesilo.com</div>
+    </a>
+
+    <a class="rpt-card" href="https://www.icann.org/compliance/complaint" target="_blank" style="border-color:rgba(255,122,0,0.3);">
+      <span class="rpt-flag">🏛️</span>
+      <div class="rpt-country" style="color:var(--orange);">Bypass NameSilo — report directly</div>
+      <div class="rpt-name">ICANN Complaint</div>
+      <div class="rpt-url">icann.org/compliance/complaint</div>
     </a>
 
     <a class="rpt-card" href="mailto:abuse@ddos-guard.net">
@@ -1214,6 +1267,27 @@ IQWEB (IQWeb FZ-LLC) → <span class="c-red">$550/month</span>  custom plan (dis
       <div class="rpt-country">Blockchain Intelligence</div>
       <div class="rpt-name">Chainalysis</div>
       <div class="rpt-url">chainalysis.com</div>
+    </a>
+
+    <a class="rpt-card" href="https://phishdestroy.medium.com/xmrwallet-com-2953f35b8a79" target="_blank">
+      <span class="rpt-flag">📰</span>
+      <div class="rpt-country">Full Investigation Article</div>
+      <div class="rpt-name">Medium — PhishDestroy</div>
+      <div class="rpt-url">phishdestroy.medium.com</div>
+    </a>
+
+    <a class="rpt-card" href="https://dev.to/phishdestroy/xmrwallet-com-scam" target="_blank">
+      <span class="rpt-flag">📰</span>
+      <div class="rpt-country">Technical Writeup</div>
+      <div class="rpt-name">dev.to — PhishDestroy</div>
+      <div class="rpt-url">dev.to/phishdestroy</div>
+    </a>
+
+    <a class="rpt-card" href="posts/post-namesilo-xmrwallet-coverup.html">
+      <span class="rpt-flag">🏛️</span>
+      <div class="rpt-country">NameSilo Cover-Up Analysis</div>
+      <div class="rpt-name">NameSilo Lied — Proof</div>
+      <div class="rpt-url">Operator emails vs NameSilo claims</div>
     </a>
 
   </div>

@@ -1,1 +1,14 @@
-²ø1šYì
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#080808"/>
+  <rect width="6" height="630" fill="#FF2020"/>
+  <text x="60" y="120" font-family="monospace" font-size="14" fill="#FF2020" letter-spacing="4">PHISHDESTROY RESEARCH</text>
+  <text x="60" y="220" font-family="sans-serif" font-size="56" font-weight="bold" fill="#E0E0E0">xmrwallet.com</text>
+  <text x="60" y="290" font-family="sans-serif" font-size="36" fill="#FF2020">$2M+ Stolen â€” Server-Side TX Hijacking</text>
+  <text x="60" y="360" font-family="monospace" font-size="18" fill="#555">session_key = Base64(private_view_key) â€” exfiltrated 40+ times per session</text>
+  <text x="60" y="400" font-family="monospace" font-size="18" fill="#555">raw_tx_and_hash.raw = 0 â€” client TX discarded, server redirects funds</text>
+  <text x="60" y="440" font-family="monospace" font-size="18" fill="#555">type == 'swept' â€” custom theft marker, not in Monero protocol</text>
+  <rect x="60" y="480" width="180" height="3" fill="#FF2020"/>
+  <text x="60" y="520" font-family="monospace" font-size="14" fill="#FF2020">3 REGISTRARS SUSPENDED</text>
+  <text x="60" y="545" font-family="monospace" font-size="14" fill="#333">NAMESILO COVERED FOR THE OPERATOR</text>
+  <text x="60" y="590" font-family="monospace" font-size="12" fill="#333">phishdestroy.github.io/DO-NOT-USE-xmrwallet-com</text>
+</svg>
