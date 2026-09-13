@@ -629,7 +629,7 @@ In 8 years of operation the operator has **never once** produced:
 
 | Project | Description |
 |:--------|:------------|
-| [**destroylist**](https://github.com/phishdestroy/destroylist) | 70,000+ malicious domain blocklist ![](https://img.shields.io/github/stars/phishdestroy/destroylist?style=flat-square&color=FF0000) |
+| [**destroylist**](https://github.com/phishdestroy/destroylist) | [![destroylist](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/phishdestroy/destroylist/main/count.json)](https://github.com/phishdestroy/destroylist) |
 | [**ScamIntelLogs**](https://github.com/phishdestroy/ScamIntelLogs) | Intel archive of crypto scam operations ![](https://img.shields.io/github/stars/phishdestroy/ScamIntelLogs?style=flat-square&color=FF0000) |
 
 ---
